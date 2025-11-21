@@ -110,6 +110,26 @@
 #define LKP_SetAnalogMode()      do { ANSELAbits.ANSELA5 = 1; } while(0)
 #define LKP_SetDigitalMode()     do { ANSELAbits.ANSELA5 = 0; } while(0)
 
+// get/set RB4 aliases
+#define IO_RB4_TRIS                 TRISBbits.TRISB4
+#define IO_RB4_LAT                  LATBbits.LATB4
+#define IO_RB4_PORT                 PORTBbits.RB4
+#define IO_RB4_WPU                  WPUBbits.WPUB4
+#define IO_RB4_OD                   ODCONBbits.ODCB4
+#define IO_RB4_ANS                  ANSELBbits.ANSELB4
+#define IO_RB4_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
+#define IO_RB4_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
+#define IO_RB4_Toggle()             do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0)
+#define IO_RB4_GetValue()           PORTBbits.RB4
+#define IO_RB4_SetDigitalInput()    do { TRISBbits.TRISB4 = 1; } while(0)
+#define IO_RB4_SetDigitalOutput()   do { TRISBbits.TRISB4 = 0; } while(0)
+#define IO_RB4_SetPullup()          do { WPUBbits.WPUB4 = 1; } while(0)
+#define IO_RB4_ResetPullup()        do { WPUBbits.WPUB4 = 0; } while(0)
+#define IO_RB4_SetPushPull()        do { ODCONBbits.ODCB4 = 0; } while(0)
+#define IO_RB4_SetOpenDrain()       do { ODCONBbits.ODCB4 = 1; } while(0)
+#define IO_RB4_SetAnalogMode()      do { ANSELBbits.ANSELB4 = 1; } while(0)
+#define IO_RB4_SetDigitalMode()     do { ANSELBbits.ANSELB4 = 0; } while(0)
+
 // get/set RB5 aliases
 #define RB5_IN0_TRIS                 TRISBbits.TRISB5
 #define RB5_IN0_LAT                  LATBbits.LATB5
@@ -190,6 +210,27 @@
 #define IO_RC0_SetAnalogMode()      do { ANSELCbits.ANSELC0 = 1; } while(0)
 #define IO_RC0_SetDigitalMode()     do { ANSELCbits.ANSELC0 = 0; } while(0)
 
+// get/set RC1 aliases
+#define BtnSet_TRIS                 TRISCbits.TRISC1
+#define BtnSet_LAT                  LATCbits.LATC1
+#define BtnSet_PORT                 PORTCbits.RC1
+#define BtnSet_WPU                  WPUCbits.WPUC1
+#define BtnSet_OD                   ODCONCbits.ODCC1
+#define BtnSet_ANS                  ANSELCbits.ANSELC1
+#define BtnSet_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
+#define BtnSet_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
+#define BtnSet_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
+#define BtnSet_GetValue()           PORTCbits.RC1
+#define BtnSet_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
+#define BtnSet_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
+#define BtnSet_SetPullup()          do { WPUCbits.WPUC1 = 1; } while(0)
+#define BtnSet_ResetPullup()        do { WPUCbits.WPUC1 = 0; } while(0)
+#define BtnSet_SetPushPull()        do { ODCONCbits.ODCC1 = 0; } while(0)
+#define BtnSet_SetOpenDrain()       do { ODCONCbits.ODCC1 = 1; } while(0)
+#define BtnSet_SetAnalogMode()      do { ANSELCbits.ANSELC1 = 1; } while(0)
+#define BtnSet_SetDigitalMode()     do { ANSELCbits.ANSELC1 = 0; } while(0)
+#define RC1_SetInterruptHandler  BtnSet_SetInterruptHandler
+
 // get/set RC2 aliases
 #define IO_RC2_TRIS                 TRISCbits.TRISC2
 #define IO_RC2_LAT                  LATCbits.LATC2
@@ -209,6 +250,46 @@
 #define IO_RC2_SetOpenDrain()       do { ODCONCbits.ODCC2 = 1; } while(0)
 #define IO_RC2_SetAnalogMode()      do { ANSELCbits.ANSELC2 = 1; } while(0)
 #define IO_RC2_SetDigitalMode()     do { ANSELCbits.ANSELC2 = 0; } while(0)
+
+// get/set RC6 aliases
+#define IO_RC6_TRIS                 TRISCbits.TRISC6
+#define IO_RC6_LAT                  LATCbits.LATC6
+#define IO_RC6_PORT                 PORTCbits.RC6
+#define IO_RC6_WPU                  WPUCbits.WPUC6
+#define IO_RC6_OD                   ODCONCbits.ODCC6
+#define IO_RC6_ANS                  ANSELCbits.ANSELC6
+#define IO_RC6_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)
+#define IO_RC6_SetLow()             do { LATCbits.LATC6 = 0; } while(0)
+#define IO_RC6_Toggle()             do { LATCbits.LATC6 = ~LATCbits.LATC6; } while(0)
+#define IO_RC6_GetValue()           PORTCbits.RC6
+#define IO_RC6_SetDigitalInput()    do { TRISCbits.TRISC6 = 1; } while(0)
+#define IO_RC6_SetDigitalOutput()   do { TRISCbits.TRISC6 = 0; } while(0)
+#define IO_RC6_SetPullup()          do { WPUCbits.WPUC6 = 1; } while(0)
+#define IO_RC6_ResetPullup()        do { WPUCbits.WPUC6 = 0; } while(0)
+#define IO_RC6_SetPushPull()        do { ODCONCbits.ODCC6 = 0; } while(0)
+#define IO_RC6_SetOpenDrain()       do { ODCONCbits.ODCC6 = 1; } while(0)
+#define IO_RC6_SetAnalogMode()      do { ANSELCbits.ANSELC6 = 1; } while(0)
+#define IO_RC6_SetDigitalMode()     do { ANSELCbits.ANSELC6 = 0; } while(0)
+
+// get/set RC7 aliases
+#define IO_RC7_TRIS                 TRISCbits.TRISC7
+#define IO_RC7_LAT                  LATCbits.LATC7
+#define IO_RC7_PORT                 PORTCbits.RC7
+#define IO_RC7_WPU                  WPUCbits.WPUC7
+#define IO_RC7_OD                   ODCONCbits.ODCC7
+#define IO_RC7_ANS                  ANSELCbits.ANSELC7
+#define IO_RC7_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define IO_RC7_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define IO_RC7_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define IO_RC7_GetValue()           PORTCbits.RC7
+#define IO_RC7_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define IO_RC7_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define IO_RC7_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define IO_RC7_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define IO_RC7_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
+#define IO_RC7_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
+#define IO_RC7_SetAnalogMode()      do { ANSELCbits.ANSELC7 = 1; } while(0)
+#define IO_RC7_SetDigitalMode()     do { ANSELCbits.ANSELC7 = 0; } while(0)
 
 /**
  * @ingroup  pinsdriver
@@ -265,6 +346,46 @@ extern void (*InSensor_InterruptHandler)(void);
  * @return none
  */
 void InSensor_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt on Change Handler for the BtnSet pin functionality
+ * @param none
+ * @return none
+ */
+void BtnSet_ISR(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for BtnSet pin interrupt-on-change functionality.
+ *        Allows selecting an interrupt handler for BtnSet at application runtime
+ * @pre Pins intializer called
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Dynamic Interrupt Handler for BtnSet pin.
+ *        This is a dynamic interrupt handler to be used together with the BtnSet_SetInterruptHandler() method.
+ *        This handler is called every time the BtnSet ISR is executed and allows any function to be registered at runtime.
+ * @pre Pins intializer called
+ * @param none
+ * @return none
+ */
+extern void (*BtnSet_InterruptHandler)(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for BtnSet pin. 
+ *        This is a predefined interrupt handler to be used together with the BtnSet_SetInterruptHandler() method.
+ *        This handler is called every time the BtnSet ISR is executed. 
+ * @pre Pins intializer called
+ * @param none
+ * @return none
+ */
+void BtnSet_DefaultInterruptHandler(void);
 
 
 #endif // PINS_H

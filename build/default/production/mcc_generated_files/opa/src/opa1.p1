@@ -2204,8 +2204,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _OPA1_Initialize ]
 [f ]
 "47
-[; ;mcc_generated_files/opa/src/opa1.c: 47:     OPA1CON1 = 0x3F;
-[e = _OPA1CON1 -> -> 63 `i `uc ]
+[; ;mcc_generated_files/opa/src/opa1.c: 47:     OPA1CON1 = 0xF;
+[e = _OPA1CON1 -> -> 15 `i `uc ]
 "50
 [; ;mcc_generated_files/opa/src/opa1.c: 50:     OPA1CON2 = 0x12;
 [e = _OPA1CON2 -> -> 18 `i `uc ]

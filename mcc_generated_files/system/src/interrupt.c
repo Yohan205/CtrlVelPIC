@@ -108,6 +108,30 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     {
         I2C1_TX_ISR();
     }
+    else if(PIE3bits.TMR1IE == 1 && PIR3bits.TMR1IF == 1)
+    {
+        TMR1_OverflowISR();
+    }
+    else if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+    {
+        ADC_ISR();
+    }
+    else if(PIE2bits.ADTIE == 1 && PIR2bits.ADTIF == 1)
+    {
+        ADC_ThresholdISR();
+    }
+    else if(PIE4bits.U1IE == 1 && PIR4bits.U1IF == 1)
+    {
+        UART1_GeneralInterruptHandler();
+    }
+    else if(PIE4bits.U1TXIE == 1 && PIR4bits.U1TXIF == 1)
+    {
+        UART1_TxInterruptHandler();
+    }
+    else if(PIE4bits.U1RXIE == 1 && PIR4bits.U1RXIF == 1)
+    {
+        UART1_RxInterruptHandler();
+    }
     else
     {
         //Unhandled Interrupt

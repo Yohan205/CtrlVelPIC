@@ -23749,7 +23749,7 @@ __attribute__((inline)) void OPA1_SetInputOffset(uint8_t offset);
 void OPA1_Initialize(void)
 {
 
-    OPA1CON1 = 0x38;
+    OPA1CON1 = 0x3F;
 
 
     OPA1CON2 = 0x12;

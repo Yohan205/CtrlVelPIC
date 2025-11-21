@@ -1630,52 +1630,6 @@ const uint8_t FONT_2[] = {
     0x00, // ~ 94
 };
 
-void floatToChar(float n, char *res, int precision)
-{
-    int int_part = (int)n; // Parte entera
-    float frac_part = n - (float)int_part;
-    if (frac_part < 0)
-        frac_part = -frac_part;
-
-    // Convierte parte entera
-    int i = 0;
-    if (n < 0)
-    {
-        res[i++] = '-';
-        int_part = -int_part;
-    }
-
-    // Convierte entero a cadena
-    int j = i;
-    do
-    {
-        res[j++] = (char)((int_part % 10) + '0'); // cast para evitar warnings
-        int_part /= 10;
-    } while (int_part);
-
-    // invierte dígitos enteros
-    for (int k = i, l = j - 1; k < l; k++, l--)
-    {
-        char temp = res[k];
-        res[k] = res[l];
-        res[l] = temp;
-    }
-
-    // agrega punto decimal
-    res[j++] = '.';
-
-    // Convierte fracción
-    for (int p = 0; p < precision; p++)
-    {
-        frac_part *= 10;
-        int digit = (int)frac_part;
-        res[j++] = (char)(digit + '0'); // cast para evitar warnings
-        frac_part -= digit;
-    }
-
-    res[j] = '\0';
-}
-
 /* Dibuja un bitmap almacenado por columnas.
    bitmap: datos columna por columna; cada columna consume (h+7)/8 bytes;
    bit 0 de cada byte corresponde a la fila superior de ese bloque de 8 pixels. */

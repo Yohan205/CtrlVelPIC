@@ -23629,7 +23629,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
 # 39 "mcc_generated_files/system/src/../pins.h" 2
-# 239 "mcc_generated_files/system/src/../pins.h"
+# 259 "mcc_generated_files/system/src/../pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -23647,11 +23647,11 @@ void PIN_MANAGER_IOC(void);
 
 
 void InSensor_ISR(void);
-# 265 "mcc_generated_files/system/src/../pins.h"
+# 285 "mcc_generated_files/system/src/../pins.h"
 void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
-# 276 "mcc_generated_files/system/src/../pins.h"
+# 296 "mcc_generated_files/system/src/../pins.h"
 extern void (*InSensor_InterruptHandler)(void);
-# 287 "mcc_generated_files/system/src/../pins.h"
+# 307 "mcc_generated_files/system/src/../pins.h"
 void InSensor_DefaultInterruptHandler(void);
 # 36 "mcc_generated_files/system/src/pins.c" 2
 
@@ -23675,16 +23675,16 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0x1B;
+    TRISA = 0x1F;
     TRISB = 0x30;
-    TRISC = 0xFA;
+    TRISC = 0x7A;
 
 
 
 
     ANSELA = 0x7;
     ANSELB = 0x30;
-    ANSELC = 0xFF;
+    ANSELC = 0x3F;
 
 
 
@@ -23716,6 +23716,8 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    U1RXPPS = 0x16;
+    RC7PPS = 0x10;
     RC0PPS = 0x0A;
     I2C1SCLPPS = 0xF;
     RB7PPS = 0x21;

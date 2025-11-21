@@ -43,8 +43,8 @@
 
 void OPA1_Initialize(void)
 {
-    //GSEL R1 = 8R and R2 = 8R, R2/R1 = 1; RESON Enabled; NSS Vss; 
-    OPA1CON1 = 0x3F;
+    //GSEL R1 = 15R and R2 = 1R, R2/R1 = 0.07; RESON Enabled; NSS Vss; 
+    OPA1CON1 = 0xF;
 
     //NCH GSEL; PCH OPA1IN+; 
     OPA1CON2 = 0x12;

@@ -7,6 +7,10 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="adc" displayName="adc" projectFiles="true">
+          <itemPath>mcc_generated_files/adc/adc.h</itemPath>
+          <itemPath>mcc_generated_files/adc/adc_types.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="dac" displayName="dac" projectFiles="true">
           <itemPath>mcc_generated_files/dac/dac1.h</itemPath>
         </logicalFolder>
@@ -34,9 +38,15 @@
           <itemPath>mcc_generated_files/timer/tmr2_deprecated.h</itemPath>
           <itemPath>mcc_generated_files/timer/tmr0.h</itemPath>
           <itemPath>mcc_generated_files/timer/tmr0_deprecated.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr1_deprecated.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr1.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="uart" displayName="uart" projectFiles="true">
+          <itemPath>mcc_generated_files/uart/uart1.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>ssd1306_oled.h</itemPath>
+      <itemPath>Utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -54,6 +64,11 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="adc" displayName="adc" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/adc/src/adc.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="dac" displayName="dac" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/dac/src/dac1.c</itemPath>
@@ -87,11 +102,18 @@
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/timer/src/tmr2.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tmr0.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/tmr1.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="uart" displayName="uart" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/uart/src/uart1.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>ssd1306_oled.c</itemPath>
+      <itemPath>Utils.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -271,8 +293,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/CYOHAN/MPLABXProjects/ControlVel.X/debug/default/ControlVel_ptg"/>
         <property key="programmerToGoImageName" value="ControlVel_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

@@ -2184,8 +2184,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/timer/src/tmr2.c: 59:     T2RST = (0 << 0x0);
 [e = _T2RST -> << -> 0 `i -> 0 `i `uc ]
 "61
-[; ;mcc_generated_files/timer/src/tmr2.c: 61:     T2PR = 0x7C;
-[e = _T2PR -> -> 124 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr2.c: 61:     T2PR = 0xF9;
+[e = _T2PR -> -> 249 `i `uc ]
 "63
 [; ;mcc_generated_files/timer/src/tmr2.c: 63:     T2TMR = 0x0;
 [e = _T2TMR -> -> 0 `i `uc ]

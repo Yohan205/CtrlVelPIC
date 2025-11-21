@@ -43,10 +43,13 @@
 #include "../dac/dac1.h"
 #include "../opa/opa1.h"
 #include "../pwm/pwm1_16bit.h"
+#include "../uart/uart1.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
+#include "../adc/adc.h"
 #include "../i2c_host/i2c1.h"
 #include "../timer/tmr0.h"
+#include "../timer/tmr1.h"
 #include "../timer/tmr2.h"
 
 /**

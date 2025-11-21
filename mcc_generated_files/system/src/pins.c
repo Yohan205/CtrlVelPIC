@@ -35,6 +35,7 @@
 #include "../pins.h"
 
 void (*InSensor_InterruptHandler)(void);
+void (*BtnSet_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -56,21 +57,21 @@ void PIN_MANAGER_Initialize(void)
     */
     TRISA = 0x1B;
     TRISB = 0x30;
-    TRISC = 0xFA;
+    TRISC = 0x7A;
 
     /**
     ANSELx registers
     */
     ANSELA = 0x7;
     ANSELB = 0x30;
-    ANSELC = 0xFF;
+    ANSELC = 0x3D;
 
     /**
     WPUx registers
     */
     WPUA = 0x10;
     WPUB = 0x0;
-    WPUC = 0x0;
+    WPUC = 0x2;
 
 
     /**
@@ -95,6 +96,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     PPS registers
     */
+    U1RXPPS = 0x16; //RC6->UART1:RX1;
+    RC7PPS = 0x10;  //RC7->UART1:TX1;
     RC0PPS = 0x0A;  //RC0->PWM1_16BIT:PWM11;
     I2C1SCLPPS = 0xF;  //RB7->I2C1:SCL1;
     RB7PPS = 0x21;  //RB7->I2C1:SCL1;
@@ -110,11 +113,12 @@ void PIN_MANAGER_Initialize(void)
     IOCBP = 0x0;
     IOCBN = 0x0;
     IOCBF = 0x0;
-    IOCCP = 0x0;
+    IOCCP = 0x2;
     IOCCN = 0x0;
     IOCCF = 0x0;
 
     InSensor_SetInterruptHandler(InSensor_DefaultInterruptHandler);
+    BtnSet_SetInterruptHandler(BtnSet_DefaultInterruptHandler);
 
     // Enable PIE0bits.IOCIE interrupt 
     PIE0bits.IOCIE = 1; 
@@ -126,6 +130,11 @@ void PIN_MANAGER_IOC(void)
     if(IOCAFbits.IOCAF4 == 1)
     {
         InSensor_ISR();  
+    }
+    // interrupt on change for pin BtnSet
+    if(IOCCFbits.IOCCF1 == 1)
+    {
+        BtnSet_ISR();  
     }
 }
    
@@ -157,6 +166,36 @@ void InSensor_SetInterruptHandler(void (* InterruptHandler)(void)){
 void InSensor_DefaultInterruptHandler(void){
     // add your InSensor interrupt custom code
     // or set custom function using InSensor_SetInterruptHandler()
+}
+   
+/**
+   BtnSet Interrupt Service Routine
+*/
+void BtnSet_ISR(void) {
+
+    // Add custom BtnSet code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(BtnSet_InterruptHandler)
+    {
+        BtnSet_InterruptHandler();
+    }
+    IOCCFbits.IOCCF1 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for BtnSet at application runtime
+*/
+void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void)){
+    BtnSet_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for BtnSet
+*/
+void BtnSet_DefaultInterruptHandler(void){
+    // add your BtnSet interrupt custom code
+    // or set custom function using BtnSet_SetInterruptHandler()
 }
 /**
  End of File

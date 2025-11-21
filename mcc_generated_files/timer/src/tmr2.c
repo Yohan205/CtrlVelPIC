@@ -58,7 +58,7 @@ void TMR2_Initialize(void)
 
     T2RST = (0 << _T2RST_T2RSEL_POSN);  // T2RSEL T2INPPS pin
 
-    T2PR = 0x7C;    // Period 0.001s; Timer Prescaled Frequency 125000Hz; Count 124; Postscaler 1:1; 
+    T2PR = 0xF9;    // Period 0.002s; Timer Prescaled Frequency 125000Hz; Count 249; Postscaler 1:1; 
 
     T2TMR = 0x0;
 

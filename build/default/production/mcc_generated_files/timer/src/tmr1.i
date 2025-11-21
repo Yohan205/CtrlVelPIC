@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/dac/src/dac1.c"
+# 1 "mcc_generated_files/timer/src/tmr1.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/dac/src/dac1.c" 2
-# 37 "mcc_generated_files/dac/src/dac1.c"
+# 1 "mcc_generated_files/timer/src/tmr1.c" 2
+# 39 "mcc_generated_files/timer/src/tmr1.c"
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -23626,15 +23626,16 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 38 "mcc_generated_files/dac/src/dac1.c" 2
-# 1 "mcc_generated_files/dac/src/../dac1.h" 1
-# 40 "mcc_generated_files/dac/src/../dac1.h"
+# 40 "mcc_generated_files/timer/src/tmr1.c" 2
+# 1 "mcc_generated_files/timer/src/../tmr1.h" 1
+# 38 "mcc_generated_files/timer/src/../tmr1.h"
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdbool.h" 1 3
-# 41 "mcc_generated_files/dac/src/../dac1.h" 2
-# 53 "mcc_generated_files/dac/src/../dac1.h"
-void DAC1_Initialize(void);
-# 62 "mcc_generated_files/dac/src/../dac1.h"
-void DAC1_SetOutput(uint8_t inputData);
+# 39 "mcc_generated_files/timer/src/../tmr1.h" 2
+
+# 1 "mcc_generated_files/timer/src/../tmr1_deprecated.h" 1
+# 41 "mcc_generated_files/timer/src/../tmr1.h" 2
+# 199 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_Initialize(void);
 
 
 
@@ -23642,27 +23643,294 @@ void DAC1_SetOutput(uint8_t inputData);
 
 
 
-uint8_t DAC1_GetOutput(void);
-# 39 "mcc_generated_files/dac/src/dac1.c" 2
+void TMR1_Deinitialize(void);
+# 216 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_Start(void);
+# 225 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_Stop(void);
+# 234 "mcc_generated_files/timer/src/../tmr1.h"
+uint16_t TMR1_CounterGet(void);
+# 243 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_CounterSet(uint16_t timerVal);
+# 252 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_PeriodSet(uint16_t periodVal);
 
 
 
 
 
-void DAC1_Initialize(void)
+
+
+uint16_t TMR1_PeriodGet(void);
+# 269 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_Reload(void);
+
+
+
+
+
+
+
+uint16_t TMR1_MaxCountGet(void);
+# 286 "mcc_generated_files/timer/src/../tmr1.h"
+void TMR1_SinglePulseAcquisitionStart(void);
+# 295 "mcc_generated_files/timer/src/../tmr1.h"
+uint8_t TMR1_GateStateGet(void);
+
+
+
+
+
+
+
+void TMR1_OverflowInterruptEnable(void);
+
+
+
+
+
+
+
+void TMR1_OverflowInterruptDisable(void);
+
+
+
+
+
+
+
+void TMR1_OverflowISR(void);
+# 328 "mcc_generated_files/timer/src/../tmr1.h"
+_Bool TMR1_GateEventStatusGet(void);
+
+
+
+
+
+
+
+void TMR1_GateEventStatusClear(void);
+
+
+
+
+
+
+
+void TMR1_Tasks(void);
+
+
+
+
+
+
+
+ void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+
+
+
+
+
+
+
+ void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
+# 41 "mcc_generated_files/timer/src/tmr1.c" 2
+
+static volatile uint16_t timer1ReloadVal;
+static void (*TMR1_OverflowCallback)(void);
+static void TMR1_DefaultOverflowCallback(void);
+static void (*TMR1_GateCallback)(void);
+static void TMR1_DefaultGateCallback(void);
+
+void TMR1_Initialize(void)
 {
+    T1CONbits.TMR1ON = 0U;
 
-    DAC1CON = 0xA0;
+    T1GCON = (0 << 0x3)
+        | (0 << 0x4)
+        | (0 << 0x5)
+        | (0 << 0x6)
+        | (0 << 0x7);
 
+    T1GATE = (0 << 0x0);
 
-    DAC1DATL = 0xA9;
+    T1CLK = (1 << 0x0);
+
+    TMR1H = 0x63;
+    TMR1L = 0xBF;
+
+    timer1ReloadVal=((uint16_t)TMR1H << 8) | TMR1L;
+
+    TMR1_OverflowCallback = TMR1_DefaultOverflowCallback;
+    TMR1_GateCallback = TMR1_DefaultGateCallback;
+
+ PIR3bits.TMR1IF = 0U;
+ PIE3bits.TMR1IE = 1U;
+ PIR3bits.TMR1GIF = 0U;
+
+    T1CON = (1 << 0x0)
+        | (0 << 0x1)
+        | (1 << 0x2)
+        | (3 << 0x4);
 }
 
-void DAC1_SetOutput(uint8_t inputData)
+void TMR1_Deinitialize(void)
 {
-    DAC1DATL = inputData;
+    T1CONbits.TMR1ON = 0U;
+
+    T1CON = 0x0;
+    T1GCON = 0x0;
+    T1GATE = 0x0;
+    T1CLK = 0x0;
+    TMR1H = 0x0;
+    TMR1L = 0x0;
+
+    PIR3bits.TMR1IF = 0U;
+    PIE3bits.TMR1IE = 0U;
+    PIR3bits.TMR1GIF = 0U;
+    PIE3bits.TMR1GIE = 0U;
 }
-uint8_t DAC1_GetOutput(void)
+
+void TMR1_Start(void)
 {
-    return DAC1DATL;
+    T1CONbits.TMR1ON = 1U;
+}
+
+void TMR1_Stop(void)
+{
+    T1CONbits.TMR1ON = 0U;
+}
+
+uint16_t TMR1_CounterGet(void)
+{
+    uint16_t readVal;
+    uint8_t readValHigh;
+    uint8_t readValLow;
+
+    readValLow = TMR1L;
+    readValHigh = TMR1H;
+
+    readVal = ((uint16_t)readValHigh << 8U) | readValLow;
+
+    return readVal;
+}
+
+
+void TMR1_CounterSet(uint16_t timerVal)
+{
+    if (1U == T1CONbits.nT1SYNC)
+    {
+        _Bool onState = T1CONbits.TMR1ON;
+
+        TMR1H = (uint8_t)(timerVal >> 8U);
+        TMR1L = (uint8_t)timerVal;
+
+        T1CONbits.TMR1ON = onState;
+    }
+    else
+    {
+        TMR1H = (uint8_t)(timerVal >> 8U);
+        TMR1L = (uint8_t)timerVal;
+    }
+}
+
+void TMR1_PeriodSet(uint16_t periodVal)
+{
+    timer1ReloadVal = periodVal;
+}
+
+uint16_t TMR1_PeriodGet(void)
+{
+    return timer1ReloadVal;
+}
+
+void TMR1_Reload(void)
+{
+
+    TMR1_CounterSet(timer1ReloadVal);
+}
+
+uint16_t TMR1_MaxCountGet(void)
+{
+    return (65535U);
+}
+
+void TMR1_SinglePulseAcquisitionStart(void)
+{
+    T1GCONbits.T1GGO = 1U;
+}
+
+uint8_t TMR1_GateStateGet(void)
+{
+    return (T1GCONbits.T1GVAL);
+}
+
+void TMR1_OverflowInterruptEnable(void)
+{
+    PIE3bits.TMR1IE = 1U;
+}
+
+void TMR1_OverflowInterruptDisable(void)
+{
+    PIE3bits.TMR1IE = 0U;
+}
+
+_Bool TMR1_GateEventStatusGet(void)
+{
+    return (PIR3bits.TMR1GIF);
+}
+
+void TMR1_GateEventStatusClear(void)
+{
+    PIR3bits.TMR1GIF = 0U;
+}
+
+void TMR1_OverflowISR(void)
+{
+    static volatile uint16_t CountCallBack = 0;
+
+    TMR1_CounterSet(timer1ReloadVal);
+
+
+    if(++CountCallBack >= (75U))
+    {
+        if(((void*)0) != TMR1_OverflowCallback)
+        {
+            TMR1_OverflowCallback();
+        }
+        CountCallBack = 0;
+    }
+    PIR3bits.TMR1IF = 0U;
+}
+
+void TMR1_Tasks(void)
+{
+    if(1U == PIR3bits.TMR1GIF)
+    {
+        if(((void*)0) != TMR1_GateCallback)
+        {
+            TMR1_GateCallback();
+        }
+        PIR3bits.TMR1GIF = 0U;
+    }
+}
+void TMR1_OverflowCallbackRegister(void (*CallbackHandler)(void))
+{
+    TMR1_OverflowCallback = CallbackHandler;
+}
+
+
+void TMR1_GateCallbackRegister(void (*CallbackHandler)(void))
+{
+    TMR1_GateCallback = CallbackHandler;
+}
+
+static void TMR1_DefaultOverflowCallback(void)
+{
+
+}
+
+static void TMR1_DefaultGateCallback(void)
+{
+
 }

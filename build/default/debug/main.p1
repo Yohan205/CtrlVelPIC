@@ -1,28 +1,32 @@
 Version 4.0 HI-TECH Software Intermediate Code
+[v F14197 `(v ~T0 @X0 0 tf ]
 [p mainexit ]
-"58 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 58: void SYSTEM_Initialize(void);
+"59 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 59: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F14011 `(v ~T0 @X0 0 tf ]
+"96 ./ssd1306_oled.h
+[; ;./ssd1306_oled.h: 96: void OLED_Init(void);
+[v _OLED_Init `(v ~T0 @X0 0 ef ]
+[v F14556 `(v ~T0 @X0 0 tf ]
 "522 ./mcc_generated_files/system/../timer/tmr2.h
 [; ;./mcc_generated_files/system/../timer/tmr2.h: 522: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
-[v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14011 ]
-"27 main.c
-[; ;main.c: 27: void LKP(void);
+[v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14556 ]
+"28 main.c
+[; ;main.c: 28: void LKP(void);
 [v _LKP `(v ~T0 @X0 0 ef ]
-[v F13942 `(v ~T0 @X0 0 tf ]
+[v F14487 `(v ~T0 @X0 0 tf ]
 "264 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 264: void TMR0_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F13942 ]
-"29 main.c
-[; ;main.c: 29: void interuptTimer(void);
+[v _TMR0_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14487 ]
+"30 main.c
+[; ;main.c: 30: void interuptTimer(void);
 [v _interuptTimer `(v ~T0 @X0 0 ef ]
 [v F13707 `(v ~T0 @X0 0 tf ]
-"265 ./mcc_generated_files/system/../system/pins.h
-[; ;./mcc_generated_files/system/../system/pins.h: 265: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
+"285 ./mcc_generated_files/system/../system/pins.h
+[; ;./mcc_generated_files/system/../system/pins.h: 285: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _InSensor_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F13707 ]
-"28 main.c
-[; ;main.c: 28: void interruptSensor(void);
+"29 main.c
+[; ;main.c: 29: void interruptSensor(void);
 [v _interruptSensor `(v ~T0 @X0 0 ef ]
 "38181 D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 38181:     struct {
@@ -39,18 +43,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38195
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 38195: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
 [v _INTCON0bits `VS1810 ~T0 @X0 0 e@1238 ]
-"96 ./ssd1306_oled.h
-[; ;./ssd1306_oled.h: 96: void OLED_Init(void);
-[v _OLED_Init `(v ~T0 @X0 0 ef ]
-"62 ./mcc_generated_files/system/../dac/dac1.h
-[; ;./mcc_generated_files/system/../dac/dac1.h: 62: void DAC1_SetOutput(uint8_t inputData);
-[v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
 "83 ./mcc_generated_files/system/../pwm/pwm1_16bit.h
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 83: void PWM1_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
 [v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
 "101
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 101: void PWM1_16BIT_LoadBufferRegisters(void);
 [v _PWM1_16BIT_LoadBufferRegisters `(v ~T0 @X0 0 ef ]
+"69 main.c
+[; ;main.c: 69:         OPA1_SetResistorLadder(OPA1_R2byR1_is_1);
+[c E13713 0 1 2 3 4 5 6 7 .. ]
+[n E13713 . OPA1_R2byR1_is_0dp07 OPA1_R2byR1_is_0dp14 OPA1_R2byR1_is_0dp33 OPA1_R2byR1_is_1 OPA1_R2byR1_is_1dp67 OPA1_R2byR1_is_3 OPA1_R2byR1_is_7 OPA1_R2byR1_is_15  ]
+"202 ./mcc_generated_files/system/../opa/opa1.h
+[; ;./mcc_generated_files/system/../opa/opa1.h: 202: void OPA1_SetResistorLadder(OPA1_resistor_select resistorSelection);
+[v _OPA1_SetResistorLadder `(v ~T0 @X0 0 ef1`E13713 ]
+"70 main.c
+[; ;main.c: 70:         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+[c E14238 57 58 59 60 61 62 63 12 18 .. ]
+[n E14238 . ADC_CHANNEL_OPA1 ADC_CHANNEL_DAC2 ADC_CHANNEL_VSS ADC_CHANNEL_TEMP ADC_CHANNEL_DAC1 ADC_CHANNEL_FVR_BUFFER1 ADC_CHANNEL_FVR_BUFFER2 ADC_CHANNEL_ANB4 ADC_CHANNEL_ANC2  ]
+"187 ./mcc_generated_files/system/../adc/adc.h
+[; ;./mcc_generated_files/system/../adc/adc.h: 187: adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
+[v _ADC_ChannelSelectAndConvert `(s ~T0 @X0 0 ef1`E14238 ]
+"117 D:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h
+[; ;D:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h: 117: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "197 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 197: uint8_t TMR0_CounterGet(void);
 [v _TMR0_CounterGet `(uc ~T0 @X0 0 ef ]
@@ -68,21 +83,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37742
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 37742: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
 [v _LATAbits `VS1792 ~T0 @X0 0 e@1214 ]
-"111 ./ssd1306_oled.h
-[; ;./ssd1306_oled.h: 111: void floatToChar(float n, char *res, int precision);
-[v _floatToChar `(v ~T0 @X0 0 ef3`f`*uc`i ]
-"105
-[; ;./ssd1306_oled.h: 105: void OLED_SetFont(const uint8_t *font);
-[v _OLED_SetFont `(v ~T0 @X0 0 ef1`*Cuc ]
-"15
-[; ;./ssd1306_oled.h: 15: extern const uint8_t FONT_2[];
-[v _FONT_2 `Cuc ~T0 @X0 -> 0 `x e ]
-"108
-[; ;./ssd1306_oled.h: 108: void OLED_Write_Text(int16_t x, int16_t y, char *text);
-[v _OLED_Write_Text `(v ~T0 @X0 0 ef3`s`s`*uc ]
-"99
-[; ;./ssd1306_oled.h: 99: void OLED_Update(void);
-[v _OLED_Update `(v ~T0 @X0 0 ef ]
 "211 D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 211: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2123,172 +2123,167 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39504
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 39504: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"31 main.c
-[; ;main.c: 31: uint8_t contador=0;
+"385 ./mcc_generated_files/system/../uart/uart1.h
+[; ;./mcc_generated_files/system/../uart/uart1.h: 385: void (*UART1_GeneralInterruptHandler)(void);
+[v _UART1_GeneralInterruptHandler `*F14197 ~T0 @X0 1 e ]
+"23 ./Utils.h
+[; ;./Utils.h: 23: const uint16_t powers10[] = {10000, 1000, 100, 10, 1};
+[v _powers10 `Cus ~T0 @X0 -> 5 `i e ]
+[i _powers10
+:U ..
+-> -> 10000 `i `us
+-> -> 1000 `i `us
+-> -> 100 `i `us
+-> -> 10 `i `us
+-> -> 1 `i `us
+..
+]
+"32 main.c
+[; ;main.c: 32: uint8_t contador=0, send=0;
 [v _contador `uc ~T0 @X0 1 e ]
 [i _contador
 -> -> 0 `i `uc
 ]
+[v _send `uc ~T0 @X0 1 e ]
+[i _send
+-> -> 0 `i `uc
+]
 "33
-[; ;main.c: 33: float voltaje1, dutyVal;
+[; ;main.c: 33: uint16_t conv1;
+[v _conv1 `us ~T0 @X0 1 e ]
+"35
+[; ;main.c: 35: float voltaje1, dutyVal, DACval = 0;
 [v _voltaje1 `f ~T0 @X0 1 e ]
 [v _dutyVal `f ~T0 @X0 1 e ]
-"34
-[; ;main.c: 34: float DACval =0;
 [v _DACval `f ~T0 @X0 1 e ]
 [i _DACval
 -> -> 0 `i `f
 ]
-"35
-[; ;main.c: 35: volatile float frecuencia;
-[v _frecuencia `Vf ~T0 @X0 1 e ]
 "36
-[; ;main.c: 36: char Char[5], CharF[5];
-[v _Char `uc ~T0 @X0 -> 5 `i e ]
-[v _CharF `uc ~T0 @X0 -> 5 `i e ]
+[; ;main.c: 36: volatile float frecuencia;
+[v _frecuencia `Vf ~T0 @X0 1 e ]
+"37
+[; ;main.c: 37: char Char[8], CharF[8];
+[v _Char `uc ~T0 @X0 -> 8 `i e ]
+[v _CharF `uc ~T0 @X0 -> 8 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"42
-[; ;main.c: 42: int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
 "43
-[; ;main.c: 43: {
+[; ;main.c: 43: int main(void)
+[v _main `(i ~T0 @X0 1 ef ]
+"44
+[; ;main.c: 44: {
 {
 [e :U _main ]
 [f ]
-"44
-[; ;main.c: 44:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
 "45
-[; ;main.c: 45:     TMR2_PeriodMatchCallbackRegister(LKP);
-[e ( _TMR2_PeriodMatchCallbackRegister (1 &U _LKP ]
-"47
-[; ;main.c: 47:     TMR0_PeriodMatchCallbackRegister(interuptTimer);
-[e ( _TMR0_PeriodMatchCallbackRegister (1 &U _interuptTimer ]
-"48
-[; ;main.c: 48:     InSensor_SetInterruptHandler(interruptSensor);
-[e ( _InSensor_SetInterruptHandler (1 &U _interruptSensor ]
-"51
-[; ;main.c: 51:     (INTCON0bits.GIE = 1);
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"56
-[; ;main.c: 56:     OLED_Init();
+[; ;main.c: 45:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"46
+[; ;main.c: 46:     OLED_Init();
 [e ( _OLED_Init ..  ]
-"57
-[; ;main.c: 57:     DAC1_SetOutput((uint8_t) DACval);
-[e ( _DAC1_SetOutput (1 -> _DACval `uc ]
+"48
+[; ;main.c: 48:     TMR2_PeriodMatchCallbackRegister(LKP);
+[e ( _TMR2_PeriodMatchCallbackRegister (1 &U _LKP ]
+"49
+[; ;main.c: 49:     TMR0_PeriodMatchCallbackRegister(interuptTimer);
+[e ( _TMR0_PeriodMatchCallbackRegister (1 &U _interuptTimer ]
+"51
+[; ;main.c: 51:     InSensor_SetInterruptHandler(interruptSensor);
+[e ( _InSensor_SetInterruptHandler (1 &U _interruptSensor ]
+"55
+[; ;main.c: 55:     (INTCON0bits.GIE = 1);
+[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
 "58
 [; ;main.c: 58:     while(1)
-[e :U 1939 ]
+[e :U 1941 ]
 "59
 [; ;main.c: 59:     {
 {
-"63
-[; ;main.c: 63:         DACval = (255.0/80.0)*frecuencia;
-[e = _DACval -> * / .255.0 .80.0 -> _frecuencia `d `f ]
-"64
-[; ;main.c: 64:         dutyVal = (65535.0/80.0) * frecuencia;
+"60
+[; ;main.c: 60:         dutyVal = (65535.0/80.0) * frecuencia;
 [e = _dutyVal -> * / .65535.0 .80.0 -> _frecuencia `d `f ]
-"65
-[; ;main.c: 65:         voltaje1 = (5.0/255.0)*DACval;
-[e = _voltaje1 -> * / .5.0 .255.0 -> _DACval `d `f ]
-"67
-[; ;main.c: 67:         PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyVal);
+"61
+[; ;main.c: 61:         DACval = (255.0/5.0)*3.3;
+[e = _DACval -> * / .255.0 .5.0 .3.3 `f ]
+"66
+[; ;main.c: 66:         PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyVal);
 [e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> _dutyVal `us ]
-"68
-[; ;main.c: 68:         PWM1_16BIT_LoadBufferRegisters();
+"67
+[; ;main.c: 67:         PWM1_16BIT_LoadBufferRegisters();
 [e ( _PWM1_16BIT_LoadBufferRegisters ..  ]
-"73
-[; ;main.c: 73:     }
+"69
+[; ;main.c: 69:         OPA1_SetResistorLadder(OPA1_R2byR1_is_1);
+[e ( _OPA1_SetResistorLadder (1 . `E13713 3 ]
+"70
+[; ;main.c: 70:         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+[e = _conv1 -> ( _ADC_ChannelSelectAndConvert (1 . `E14238 7 `us ]
+"72
+[; ;main.c: 72:         voltaje1 = (5.0/4095.0)*conv1;
+[e = _voltaje1 -> * / .5.0 .4095.0 -> -> _conv1 `ui `d `f ]
+"77
+[; ;main.c: 77:         printf("%d\n",conv1);
+[e ( _printf , (. :s 1C -> _conv1 `ui ]
+"116
+[; ;main.c: 116:     }
 }
-[e :U 1938 ]
-[e $U 1939  ]
 [e :U 1940 ]
-"74
-[; ;main.c: 74: }
-[e :UE 1937 ]
+[e $U 1941  ]
+[e :U 1942 ]
+"117
+[; ;main.c: 117: }
+[e :UE 1939 ]
 }
-"76
-[; ;main.c: 76: void interuptTimer(void){
+"119
+[; ;main.c: 119: void interuptTimer(void){
 [v _interuptTimer `(v ~T0 @X0 1 ef ]
 {
 [e :U _interuptTimer ]
 [f ]
-"77
-[; ;main.c: 77:     frecuencia = 0;
+"120
+[; ;main.c: 120:     frecuencia = 0;
 [e = _frecuencia -> -> 0 `i `f ]
-"78
-[; ;main.c: 78: }
-[e :UE 1941 ]
+"121
+[; ;main.c: 121: }
+[e :UE 1943 ]
 }
-"80
-[; ;main.c: 80: void interruptSensor(void){
+"123
+[; ;main.c: 123: void interruptSensor(void){
 [v _interruptSensor `(v ~T0 @X0 1 ef ]
 {
 [e :U _interruptSensor ]
 [f ]
-"81
-[; ;main.c: 81:     contador = TMR0_CounterGet();
+"124
+[; ;main.c: 124:     contador = TMR0_CounterGet();
 [e = _contador ( _TMR0_CounterGet ..  ]
-"82
-[; ;main.c: 82:     frecuencia = ( 1000.0 / contador);
+"125
+[; ;main.c: 125:     frecuencia = ( 1000.0 / contador);
 [e = _frecuencia -> / .1000.0 -> -> _contador `i `d `f ]
-"83
-[; ;main.c: 83:     TMR0_CounterSet(0);
+"126
+[; ;main.c: 126:     TMR0_CounterSet(0);
 [e ( _TMR0_CounterSet (1 -> -> 0 `i `uc ]
-"84
-[; ;main.c: 84: }
-[e :UE 1942 ]
+"127
+[; ;main.c: 127: }
+[e :UE 1944 ]
 }
-"86
-[; ;main.c: 86: void LKP(void){
+"129
+[; ;main.c: 129: void LKP(void){
 [v _LKP `(v ~T0 @X0 1 ef ]
 {
 [e :U _LKP ]
 [f ]
-"87
-[; ;main.c: 87:     do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-[e :U 1946 ]
+"130
+[; ;main.c: 130:     do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
+[e :U 1948 ]
 {
 [e = . . _LATAbits 0 5 -> ~ -> . . _LATAbits 0 5 `i `uc ]
 }
-[e :U 1945 ]
-"89
-[; ;main.c: 89:     floatToChar((contador), Char, 1);
-[e ( _floatToChar (3 , , -> _contador `f &U _Char -> 1 `i ]
-"91
-[; ;main.c: 91:     OLED_SetFont(FONT_2);
-[e ( _OLED_SetFont (1 &U _FONT_2 ]
-"92
-[; ;main.c: 92:     OLED_Write_Text(3, 0, "CONT: ");
-[e ( _OLED_Write_Text (3 , , -> -> 3 `i `s -> -> 0 `i `s :s 1C ]
-"93
-[; ;main.c: 93:     OLED_Write_Text(46, 0, Char);
-[e ( _OLED_Write_Text (3 , , -> -> 46 `i `s -> -> 0 `i `s &U _Char ]
-"96
-[; ;main.c: 96:     floatToChar((frecuencia), CharF, 1);
-[e ( _floatToChar (3 , , _frecuencia &U _CharF -> 1 `i ]
-"98
-[; ;main.c: 98:     OLED_Write_Text(3, 20, "FREQ: ");
-[e ( _OLED_Write_Text (3 , , -> -> 3 `i `s -> -> 20 `i `s :s 2C ]
-"99
-[; ;main.c: 99:     OLED_Write_Text(46, 20, CharF);
-[e ( _OLED_Write_Text (3 , , -> -> 46 `i `s -> -> 20 `i `s &U _CharF ]
-"101
-[; ;main.c: 101:     floatToChar((voltaje1), Char, 1);
-[e ( _floatToChar (3 , , _voltaje1 &U _Char -> 1 `i ]
-"103
-[; ;main.c: 103:     OLED_Write_Text(3, 40, "VOLT: ");
-[e ( _OLED_Write_Text (3 , , -> -> 3 `i `s -> -> 40 `i `s :s 3C ]
-"104
-[; ;main.c: 104:     OLED_Write_Text(46, 40, Char);
-[e ( _OLED_Write_Text (3 , , -> -> 46 `i `s -> -> 40 `i `s &U _Char ]
-"105
-[; ;main.c: 105:     OLED_Update();
-[e ( _OLED_Update ..  ]
-"107
-[; ;main.c: 107: }
-[e :UE 1943 ]
+[e :U 1947 ]
+"135
+[; ;main.c: 135:     send = 1;
+[e = _send -> -> 1 `i `uc ]
+"136
+[; ;main.c: 136: }
+[e :UE 1945 ]
 }
-[a 1C 67 79 78 84 58 32 0 ]
-[a 3C 86 79 76 84 58 32 0 ]
-[a 2C 70 82 69 81 58 32 0 ]
+[p f _printf 8388736 ]
+[a 1C 37 100 10 0 ]

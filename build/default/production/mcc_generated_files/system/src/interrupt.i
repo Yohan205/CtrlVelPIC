@@ -23674,7 +23674,7 @@ void CLOCK_Initialize(void);
 # 39 "mcc_generated_files/system/src/../../system/config_bits.h" 2
 # 42 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../system/pins.h" 1
-# 219 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 279 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -23692,11 +23692,11 @@ void PIN_MANAGER_IOC(void);
 
 
 void InSensor_ISR(void);
-# 245 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 305 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
-# 256 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 316 "mcc_generated_files/system/src/../../system/../system/pins.h"
 extern void (*InSensor_InterruptHandler)(void);
-# 267 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 327 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void InSensor_DefaultInterruptHandler(void);
 # 43 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../dac/dac1.h" 1
@@ -23899,8 +23899,940 @@ void PWM1_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void
 
 void PWM1_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
 # 46 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../uart/uart1.h" 1
+# 45 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+# 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdio.h" 1 3
+# 24 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdio.h" 3
+# 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 12 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef void * va_list[1];
 
 
+
+
+typedef void * __isoc_va_list[1];
+# 143 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 ssize_t;
+# 255 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdio.h" 2 3
+# 52 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 46 "mcc_generated_files/system/src/../../system/../uart/uart1.h" 2
+# 1 "mcc_generated_files/system/src/../../system/system.h" 1
+# 47 "mcc_generated_files/system/src/../../system/../uart/uart1.h" 2
+# 65 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+typedef union {
+    struct {
+        uint8_t perr : 1;
+        uint8_t ferr : 1;
+        uint8_t oerr : 1;
+        uint8_t reserved : 5;
+    };
+    size_t status;
+}uart1_status_t;
+# 82 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+void UART1_Initialize(void);
+# 91 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+void UART1_Deinitialize(void);
+
+
+
+
+
+
+
+void UART1_Enable(void);
+
+
+
+
+
+
+
+void UART1_Disable(void);
+# 116 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+void UART1_TransmitEnable(void);
+
+
+
+
+
+
+
+void UART1_TransmitDisable(void);
+# 133 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+void UART1_ReceiveEnable(void);
+
+
+
+
+
+
+
+void UART1_ReceiveDisable(void);
+
+
+
+
+
+
+
+void UART1_SendBreakControlEnable(void);
+
+
+
+
+
+
+
+void UART1_SendBreakControlDisable(void);
+
+
+
+
+
+
+
+void UART1_TransmitInterruptEnable(void);
+
+
+
+
+
+
+
+void UART1_TransmitInterruptDisable(void);
+
+
+
+
+
+
+
+void UART1_ReceiveInterruptEnable(void);
+
+
+
+
+
+
+
+void UART1_ReceiveInterruptDisable(void);
+
+
+
+
+
+
+
+void UART1_AutoBaudSet(_Bool enable);
+# 206 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+_Bool UART1_AutoBaudQuery(void);
+
+
+
+
+
+
+
+void UART1_AutoBaudDetectCompleteReset(void);
+
+
+
+
+
+
+
+_Bool UART1_IsAutoBaudDetectOverflow(void);
+
+
+
+
+
+
+
+void UART1_AutoBaudDetectOverflowReset(void);
+
+
+
+
+
+
+
+void UART1_GeneralInterruptEnable(void);
+
+
+
+
+
+
+
+void UART1_GeneralInterruptDisable(void);
+# 255 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+_Bool UART1_IsRxReady(void);
+# 264 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+_Bool UART1_IsTxReady(void);
+# 273 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+_Bool UART1_IsTxDone(void);
+# 283 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+size_t UART1_ErrorGet(void);
+# 293 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+uint8_t UART1_Read(void);
+# 303 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+void UART1_Write(uint8_t txData);
+
+
+
+
+
+
+
+void UART1_FramingErrorCallbackRegister(void (* callbackHandler)(void));
+
+
+
+
+
+
+
+void UART1_OverrunErrorCallbackRegister(void (* callbackHandler)(void));
+
+
+
+
+
+
+
+void UART1_ParityErrorCallbackRegister(void (* callbackHandler)(void));
+# 336 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+extern void (*UART1_TxInterruptHandler)(void);
+
+
+
+
+
+
+
+void UART1_TxCompleteCallbackRegister(void (* callbackHandler)(void));
+
+
+
+
+
+
+
+void UART1_TransmitISR(void);
+# 361 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+extern void (*UART1_RxInterruptHandler)(void);
+
+
+
+
+
+
+void UART1_RxCompleteCallbackRegister(void (* callbackHandler)(void));
+
+
+
+
+
+
+
+void UART1_ReceiveISR(void);
+# 385 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
+void (*UART1_GeneralInterruptHandler)(void);
+
+
+
+
+
+
+
+void UART1_GeneralInterruptCallbackRegister(void (* callbackHandler)(void));
+
+
+
+
+
+
+
+void UART1_GeneralISR(void);
+
+
+
+
+
+
+
+int getch(void);
+
+
+
+
+
+
+
+void putch(char txData);
+# 47 "mcc_generated_files/system/src/../../system/system.h" 2
+
+
+# 1 "mcc_generated_files/system/src/../../system/../adc/adc.h" 1
+# 40 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+# 1 "mcc_generated_files/system/src/../../system/../adc/./adc_types.h" 1
+# 62 "mcc_generated_files/system/src/../../system/../adc/./adc_types.h"
+typedef int16_t adc_result_t;
+
+
+
+
+
+
+typedef int32_t adc_accumulate_t;
+
+
+
+
+
+
+typedef int16_t adc_threshold_t;
+
+
+
+
+
+
+typedef uint8_t adc_repeat_count_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_CHANNEL_OPA1 = 0x39,
+    ADC_CHANNEL_DAC2 = 0x3a,
+    ADC_CHANNEL_VSS = 0x3b,
+    ADC_CHANNEL_TEMP = 0x3c,
+    ADC_CHANNEL_DAC1 = 0x3d,
+    ADC_CHANNEL_FVR_BUFFER1 = 0x3e,
+    ADC_CHANNEL_FVR_BUFFER2 = 0x3f,
+    ADC_CHANNEL_ANB4 = 0xc,
+    ADC_CHANNEL_ANC2 = 0x12
+} adc_channel_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_BASIC = 0x0,
+    ADC_SERIES_ACCUMULATE = 0x1,
+    ADC_SERIES_AVERAGE = 0x2,
+    ADC_BURST_AVERAGE = 0x3,
+    ADC_LOW_PASS_FILTER = 0x4
+} adc_computation_mode_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_FIRST_DERIVATIVE_OF_SINGLE_MEASUREMENT = 0x0,
+    ADC_ACTUAL_RESULT_VS_SETPOINT = 0x1,
+    ADC_ACTUAL_RESULT_VS_FILTERED_VALUE = 0x2,
+    ADC_FIRST_DERIVATIVE_OF_FILTERED_VALUE = 0x4,
+    ADC_FILTERED_VALUE_VS_SETPOINT = 0x5
+} adc_calculation_mode_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_NEVER_INTERRUPT = 0x0,
+    ADC_BELOW_LOWER_THRESHOLD = 0x1,
+    ADC_ABOVE_LOWER_THRESHOLD = 0x2,
+    ADC_INSIDE_LOWER_AND_UPPER_THRESHOLD = 0x3,
+    ADC_OUTSIDE_LOWER_AND_UPPER_THRESHOLD = 0x4,
+    ADC_BELOW_UPPER_THRESHOLD = 0x5,
+    ADC_ABOVE_UPPER_THRESHOLD = 0x6,
+    ADC_ALWAYS_INTERRUPT = 0x7
+} adc_threshold_mode_t ;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_TRIGGER_SOURCE_DISABLED = 0x0,
+    ADC_TRIGGER_SOURCE_ADACTPPS = 0x1,
+    ADC_TRIGGER_SOURCE_TMR0 = 0x2,
+    ADC_TRIGGER_SOURCE_TMR1 = 0x3,
+    ADC_TRIGGER_SOURCE_TMR2 = 0x4,
+    ADC_TRIGGER_SOURCE_TMR3 = 0x5,
+    ADC_TRIGGER_SOURCE_TMR4 = 0x6,
+    ADC_TRIGGER_SOURCE_SMT1_OVERFLOW = 0x7,
+    ADC_TRIGGER_SOURCE_CCP1 = 0x8,
+    ADC_TRIGGER_SOURCE_PWM1_OUT1 = 0x9,
+    ADC_TRIGGER_SOURCE_PWM1_OUT2 = 0xa,
+    ADC_TRIGGER_SOURCE_PWM2_OUT1 = 0xb,
+    ADC_TRIGGER_SOURCE_PWM2_OUT2 = 0xc,
+    ADC_TRIGGER_SOURCE_PWM3_OUT1 = 0xd,
+    ADC_TRIGGER_SOURCE_PWM3_OUT2 = 0xe,
+    ADC_TRIGGER_SOURCE_NCO1 = 0xf,
+    ADC_TRIGGER_SOURCE_CMP1 = 0x10,
+    ADC_TRIGGER_SOURCE_CMP2 = 0x11,
+    ADC_TRIGGER_SOURCE_LOGICAL_OR_OF_ALL_IOC_FLAGS = 0x12,
+    ADC_TRIGGER_SOURCE_CLC1 = 0x13,
+    ADC_TRIGGER_SOURCE_CLC2 = 0x14,
+    ADC_TRIGGER_SOURCE_CLC3 = 0x15,
+    ADC_TRIGGER_SOURCE_CLC4 = 0x16,
+    ADC_TRIGGER_SOURCE_ADERRH = 0x17,
+    ADC_TRIGGER_SOURCE_ADRESH = 0x18,
+    ADC_TRIGGER_SOURCE_ADPCH = 0x19
+} adc_trigger_source_t ;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_NOT_CONVERTING = 0x0,
+    ADC_1ST_PRECHARGE = 0x1,
+    ADC_1ST_ACQUISITION = 0x2,
+    ADC_1ST_CONVERSION = 0x3,
+    ADC_SUSPENDED_BETWEEN_1ST_AND_2ND_SAMPLE = 0x4,
+    ADC_2ND_PRECHARGE = 0x5,
+    ADC_2ND_ACQUISITION = 0x6,
+    ADC_2ND_CONVERSION = 0x7
+} adc_conversion_stage_t;
+# 41 "mcc_generated_files/system/src/../../system/../adc/adc.h" 2
+# 62 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+void ADC_Initialize(void);
+
+
+
+
+
+
+
+void ADC_Deinitialize(void);
+
+
+
+
+
+
+
+void ADC_Enable(void);
+
+
+
+
+
+
+
+void ADC_Disable(void);
+
+
+
+
+
+
+
+void ADC_ChannelSelect(adc_channel_t channel);
+# 104 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+void ADC_ConversionStart(void);
+# 114 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsConversionDone(void);
+
+
+
+
+
+
+
+void ADC_ConversionStop(void);
+# 131 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+adc_result_t ADC_ConversionResultGet(void);
+
+
+
+
+
+
+
+void ADC_ComputationModeSet(adc_computation_mode_t computationMode);
+
+
+
+
+
+
+
+void ADC_ThresholdModeSet(adc_threshold_mode_t thresholdMode);
+
+
+
+
+
+
+
+void ADC_SampleRepeatCountSet(adc_repeat_count_t repeatCount);
+
+
+
+
+
+
+
+void ADC_UpperThresholdSet(adc_threshold_t upperThreshold);
+
+
+
+
+
+
+
+void ADC_LowerThresholdSet(adc_threshold_t lowerThreshold);
+
+
+
+
+
+
+
+adc_accumulate_t ADC_AccumulatedResultGet(void);
+
+
+
+
+
+
+
+adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
+# 196 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+void ADC_StopOnInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_StopOnInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_SampleCapacitorDischarge(void);
+
+
+
+
+
+
+
+void ADC_AcquisitionTimeSet(uint16_t acquisitionValue);
+
+
+
+
+
+
+
+void ADC_PrechargeTimeSet(uint16_t prechargeTime);
+
+
+
+
+
+
+
+adc_repeat_count_t ADC_CurrentConversionCountGet(void);
+
+
+
+
+
+
+
+void ADC_AccumulatorClear(void);
+# 253 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsAccumulatorClearComplete(void);
+# 262 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_HasAccumulatorOverflowed(void);
+# 271 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+adc_result_t ADC_FilterValueGet(void);
+
+
+
+
+
+
+
+adc_result_t ADC_PreviousResultGet(void);
+
+
+
+
+
+
+
+void ADC_SetPointDefine(adc_threshold_t setPoint);
+
+
+
+
+
+
+
+adc_result_t ADC_ErrorCalculationGet(void);
+
+
+
+
+
+
+
+void ADC_DoubleSamplingEnable(void);
+
+
+
+
+
+
+
+void ADC_DoubleSamplingDisable(void);
+
+
+
+
+
+
+
+void ADC_ContinuousConversionEnable(void);
+
+
+
+
+
+
+
+void ADC_ContinuousConversionDisable(void);
+
+
+
+
+
+
+
+_Bool ADC_IsErrorGreaterThanUpperThreshold(void);
+# 344 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsErrorLesserThanLowerThreshold(void);
+
+
+
+
+
+
+
+adc_conversion_stage_t ADC_ConversionStageStatusGet(void);
+
+
+
+
+
+
+
+void ADC_AutoTriggerSourceSet(adc_trigger_source_t triggerSource);
+
+
+
+
+
+
+
+void ADC_ErrorCalculationModeSet(adc_calculation_mode_t errorCalculationMode);
+
+
+
+
+
+
+
+void ADC_CalculationRightShiftSet(uint8_t rightShiftValue);
+
+
+
+
+
+
+
+void ADC_ChargePumpEnable(void);
+
+
+
+
+
+
+
+void ADC_ChargePumpDisable(void);
+# 401 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsChargePumpReady(void);
+
+
+
+
+
+
+
+uint8_t ADC_ResolutionGet(void);
+# 418 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsBusy(void);
+
+
+
+
+
+
+
+void ADC_BusyStatusSet(_Bool status);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptFlagClear(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptFlagClear(void);
+# 451 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsConversionDoneInterruptFlagSet(void);
+# 460 "mcc_generated_files/system/src/../../system/../adc/adc.h"
+_Bool ADC_IsThresholdInterruptFlagSet(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneCallbackRegister(void (*callback)(void));
+
+
+
+
+
+
+
+void ADC_ThresholdCallbackRegister(void (*callback)(void));
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
+# 50 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../i2c_host/i2c1.h" 1
 # 49 "mcc_generated_files/system/src/../../system/../i2c_host/i2c1.h"
 # 1 "mcc_generated_files/system/src/../../system/../i2c_host/i2c_host_event_types.h" 1
@@ -24045,7 +24977,7 @@ void I2C1_RX_ISR(void);
 
 
 void I2C1_TX_ISR(void);
-# 49 "mcc_generated_files/system/src/../../system/system.h" 2
+# 51 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr0.h" 1
 # 40 "mcc_generated_files/system/src/../../system/../timer/tmr0.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr0_deprecated.h" 1
@@ -24112,7 +25044,112 @@ void TMR0_ISR(void);
 
 
 void TMR0_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 50 "mcc_generated_files/system/src/../../system/system.h" 2
+# 52 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 1
+# 40 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr1_deprecated.h" 1
+# 41 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 2
+# 199 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Initialize(void);
+
+
+
+
+
+
+
+void TMR1_Deinitialize(void);
+# 216 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Start(void);
+# 225 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Stop(void);
+# 234 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+uint16_t TMR1_CounterGet(void);
+# 243 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_CounterSet(uint16_t timerVal);
+# 252 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_PeriodSet(uint16_t periodVal);
+
+
+
+
+
+
+
+uint16_t TMR1_PeriodGet(void);
+# 269 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Reload(void);
+
+
+
+
+
+
+
+uint16_t TMR1_MaxCountGet(void);
+# 286 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_SinglePulseAcquisitionStart(void);
+# 295 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+uint8_t TMR1_GateStateGet(void);
+
+
+
+
+
+
+
+void TMR1_OverflowInterruptEnable(void);
+
+
+
+
+
+
+
+void TMR1_OverflowInterruptDisable(void);
+
+
+
+
+
+
+
+void TMR1_OverflowISR(void);
+# 328 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+_Bool TMR1_GateEventStatusGet(void);
+
+
+
+
+
+
+
+void TMR1_GateEventStatusClear(void);
+
+
+
+
+
+
+
+void TMR1_Tasks(void);
+
+
+
+
+
+
+
+ void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+
+
+
+
+
+
+
+ void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
+# 53 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr2.h" 1
 # 41 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr2_deprecated.h" 1
@@ -24391,7 +25428,7 @@ void TMR2_ISR(void);
 
 
 void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
-# 51 "mcc_generated_files/system/src/../../system/system.h" 2
+# 54 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 
@@ -24468,6 +25505,30 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     else if(PIE7bits.I2C1TXIE == 1 && PIR7bits.I2C1TXIF == 1)
     {
         I2C1_TX_ISR();
+    }
+    else if(PIE3bits.TMR1IE == 1 && PIR3bits.TMR1IF == 1)
+    {
+        TMR1_OverflowISR();
+    }
+    else if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+    {
+        ADC_ISR();
+    }
+    else if(PIE2bits.ADTIE == 1 && PIR2bits.ADTIF == 1)
+    {
+        ADC_ThresholdISR();
+    }
+    else if(PIE4bits.U1IE == 1 && PIR4bits.U1IF == 1)
+    {
+        UART1_GeneralInterruptHandler();
+    }
+    else if(PIE4bits.U1TXIE == 1 && PIR4bits.U1TXIF == 1)
+    {
+        UART1_TxInterruptHandler();
+    }
+    else if(PIE4bits.U1RXIE == 1 && PIR4bits.U1RXIF == 1)
+    {
+        UART1_RxInterruptHandler();
     }
     else
     {
