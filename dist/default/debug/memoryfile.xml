@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\ControlVel.X.debug.hex">
+  <executable name="dist/default/debug\CtrlVelPIC.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>65536</length>
-      <used>10938</used>
-      <free>54598</free>
+      <used>13579</used>
+      <free>51957</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>4096</length>
-      <used>1316</used>
-      <free>2780</free>
+      <used>1326</used>
+      <free>2770</free>
     </memory>
   </executable>
 </project>

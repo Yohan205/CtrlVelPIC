@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ControlVel.X
+PROJECTNAME=CtrlVelPIC
 
 # Active Configuration
 DEFAULTCONF=default

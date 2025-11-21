@@ -29,9 +29,13 @@ void LKP(void);
 void interruptSensor(void);
 void interruptTimer0(void);
 void interruptTmr1(void);
+void boton1 (void);
+volatile bool flagguardar = true;
 
 uint8_t contador=0;
 uint16_t conv1;
+float valorGuardado;
+
 //int RxMsg;    bool activeMsg=0;
 float voltaje1, dutyVal, DACval = 0;
 volatile float frecuencia;
@@ -51,13 +55,13 @@ int main(void)
     Timer0_OverflowCallbackRegister(interruptTimer0);
     
     InSensor_SetInterruptHandler(interruptSensor);
+     BtnSet_SetInterruptHandler(boton1);
     
     
     // Enable the Global Interrupts 
     INTERRUPT_GlobalInterruptEnable(); 
     
-    DACval = (255.0/5.0)*3.3;
-    DAC1_SetOutput((uint8_t) DACval);
+    
     while(1)
     {
         dutyVal = (65535.0/80.0) * frecuencia;  // Conversion a duty
@@ -68,6 +72,18 @@ int main(void)
         PWM1_16BIT_LoadBufferRegisters();
         //OPA1_SetResistorLadder(OPA1_R2byR1_is_1); //Ganancia (R2/R1 + 1) 
         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+        
+        
+        if (flagguardar) {
+        
+            DACval = (255.0 / 4095.0)*conv1;
+        }
+        else {
+       
+            DACval = valorGuardado;
+        }
+       // DACval = (255.0/5.0)*3.3;
+        DAC1_SetOutput((uint8_t) DACval);
         
         voltaje1 = (5.0/4095.0)*conv1;
         
@@ -112,6 +128,7 @@ int main(void)
     }    
 }
 
+
 void interruptTimer0(void){
     frecuencia = 0;  
 }
@@ -128,6 +145,15 @@ void LKP(void){
     //printf("%d\n",conv1);
     
 }
+
+void boton1 (void){
+    
+    flagguardar=~flagguardar;
+     
+    
+}
+   
+
 
 void interruptTmr1(void){
     printf("%d\n",conv1);
