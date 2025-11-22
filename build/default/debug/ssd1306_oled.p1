@@ -11,7 +11,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/system/../i2c_host/i2c1.h: 113: _Bool I2C1_Write(uint16_t address, uint8_t *data, size_t dataLength);
 [v _I2C1_Write `(a ~T0 @X0 0 ef3`us`*uc`ui ]
 [v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
+"20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
 [p i __delay ]
 "197 ./mcc_generated_files/system/../i2c_host/i2c1.h
@@ -19,22 +19,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _I2C1_IsBusy `(a ~T0 @X0 0 ef ]
 "1691 ssd1306_oled.c
 [; ;ssd1306_oled.c: 1691:     if (I2C1_ErrorGet() != I2C_ERROR_NONE)
-[c E14400 0 1 2 3 .. ]
-[n E14400 . I2C_ERROR_NONE I2C_ERROR_ADDR_NACK I2C_ERROR_DATA_NACK I2C_ERROR_BUS_COLLISION  ]
+[c E14401 0 1 2 3 .. ]
+[n E14401 . I2C_ERROR_NONE I2C_ERROR_ADDR_NACK I2C_ERROR_DATA_NACK I2C_ERROR_BUS_COLLISION  ]
 "186 ./mcc_generated_files/system/../i2c_host/i2c1.h
 [; ;./mcc_generated_files/system/../i2c_host/i2c1.h: 186: i2c_host_error_t I2C1_ErrorGet(void);
-[v _I2C1_ErrorGet `(E14400 ~T0 @X0 0 ef ]
+[v _I2C1_ErrorGet `(E14401 ~T0 @X0 0 ef ]
 "101 ./ssd1306_oled.h
 [; ;./ssd1306_oled.h: 101: void OLED_ClearDisplay(void);
 [v _OLED_ClearDisplay `(v ~T0 @X0 0 ef ]
 "99
 [; ;./ssd1306_oled.h: 99: void OLED_Update(void);
 [v _OLED_Update `(v ~T0 @X0 0 ef ]
-"29 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h
-[; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h: 29: void *memset (void *, int, size_t);
+"29 C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/string.h
+[; ;C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "54
-[; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h: 54: size_t strlen (const char *);
+[; ;C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "211 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 211: __asm("CLKRCON equ 039h");
@@ -4423,7 +4423,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1964 ]
 "1691
 [; ;ssd1306_oled.c: 1691:     if (I2C1_ErrorGet() != I2C_ERROR_NONE)
-[e $ ! != -> ( _I2C1_ErrorGet ..  `ui -> . `E14400 0 `ui 1965  ]
+[e $ ! != -> ( _I2C1_ErrorGet ..  `ui -> . `E14401 0 `ui 1965  ]
 "1692
 [; ;ssd1306_oled.c: 1692:         return 0;
 [e ) -> -> 0 `i `a ]
@@ -4437,10 +4437,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ssd1306_oled.c: 1694: }
 [e :UE 1959 ]
 }
-[v F15260 `(v ~T0 @X0 1 tf1`uc ]
+[v F15261 `(v ~T0 @X0 1 tf1`uc ]
 "1696
 [; ;ssd1306_oled.c: 1696: static __attribute__((inline)) void ssd1306_command(uint8_t command)
-[v _ssd1306_command `TF15260 ~T0 @X0 1 s ]
+[v _ssd1306_command `TF15261 ~T0 @X0 1 s ]
 "1697
 [; ;ssd1306_oled.c: 1697: {
 {
@@ -4451,8 +4451,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1697
 [; ;ssd1306_oled.c: 1697: {
 [f ]
-[v F15262 `uc ~T0 @X0 -> 2 `i s ]
-[i F15262
+[v F15263 `uc ~T0 @X0 -> 2 `i s ]
+[i F15263
 :U ..
 "1698
 [; ;ssd1306_oled.c: 1698:     uint8_t data[2] = {0x00, 0x00};
@@ -4461,7 +4461,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _data `uc ~T0 @X0 -> 2 `i a ]
-[e = _data F15262 ]
+[e = _data F15263 ]
 "1699
 [; ;ssd1306_oled.c: 1699:     data[1] = command;
 [e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux _command ]
@@ -4472,10 +4472,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ssd1306_oled.c: 1701: }
 [e :UE 1966 ]
 }
-[v F15265 `(v ~T0 @X0 1 tf1`uc ]
+[v F15266 `(v ~T0 @X0 1 tf1`uc ]
 "1703
 [; ;ssd1306_oled.c: 1703: static __attribute__((inline)) void ssd1306_data(uint8_t value)
-[v _ssd1306_data `TF15265 ~T0 @X0 1 s ]
+[v _ssd1306_data `TF15266 ~T0 @X0 1 s ]
 "1704
 [; ;ssd1306_oled.c: 1704: {
 {
@@ -4486,8 +4486,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1704
 [; ;ssd1306_oled.c: 1704: {
 [f ]
-[v F15267 `uc ~T0 @X0 -> 2 `i s ]
-[i F15267
+[v F15268 `uc ~T0 @X0 -> 2 `i s ]
+[i F15268
 :U ..
 "1705
 [; ;ssd1306_oled.c: 1705:     uint8_t data[2] = {0x40, 0x00};
@@ -4496,7 +4496,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _data `uc ~T0 @X0 -> 2 `i a ]
-[e = _data F15267 ]
+[e = _data F15268 ]
 "1706
 [; ;ssd1306_oled.c: 1706:     data[1] = value;
 [e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux _value ]

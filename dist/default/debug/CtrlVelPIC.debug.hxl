@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o
+ C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o
  -Odist/default/debug\CtrlVelPIC.debug.hex
  -logfile=dist/default/debug\CtrlVelPIC.debug.hxl
  -addressing=1
@@ -9,25 +9,25 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 5h		(C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o)
-  8h - Bh		(C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o)
-  18h - 2CAEh		(C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o)
-  F7A2h - FFFEh		(C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o)
-  300000h - 300008h		(C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o)
+  8h - Bh		(C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o)
+  18h - 2D0Ah		(C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o)
+  F7A2h - FFFEh		(C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o)
+  300000h - 300008h		(C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o)
  Unused ranges:
-  6h - 7h
+  4h - 7h
   Ch - 17h
-  2CAFh - F7A1h
+  2D0Bh - F7A1h
   FFFFh - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\fioer\AppData\Local\Temp\xcAscpg.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\fioer\AppData\Local\Temp\xcAsaog.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
-00000000 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 -- -- -- --
+00000000 | H1 H1 H1 H1 -- -- -- -- H1 H1 H1 H1 -- -- -- --
 00000010 | -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1
 00000020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -741,7 +741,13 @@
 00002C70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002C80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002C90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002CA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 --
+00002CA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002CB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002CC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002CD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002CE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002CF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002D00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- --
 ----------------------------------------------------------
 0000F7A0 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000F7B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

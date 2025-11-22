@@ -97,6 +97,7 @@ typedef enum
     ADC_CHANNEL_FVR_BUFFER1 =  0x3e, /**< FVR_Buffer1*/ 
     ADC_CHANNEL_FVR_BUFFER2 =  0x3f, /**< FVR_Buffer2*/ 
     ADC_CHANNEL_ANB4 =  0xc, /**< IO_RB4: RB4*/ 
+    ADC_CHANNEL_ANC3 =  0x13, /**< IO_RC3: RC3*/ 
     ADC_CHANNEL_ANC2 =  0x12 /**< IO_RC2: ANC2*/ 
 } adc_channel_t;
 

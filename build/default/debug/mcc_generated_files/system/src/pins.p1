@@ -79,6 +79,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9566
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 9566: extern volatile unsigned char RC0PPS __attribute__((address(0x211)));
 [v _RC0PPS `Vuc ~T0 @X0 0 e@529 ]
+"9766
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 9766: extern volatile unsigned char RC4PPS __attribute__((address(0x215)));
+[v _RC4PPS `Vuc ~T0 @X0 0 e@533 ]
 "12786
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 12786: extern volatile unsigned char I2C1SCLPPS __attribute__((address(0x271)));
 [v _I2C1SCLPPS `Vuc ~T0 @X0 0 e@625 ]
@@ -119,18 +122,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 33362: extern volatile unsigned char IOCCF __attribute__((address(0x417)));
 [v _IOCCF `Vuc ~T0 @X0 0 e@1047 ]
 [v F13706 `(v ~T0 @X0 0 tf ]
-"326 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 326: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
+"366 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 366: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _InSensor_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F13706 ]
-"348
-[; ;mcc_generated_files/system/src/../pins.h: 348: void InSensor_DefaultInterruptHandler(void);
+"388
+[; ;mcc_generated_files/system/src/../pins.h: 388: void InSensor_DefaultInterruptHandler(void);
 [v _InSensor_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 [v F13714 `(v ~T0 @X0 0 tf ]
-"366
-[; ;mcc_generated_files/system/src/../pins.h: 366: void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void));
+"406
+[; ;mcc_generated_files/system/src/../pins.h: 406: void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _BtnSet_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F13714 ]
-"388
-[; ;mcc_generated_files/system/src/../pins.h: 388: void BtnSet_DefaultInterruptHandler(void);
+"428
+[; ;mcc_generated_files/system/src/../pins.h: 428: void BtnSet_DefaultInterruptHandler(void);
 [v _BtnSet_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 "36439 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 36439:     struct {
@@ -154,8 +157,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32581
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 32581: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x407)));
 [v _IOCAFbits `VS1550 ~T0 @X0 0 e@1031 ]
-"316 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 316: void InSensor_ISR(void);
+"356 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 356: void InSensor_ISR(void);
 [v _InSensor_ISR `(v ~T0 @X0 0 ef ]
 "33368 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 33368:     struct {
@@ -168,8 +171,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33379
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 33379: extern volatile IOCCFbits_t IOCCFbits __attribute__((address(0x417)));
 [v _IOCCFbits `VS1582 ~T0 @X0 0 e@1047 ]
-"356 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 356: void BtnSet_ISR(void);
+"396 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 396: void BtnSet_ISR(void);
 [v _BtnSet_ISR `(v ~T0 @X0 0 ef ]
 [v F13729 `(v ~T0 @X0 0 tf ]
 [v F13731 `(v ~T0 @X0 0 tf ]
@@ -2256,8 +2259,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 59:     TRISB = 0x30;
 [e = _TRISB -> -> 48 `i `uc ]
 "60
-[; ;mcc_generated_files/system/src/pins.c: 60:     TRISC = 0x7A;
-[e = _TRISC -> -> 122 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 60:     TRISC = 0x6A;
+[e = _TRISC -> -> 106 `i `uc ]
 "65
 [; ;mcc_generated_files/system/src/pins.c: 65:     ANSELA = 0x7;
 [e = _ANSELA -> -> 7 `i `uc ]
@@ -2310,192 +2313,195 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 101:     RC0PPS = 0x0A;
 [e = _RC0PPS -> -> 10 `i `uc ]
 "102
-[; ;mcc_generated_files/system/src/pins.c: 102:     I2C1SCLPPS = 0xF;
-[e = _I2C1SCLPPS -> -> 15 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 102:     RC4PPS = 0x0B;
+[e = _RC4PPS -> -> 11 `i `uc ]
 "103
-[; ;mcc_generated_files/system/src/pins.c: 103:     RB7PPS = 0x21;
-[e = _RB7PPS -> -> 33 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 103:     I2C1SCLPPS = 0xF;
+[e = _I2C1SCLPPS -> -> 15 `i `uc ]
 "104
-[; ;mcc_generated_files/system/src/pins.c: 104:     I2C1SDAPPS = 0xE;
-[e = _I2C1SDAPPS -> -> 14 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 104:     RB7PPS = 0x21;
+[e = _RB7PPS -> -> 33 `i `uc ]
 "105
-[; ;mcc_generated_files/system/src/pins.c: 105:     RB6PPS = 0x22;
+[; ;mcc_generated_files/system/src/pins.c: 105:     I2C1SDAPPS = 0xE;
+[e = _I2C1SDAPPS -> -> 14 `i `uc ]
+"106
+[; ;mcc_generated_files/system/src/pins.c: 106:     RB6PPS = 0x22;
 [e = _RB6PPS -> -> 34 `i `uc ]
-"110
-[; ;mcc_generated_files/system/src/pins.c: 110:     IOCAP = 0x0;
-[e = _IOCAP -> -> 0 `i `uc ]
 "111
-[; ;mcc_generated_files/system/src/pins.c: 111:     IOCAN = 0x10;
-[e = _IOCAN -> -> 16 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 111:     IOCAP = 0x0;
+[e = _IOCAP -> -> 0 `i `uc ]
 "112
-[; ;mcc_generated_files/system/src/pins.c: 112:     IOCAF = 0x0;
-[e = _IOCAF -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 112:     IOCAN = 0x10;
+[e = _IOCAN -> -> 16 `i `uc ]
 "113
-[; ;mcc_generated_files/system/src/pins.c: 113:     IOCBP = 0x0;
-[e = _IOCBP -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 113:     IOCAF = 0x0;
+[e = _IOCAF -> -> 0 `i `uc ]
 "114
-[; ;mcc_generated_files/system/src/pins.c: 114:     IOCBN = 0x0;
-[e = _IOCBN -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 114:     IOCBP = 0x0;
+[e = _IOCBP -> -> 0 `i `uc ]
 "115
-[; ;mcc_generated_files/system/src/pins.c: 115:     IOCBF = 0x0;
-[e = _IOCBF -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 115:     IOCBN = 0x0;
+[e = _IOCBN -> -> 0 `i `uc ]
 "116
-[; ;mcc_generated_files/system/src/pins.c: 116:     IOCCP = 0x2;
-[e = _IOCCP -> -> 2 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 116:     IOCBF = 0x0;
+[e = _IOCBF -> -> 0 `i `uc ]
 "117
-[; ;mcc_generated_files/system/src/pins.c: 117:     IOCCN = 0x0;
-[e = _IOCCN -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 117:     IOCCP = 0x2;
+[e = _IOCCP -> -> 2 `i `uc ]
 "118
-[; ;mcc_generated_files/system/src/pins.c: 118:     IOCCF = 0x0;
+[; ;mcc_generated_files/system/src/pins.c: 118:     IOCCN = 0x0;
+[e = _IOCCN -> -> 0 `i `uc ]
+"119
+[; ;mcc_generated_files/system/src/pins.c: 119:     IOCCF = 0x0;
 [e = _IOCCF -> -> 0 `i `uc ]
-"120
-[; ;mcc_generated_files/system/src/pins.c: 120:     InSensor_SetInterruptHandler(InSensor_DefaultInterruptHandler);
-[e ( _InSensor_SetInterruptHandler (1 &U _InSensor_DefaultInterruptHandler ]
 "121
-[; ;mcc_generated_files/system/src/pins.c: 121:     BtnSet_SetInterruptHandler(BtnSet_DefaultInterruptHandler);
+[; ;mcc_generated_files/system/src/pins.c: 121:     InSensor_SetInterruptHandler(InSensor_DefaultInterruptHandler);
+[e ( _InSensor_SetInterruptHandler (1 &U _InSensor_DefaultInterruptHandler ]
+"122
+[; ;mcc_generated_files/system/src/pins.c: 122:     BtnSet_SetInterruptHandler(BtnSet_DefaultInterruptHandler);
 [e ( _BtnSet_SetInterruptHandler (1 &U _BtnSet_DefaultInterruptHandler ]
-"124
-[; ;mcc_generated_files/system/src/pins.c: 124:     PIE0bits.IOCIE = 1;
-[e = . . _PIE0bits 0 7 -> -> 1 `i `uc ]
 "125
-[; ;mcc_generated_files/system/src/pins.c: 125: }
+[; ;mcc_generated_files/system/src/pins.c: 125:     PIE0bits.IOCIE = 1;
+[e = . . _PIE0bits 0 7 -> -> 1 `i `uc ]
+"126
+[; ;mcc_generated_files/system/src/pins.c: 126: }
 [e :UE 1930 ]
 }
-"127
-[; ;mcc_generated_files/system/src/pins.c: 127: void PIN_MANAGER_IOC(void)
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
 "128
-[; ;mcc_generated_files/system/src/pins.c: 128: {
+[; ;mcc_generated_files/system/src/pins.c: 128: void PIN_MANAGER_IOC(void)
+[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
+"129
+[; ;mcc_generated_files/system/src/pins.c: 129: {
 {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-"130
-[; ;mcc_generated_files/system/src/pins.c: 130:     if(IOCAFbits.IOCAF4 == 1)
-[e $ ! == -> . . _IOCAFbits 0 4 `i -> 1 `i 1932  ]
 "131
-[; ;mcc_generated_files/system/src/pins.c: 131:     {
-{
+[; ;mcc_generated_files/system/src/pins.c: 131:     if(IOCAFbits.IOCAF4 == 1)
+[e $ ! == -> . . _IOCAFbits 0 4 `i -> 1 `i 1932  ]
 "132
-[; ;mcc_generated_files/system/src/pins.c: 132:         InSensor_ISR();
-[e ( _InSensor_ISR ..  ]
+[; ;mcc_generated_files/system/src/pins.c: 132:     {
+{
 "133
-[; ;mcc_generated_files/system/src/pins.c: 133:     }
+[; ;mcc_generated_files/system/src/pins.c: 133:         InSensor_ISR();
+[e ( _InSensor_ISR ..  ]
+"134
+[; ;mcc_generated_files/system/src/pins.c: 134:     }
 }
 [e :U 1932 ]
-"135
-[; ;mcc_generated_files/system/src/pins.c: 135:     if(IOCCFbits.IOCCF1 == 1)
-[e $ ! == -> . . _IOCCFbits 0 1 `i -> 1 `i 1933  ]
 "136
-[; ;mcc_generated_files/system/src/pins.c: 136:     {
-{
+[; ;mcc_generated_files/system/src/pins.c: 136:     if(IOCCFbits.IOCCF1 == 1)
+[e $ ! == -> . . _IOCCFbits 0 1 `i -> 1 `i 1933  ]
 "137
-[; ;mcc_generated_files/system/src/pins.c: 137:         BtnSet_ISR();
-[e ( _BtnSet_ISR ..  ]
+[; ;mcc_generated_files/system/src/pins.c: 137:     {
+{
 "138
-[; ;mcc_generated_files/system/src/pins.c: 138:     }
+[; ;mcc_generated_files/system/src/pins.c: 138:         BtnSet_ISR();
+[e ( _BtnSet_ISR ..  ]
+"139
+[; ;mcc_generated_files/system/src/pins.c: 139:     }
 }
 [e :U 1933 ]
-"139
-[; ;mcc_generated_files/system/src/pins.c: 139: }
+"140
+[; ;mcc_generated_files/system/src/pins.c: 140: }
 [e :UE 1931 ]
 }
-"144
-[; ;mcc_generated_files/system/src/pins.c: 144: void InSensor_ISR(void) {
+"145
+[; ;mcc_generated_files/system/src/pins.c: 145: void InSensor_ISR(void) {
 [v _InSensor_ISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _InSensor_ISR ]
 [f ]
-"149
-[; ;mcc_generated_files/system/src/pins.c: 149:     if(InSensor_InterruptHandler)
-[e $ ! != _InSensor_InterruptHandler -> -> 0 `i `*F13729 1935  ]
 "150
-[; ;mcc_generated_files/system/src/pins.c: 150:     {
-{
+[; ;mcc_generated_files/system/src/pins.c: 150:     if(InSensor_InterruptHandler)
+[e $ ! != _InSensor_InterruptHandler -> -> 0 `i `*F13729 1935  ]
 "151
-[; ;mcc_generated_files/system/src/pins.c: 151:         InSensor_InterruptHandler();
-[e ( *U _InSensor_InterruptHandler ..  ]
+[; ;mcc_generated_files/system/src/pins.c: 151:     {
+{
 "152
-[; ;mcc_generated_files/system/src/pins.c: 152:     }
+[; ;mcc_generated_files/system/src/pins.c: 152:         InSensor_InterruptHandler();
+[e ( *U _InSensor_InterruptHandler ..  ]
+"153
+[; ;mcc_generated_files/system/src/pins.c: 153:     }
 }
 [e :U 1935 ]
-"153
-[; ;mcc_generated_files/system/src/pins.c: 153:     IOCAFbits.IOCAF4 = 0;
-[e = . . _IOCAFbits 0 4 -> -> 0 `i `uc ]
 "154
-[; ;mcc_generated_files/system/src/pins.c: 154: }
+[; ;mcc_generated_files/system/src/pins.c: 154:     IOCAFbits.IOCAF4 = 0;
+[e = . . _IOCAFbits 0 4 -> -> 0 `i `uc ]
+"155
+[; ;mcc_generated_files/system/src/pins.c: 155: }
 [e :UE 1934 ]
 }
-"159
-[; ;mcc_generated_files/system/src/pins.c: 159: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void)){
+"160
+[; ;mcc_generated_files/system/src/pins.c: 160: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void)){
 [v _InSensor_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13731 ]
 {
 [e :U _InSensor_SetInterruptHandler ]
 [v _InterruptHandler `*F13733 ~T0 @X0 1 r1 ]
 [f ]
-"160
-[; ;mcc_generated_files/system/src/pins.c: 160:     InSensor_InterruptHandler = InterruptHandler;
-[e = _InSensor_InterruptHandler _InterruptHandler ]
 "161
-[; ;mcc_generated_files/system/src/pins.c: 161: }
+[; ;mcc_generated_files/system/src/pins.c: 161:     InSensor_InterruptHandler = InterruptHandler;
+[e = _InSensor_InterruptHandler _InterruptHandler ]
+"162
+[; ;mcc_generated_files/system/src/pins.c: 162: }
 [e :UE 1936 ]
 }
-"166
-[; ;mcc_generated_files/system/src/pins.c: 166: void InSensor_DefaultInterruptHandler(void){
+"167
+[; ;mcc_generated_files/system/src/pins.c: 167: void InSensor_DefaultInterruptHandler(void){
 [v _InSensor_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _InSensor_DefaultInterruptHandler ]
 [f ]
-"169
-[; ;mcc_generated_files/system/src/pins.c: 169: }
+"170
+[; ;mcc_generated_files/system/src/pins.c: 170: }
 [e :UE 1937 ]
 }
-"174
-[; ;mcc_generated_files/system/src/pins.c: 174: void BtnSet_ISR(void) {
+"175
+[; ;mcc_generated_files/system/src/pins.c: 175: void BtnSet_ISR(void) {
 [v _BtnSet_ISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _BtnSet_ISR ]
 [f ]
-"179
-[; ;mcc_generated_files/system/src/pins.c: 179:     if(BtnSet_InterruptHandler)
-[e $ ! != _BtnSet_InterruptHandler -> -> 0 `i `*F13737 1939  ]
 "180
-[; ;mcc_generated_files/system/src/pins.c: 180:     {
-{
+[; ;mcc_generated_files/system/src/pins.c: 180:     if(BtnSet_InterruptHandler)
+[e $ ! != _BtnSet_InterruptHandler -> -> 0 `i `*F13737 1939  ]
 "181
-[; ;mcc_generated_files/system/src/pins.c: 181:         BtnSet_InterruptHandler();
-[e ( *U _BtnSet_InterruptHandler ..  ]
+[; ;mcc_generated_files/system/src/pins.c: 181:     {
+{
 "182
-[; ;mcc_generated_files/system/src/pins.c: 182:     }
+[; ;mcc_generated_files/system/src/pins.c: 182:         BtnSet_InterruptHandler();
+[e ( *U _BtnSet_InterruptHandler ..  ]
+"183
+[; ;mcc_generated_files/system/src/pins.c: 183:     }
 }
 [e :U 1939 ]
-"183
-[; ;mcc_generated_files/system/src/pins.c: 183:     IOCCFbits.IOCCF1 = 0;
-[e = . . _IOCCFbits 0 1 -> -> 0 `i `uc ]
 "184
-[; ;mcc_generated_files/system/src/pins.c: 184: }
+[; ;mcc_generated_files/system/src/pins.c: 184:     IOCCFbits.IOCCF1 = 0;
+[e = . . _IOCCFbits 0 1 -> -> 0 `i `uc ]
+"185
+[; ;mcc_generated_files/system/src/pins.c: 185: }
 [e :UE 1938 ]
 }
-"189
-[; ;mcc_generated_files/system/src/pins.c: 189: void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void)){
+"190
+[; ;mcc_generated_files/system/src/pins.c: 190: void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void)){
 [v _BtnSet_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F13739 ]
 {
 [e :U _BtnSet_SetInterruptHandler ]
 [v _InterruptHandler `*F13741 ~T0 @X0 1 r1 ]
 [f ]
-"190
-[; ;mcc_generated_files/system/src/pins.c: 190:     BtnSet_InterruptHandler = InterruptHandler;
-[e = _BtnSet_InterruptHandler _InterruptHandler ]
 "191
-[; ;mcc_generated_files/system/src/pins.c: 191: }
+[; ;mcc_generated_files/system/src/pins.c: 191:     BtnSet_InterruptHandler = InterruptHandler;
+[e = _BtnSet_InterruptHandler _InterruptHandler ]
+"192
+[; ;mcc_generated_files/system/src/pins.c: 192: }
 [e :UE 1940 ]
 }
-"196
-[; ;mcc_generated_files/system/src/pins.c: 196: void BtnSet_DefaultInterruptHandler(void){
+"197
+[; ;mcc_generated_files/system/src/pins.c: 197: void BtnSet_DefaultInterruptHandler(void){
 [v _BtnSet_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _BtnSet_DefaultInterruptHandler ]
 [f ]
-"199
-[; ;mcc_generated_files/system/src/pins.c: 199: }
+"200
+[; ;mcc_generated_files/system/src/pins.c: 200: }
 [e :UE 1941 ]
 }

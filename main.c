@@ -34,10 +34,11 @@ volatile bool flagguardar = true;
 
 uint8_t contador=0;
 uint16_t conv1;
+uint16_t conv2;
 float valorGuardado;
 
 //int RxMsg;    bool activeMsg=0;
-float voltaje1, dutyVal, DACval = 0;
+float voltaje1, dutyVal,dutyval1, DACval = 0;
 volatile float frecuencia;
 char str[8], CharF[8];
 
@@ -70,8 +71,19 @@ int main(void)
         
         PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyVal);
         PWM1_16BIT_LoadBufferRegisters();
+        
         //OPA1_SetResistorLadder(OPA1_R2byR1_is_1); //Ganancia (R2/R1 + 1) 
         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+        
+        
+        conv2 = (uint16_t)ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANC3);
+        
+        dutyval1 =(65535.0/4095.0)*conv2;
+        
+        PWM1_16BIT_SetSlice1Output2DutyCycleRegister((uint16_t) dutyval1);
+        PWM1_16BIT_LoadBufferRegisters();
+        
+        
         
         
         if (flagguardar) {
