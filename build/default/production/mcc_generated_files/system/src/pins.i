@@ -23629,7 +23629,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
 # 39 "mcc_generated_files/system/src/../pins.h" 2
-# 279 "mcc_generated_files/system/src/../pins.h"
+# 340 "mcc_generated_files/system/src/../pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -23647,15 +23647,30 @@ void PIN_MANAGER_IOC(void);
 
 
 void InSensor_ISR(void);
-# 305 "mcc_generated_files/system/src/../pins.h"
+# 366 "mcc_generated_files/system/src/../pins.h"
 void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
-# 316 "mcc_generated_files/system/src/../pins.h"
+# 377 "mcc_generated_files/system/src/../pins.h"
 extern void (*InSensor_InterruptHandler)(void);
-# 327 "mcc_generated_files/system/src/../pins.h"
+# 388 "mcc_generated_files/system/src/../pins.h"
 void InSensor_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void BtnSet_ISR(void);
+# 406 "mcc_generated_files/system/src/../pins.h"
+void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void));
+# 417 "mcc_generated_files/system/src/../pins.h"
+extern void (*BtnSet_InterruptHandler)(void);
+# 428 "mcc_generated_files/system/src/../pins.h"
+void BtnSet_DefaultInterruptHandler(void);
 # 36 "mcc_generated_files/system/src/pins.c" 2
 
 void (*InSensor_InterruptHandler)(void);
+void (*BtnSet_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -23677,21 +23692,21 @@ void PIN_MANAGER_Initialize(void)
 
     TRISA = 0x1B;
     TRISB = 0x30;
-    TRISC = 0x7A;
+    TRISC = 0x6A;
 
 
 
 
     ANSELA = 0x7;
     ANSELB = 0x30;
-    ANSELC = 0x3F;
+    ANSELC = 0x3D;
 
 
 
 
     WPUA = 0x10;
     WPUB = 0x0;
-    WPUC = 0x0;
+    WPUC = 0x2;
 
 
 
@@ -23719,6 +23734,7 @@ void PIN_MANAGER_Initialize(void)
     U1RXPPS = 0x16;
     RC7PPS = 0x10;
     RC0PPS = 0x0A;
+    RC4PPS = 0x0B;
     I2C1SCLPPS = 0xF;
     RB7PPS = 0x21;
     I2C1SDAPPS = 0xE;
@@ -23733,11 +23749,12 @@ void PIN_MANAGER_Initialize(void)
     IOCBP = 0x0;
     IOCBN = 0x0;
     IOCBF = 0x0;
-    IOCCP = 0x0;
+    IOCCP = 0x2;
     IOCCN = 0x0;
     IOCCF = 0x0;
 
     InSensor_SetInterruptHandler(InSensor_DefaultInterruptHandler);
+    BtnSet_SetInterruptHandler(BtnSet_DefaultInterruptHandler);
 
 
     PIE0bits.IOCIE = 1;
@@ -23749,6 +23766,11 @@ void PIN_MANAGER_IOC(void)
     if(IOCAFbits.IOCAF4 == 1)
     {
         InSensor_ISR();
+    }
+
+    if(IOCCFbits.IOCCF1 == 1)
+    {
+        BtnSet_ISR();
     }
 }
 
@@ -23778,6 +23800,36 @@ void InSensor_SetInterruptHandler(void (* InterruptHandler)(void)){
 
 
 void InSensor_DefaultInterruptHandler(void){
+
+
+}
+
+
+
+
+void BtnSet_ISR(void) {
+
+
+
+
+    if(BtnSet_InterruptHandler)
+    {
+        BtnSet_InterruptHandler();
+    }
+    IOCCFbits.IOCCF1 = 0;
+}
+
+
+
+
+void BtnSet_SetInterruptHandler(void (* InterruptHandler)(void)){
+    BtnSet_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void BtnSet_DefaultInterruptHandler(void){
 
 
 }

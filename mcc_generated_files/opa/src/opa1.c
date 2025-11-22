@@ -43,14 +43,14 @@
 
 void OPA1_Initialize(void)
 {
-    //GSEL R1 = 15R and R2 = 1R, R2/R1 = 0.07; RESON Enabled; NSS Vss; 
-    OPA1CON1 = 0xF;
+    //GSEL R1 = 15R and R2 = 1R, R2/R1 = 0.07; RESON Disabled; NSS OPA1IN0-; 
+    OPA1CON1 = 0x0;
 
-    //NCH GSEL; PCH OPA1IN+; 
-    OPA1CON2 = 0x12;
+    //NCH No Connection; PCH OPA1IN+; 
+    OPA1CON2 = 0x2;
 
-    //FMS OPA1OUT; PSS OPA1IN0+; 
-    OPA1CON3 = 0x80;
+    //FMS No Connection; PSS OPA1IN0+; 
+    OPA1CON3 = 0x0;
 
     //OREN Software Override; HWCH User Defined Feedback; ORPOL Non Inverted; HWCL User Defined Feedback; 
     OPA1HWC = 0x0;
@@ -58,8 +58,8 @@ void OPA1_Initialize(void)
     //ORS LFINTOSC; 
     OPA1ORS = 0x0;
 
-    //EN Enabled; CPON Disabled; UG OPAIN- pin; SOC User Defined Feedback; 
-    OPA1CON0 = 0x80;
+    //EN Enabled; CPON Disabled; UG OPA Output; SOC User Defined Feedback; 
+    OPA1CON0 = 0x88;
 }
 
 inline void OPA1_EnableChargePump(void)

@@ -50,6 +50,7 @@ void SYSTEM_Initialize(void)
     DAC1_Initialize();
     OPA1_Initialize();
     PWM1_16BIT_Initialize();
+    PWM2_16BIT_Initialize();
     UART1_Initialize();
     INTERRUPT_Initialize();
 }

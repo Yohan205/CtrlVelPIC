@@ -1,7 +1,7 @@
 
 18F16Q41 Memory Summary:
-    Program space        used  33DCh ( 13276) of 10000h bytes   ( 20.3%)
-    Data space           used   527h (  1319) of  1000h bytes   ( 32.2%)
+    Program space        used  2A5Bh ( 10843) of 10000h bytes   ( 16.5%)
+    Data space           used   531h (  1329) of  1000h bytes   ( 32.4%)
     Configuration bits   used     4h (     4) of     9h words   ( 44.4%)
     EEPROM space         used     0h (     0) of   200h bytes   (  0.0%)
     ID Location space    used     0h (     0) of    40h bytes   (  0.0%)

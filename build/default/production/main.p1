@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F14201 `(v ~T0 @X0 0 tf ]
+[v F14209 `(v ~T0 @X0 0 tf ]
 [p mainexit ]
 "61 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 61: void SYSTEM_Initialize(void);
@@ -7,30 +7,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "96 ./ssd1306_oled.h
 [; ;./ssd1306_oled.h: 96: void OLED_Init(void);
 [v _OLED_Init `(v ~T0 @X0 0 ef ]
-[v F14588 `(v ~T0 @X0 0 tf ]
+[v F14597 `(v ~T0 @X0 0 tf ]
 "522 ./mcc_generated_files/system/../timer/tmr2.h
 [; ;./mcc_generated_files/system/../timer/tmr2.h: 522: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
-[v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14588 ]
+[v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14597 ]
 "28 main.c
 [; ;main.c: 28: void LKP(void);
 [v _LKP `(v ~T0 @X0 0 ef ]
-[v F14515 `(v ~T0 @X0 0 tf ]
+[v F14524 `(v ~T0 @X0 0 tf ]
 "352 ./mcc_generated_files/system/../timer/tmr1.h
 [; ;./mcc_generated_files/system/../timer/tmr1.h: 352:  void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR1_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F14515 ]
+[v _TMR1_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F14524 ]
 "31 main.c
 [; ;main.c: 31: void interruptTmr1(void);
 [v _interruptTmr1 `(v ~T0 @X0 0 ef ]
-[v F14491 `(v ~T0 @X0 0 tf ]
+[v F14500 `(v ~T0 @X0 0 tf ]
 "264 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 264: void TMR0_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14491 ]
+[v _TMR0_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F14500 ]
 "30 main.c
 [; ;main.c: 30: void interruptTimer0(void);
 [v _interruptTimer0 `(v ~T0 @X0 0 ef ]
 [v F13707 `(v ~T0 @X0 0 tf ]
-"305 ./mcc_generated_files/system/../system/pins.h
-[; ;./mcc_generated_files/system/../system/pins.h: 305: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
+"366 ./mcc_generated_files/system/../system/pins.h
+[; ;./mcc_generated_files/system/../system/pins.h: 366: void InSensor_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _InSensor_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F13707 ]
 "29 main.c
 [; ;main.c: 29: void interruptSensor(void);
@@ -50,25 +50,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38195
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 38195: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
 [v _INTCON0bits `VS1810 ~T0 @X0 0 e@1238 ]
-"62 ./mcc_generated_files/system/../dac/dac1.h
-[; ;./mcc_generated_files/system/../dac/dac1.h: 62: void DAC1_SetOutput(uint8_t inputData);
-[v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
+"68 main.c
+[; ;main.c: 68:         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+[c E14250 57 58 59 60 61 62 63 12 19 18 .. ]
+[n E14250 . ADC_CHANNEL_OPA1 ADC_CHANNEL_DAC2 ADC_CHANNEL_VSS ADC_CHANNEL_TEMP ADC_CHANNEL_DAC1 ADC_CHANNEL_FVR_BUFFER1 ADC_CHANNEL_FVR_BUFFER2 ADC_CHANNEL_ANB4 ADC_CHANNEL_ANC3 ADC_CHANNEL_ANC2  ]
+"193 ./mcc_generated_files/system/../adc/adc.h
+[; ;./mcc_generated_files/system/../adc/adc.h: 193: adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
+[v _ADC_ChannelSelectAndConvert `(s ~T0 @X0 0 ef1`E14250 ]
 "83 ./mcc_generated_files/system/../pwm/pwm1_16bit.h
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 83: void PWM1_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
 [v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
 "101
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 101: void PWM1_16BIT_LoadBufferRegisters(void);
 [v _PWM1_16BIT_LoadBufferRegisters `(v ~T0 @X0 0 ef ]
-"70 main.c
-[; ;main.c: 70:         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
-[c E14242 57 58 59 60 61 62 63 12 18 .. ]
-[n E14242 . ADC_CHANNEL_OPA1 ADC_CHANNEL_DAC2 ADC_CHANNEL_VSS ADC_CHANNEL_TEMP ADC_CHANNEL_DAC1 ADC_CHANNEL_FVR_BUFFER1 ADC_CHANNEL_FVR_BUFFER2 ADC_CHANNEL_ANB4 ADC_CHANNEL_ANC2  ]
-"187 ./mcc_generated_files/system/../adc/adc.h
-[; ;./mcc_generated_files/system/../adc/adc.h: 187: adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
-[v _ADC_ChannelSelectAndConvert `(s ~T0 @X0 0 ef1`E14242 ]
-"26 ./Utils.h
-[; ;./Utils.h: 26: void floatToStr(float n, char *res, uint8_t precision, _Bool endLine);
-[v _floatToStr `(v ~T0 @X0 0 ef4`f`*uc`uc`a ]
+"62 ./mcc_generated_files/system/../dac/dac1.h
+[; ;./mcc_generated_files/system/../dac/dac1.h: 62: void DAC1_SetOutput(uint8_t inputData);
+[v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
 "197 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 197: uint8_t TMR0_CounterGet(void);
 [v _TMR0_CounterGet `(uc ~T0 @X0 0 ef ]
@@ -2131,7 +2128,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 04FFh ;# ">
 "385 ./mcc_generated_files/system/../uart/uart1.h
 [; ;./mcc_generated_files/system/../uart/uart1.h: 385: void (*UART1_GeneralInterruptHandler)(void);
-[v _UART1_GeneralInterruptHandler `*F14201 ~T0 @X0 1 e ]
+[v _UART1_GeneralInterruptHandler `*F14209 ~T0 @X0 1 e ]
 "23 ./Utils.h
 [; ;./Utils.h: 23: const uint16_t powers10[] = {10000, 1000, 100, 10, 1};
 [v _powers10 `Cus ~T0 @X0 -> 5 `i e ]
@@ -2145,160 +2142,180 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "33 main.c
-[; ;main.c: 33: uint8_t contador=0;
+[; ;main.c: 33: volatile _Bool flagguardar = 1;
+[v _flagguardar `Va ~T0 @X0 1 e ]
+[i _flagguardar
+-> -> 1 `i `a
+]
+"35
+[; ;main.c: 35: uint8_t contador=0;
 [v _contador `uc ~T0 @X0 1 e ]
 [i _contador
 -> -> 0 `i `uc
 ]
-"34
-[; ;main.c: 34: uint16_t conv1;
-[v _conv1 `us ~T0 @X0 1 e ]
 "36
-[; ;main.c: 36: float voltaje1, dutyVal, DACval = 0;
+[; ;main.c: 36: uint16_t conv1;
+[v _conv1 `us ~T0 @X0 1 e ]
+"37
+[; ;main.c: 37: uint16_t conv2;
+[v _conv2 `us ~T0 @X0 1 e ]
+"38
+[; ;main.c: 38: float valorGuardado;
+[v _valorGuardado `f ~T0 @X0 1 e ]
+"41
+[; ;main.c: 41: float voltaje1, dutyVal,dutyval1, DACval = 0;
 [v _voltaje1 `f ~T0 @X0 1 e ]
 [v _dutyVal `f ~T0 @X0 1 e ]
+[v _dutyval1 `f ~T0 @X0 1 e ]
 [v _DACval `f ~T0 @X0 1 e ]
 [i _DACval
 -> -> 0 `i `f
 ]
-"37
-[; ;main.c: 37: volatile float frecuencia;
+"42
+[; ;main.c: 42: volatile float frecuencia;
 [v _frecuencia `Vf ~T0 @X0 1 e ]
-"38
-[; ;main.c: 38: char str[8], CharF[8];
+"43
+[; ;main.c: 43: char str[8], CharF[8];
 [v _str `uc ~T0 @X0 -> 8 `i e ]
 [v _CharF `uc ~T0 @X0 -> 8 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"44
-[; ;main.c: 44: int main(void)
+"49
+[; ;main.c: 49: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"45
-[; ;main.c: 45: {
+"50
+[; ;main.c: 50: {
 {
 [e :U _main ]
 [f ]
-"46
-[; ;main.c: 46:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"47
-[; ;main.c: 47:     OLED_Init();
-[e ( _OLED_Init ..  ]
-"49
-[; ;main.c: 49:     TMR2_PeriodMatchCallbackRegister(LKP);
-[e ( _TMR2_PeriodMatchCallbackRegister (1 &U _LKP ]
-"50
-[; ;main.c: 50:     TMR1_OverflowCallbackRegister(interruptTmr1);
-[e ( _TMR1_OverflowCallbackRegister (1 &U _interruptTmr1 ]
 "51
-[; ;main.c: 51:     TMR0_PeriodMatchCallbackRegister(interruptTimer0);
+[; ;main.c: 51:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"52
+[; ;main.c: 52:     OLED_Init();
+[e ( _OLED_Init ..  ]
+"54
+[; ;main.c: 54:     TMR2_PeriodMatchCallbackRegister(LKP);
+[e ( _TMR2_PeriodMatchCallbackRegister (1 &U _LKP ]
+"55
+[; ;main.c: 55:     TMR1_OverflowCallbackRegister(interruptTmr1);
+[e ( _TMR1_OverflowCallbackRegister (1 &U _interruptTmr1 ]
+"56
+[; ;main.c: 56:     TMR0_PeriodMatchCallbackRegister(interruptTimer0);
 [e ( _TMR0_PeriodMatchCallbackRegister (1 &U _interruptTimer0 ]
-"53
-[; ;main.c: 53:     InSensor_SetInterruptHandler(interruptSensor);
+"58
+[; ;main.c: 58:     InSensor_SetInterruptHandler(interruptSensor);
 [e ( _InSensor_SetInterruptHandler (1 &U _interruptSensor ]
-"57
-[; ;main.c: 57:     (INTCON0bits.GIE = 1);
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"59
-[; ;main.c: 59:     DACval = (255.0/5.0)*3.3;
-[e = _DACval -> * / .255.0 .5.0 .3.3 `f ]
-"60
-[; ;main.c: 60:     DAC1_SetOutput((uint8_t) DACval);
-[e ( _DAC1_SetOutput (1 -> _DACval `uc ]
-"61
-[; ;main.c: 61:     while(1)
-[e :U 1941 ]
-"62
-[; ;main.c: 62:     {
-{
 "63
-[; ;main.c: 63:         dutyVal = (65535.0/80.0) * frecuencia;
-[e = _dutyVal -> * / .65535.0 .80.0 -> _frecuencia `d `f ]
+[; ;main.c: 63:     (INTCON0bits.GIE = 1);
+[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
+"66
+[; ;main.c: 66:     while(1)
+[e :U 1941 ]
 "67
-[; ;main.c: 67:         PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyVal);
-[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> _dutyVal `us ]
+[; ;main.c: 67:     {
+{
 "68
-[; ;main.c: 68:         PWM1_16BIT_LoadBufferRegisters();
+[; ;main.c: 68:         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+[e = _conv1 -> ( _ADC_ChannelSelectAndConvert (1 . `E14250 7 `us ]
+"74
+[; ;main.c: 74:         dutyVal = (65535.0/80.0) * frecuencia;
+[e = _dutyVal -> * / .65535.0 .80.0 -> _frecuencia `d `f ]
+"77
+[; ;main.c: 77:         PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyVal);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> _dutyVal `us ]
+"79
+[; ;main.c: 79:         PWM1_16BIT_LoadBufferRegisters();
 [e ( _PWM1_16BIT_LoadBufferRegisters ..  ]
-"70
-[; ;main.c: 70:         conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
-[e = _conv1 -> ( _ADC_ChannelSelectAndConvert (1 . `E14242 7 `us ]
-"72
-[; ;main.c: 72:         voltaje1 = (5.0/4095.0)*conv1;
-[e = _voltaje1 -> * / .5.0 .4095.0 -> -> _conv1 `ui `d `f ]
-"75
-[; ;main.c: 75:         floatToStr(voltaje1, str, 2, 1);
-[e ( _floatToStr (4 , , , _voltaje1 &U _str -> -> 2 `i `uc -> -> 1 `i `a ]
-"112
-[; ;main.c: 112:     }
+"90
+[; ;main.c: 90:         DACval = (255.0/5.0)*3.3;
+[e = _DACval -> * / .255.0 .5.0 .3.3 `f ]
+"91
+[; ;main.c: 91:         DAC1_SetOutput((uint8_t) DACval);
+[e ( _DAC1_SetOutput (1 -> _DACval `uc ]
+"133
+[; ;main.c: 133:     }
 }
 [e :U 1940 ]
 [e $U 1941  ]
 [e :U 1942 ]
-"113
-[; ;main.c: 113: }
+"134
+[; ;main.c: 134: }
 [e :UE 1939 ]
 }
-"115
-[; ;main.c: 115: void interruptTimer0(void){
+"137
+[; ;main.c: 137: void interruptTimer0(void){
 [v _interruptTimer0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _interruptTimer0 ]
 [f ]
-"116
-[; ;main.c: 116:     frecuencia = 0;
+"138
+[; ;main.c: 138:     frecuencia = 0;
 [e = _frecuencia -> -> 0 `i `f ]
-"117
-[; ;main.c: 117: }
+"139
+[; ;main.c: 139: }
 [e :UE 1943 ]
 }
-"119
-[; ;main.c: 119: void interruptSensor(void){
+"141
+[; ;main.c: 141: void interruptSensor(void){
 [v _interruptSensor `(v ~T0 @X0 1 ef ]
 {
 [e :U _interruptSensor ]
 [f ]
-"120
-[; ;main.c: 120:     contador = TMR0_CounterGet();
+"142
+[; ;main.c: 142:     contador = TMR0_CounterGet();
 [e = _contador ( _TMR0_CounterGet ..  ]
-"121
-[; ;main.c: 121:     frecuencia = ( 1000.0 / contador);
+"143
+[; ;main.c: 143:     frecuencia = ( 1000.0 / contador);
 [e = _frecuencia -> / .1000.0 -> -> _contador `i `d `f ]
-"122
-[; ;main.c: 122:     TMR0_CounterSet(0);
+"144
+[; ;main.c: 144:     TMR0_CounterSet(0);
 [e ( _TMR0_CounterSet (1 -> -> 0 `i `uc ]
-"123
-[; ;main.c: 123: }
+"145
+[; ;main.c: 145: }
 [e :UE 1944 ]
 }
-"125
-[; ;main.c: 125: void LKP(void){
+"147
+[; ;main.c: 147: void LKP(void){
 [v _LKP `(v ~T0 @X0 1 ef ]
 {
 [e :U _LKP ]
 [f ]
-"126
-[; ;main.c: 126:     do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
+"148
+[; ;main.c: 148:     do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
 [e :U 1948 ]
 {
 [e = . . _LATAbits 0 5 -> ~ -> . . _LATAbits 0 5 `i `uc ]
 }
 [e :U 1947 ]
-"130
-[; ;main.c: 130: }
+"149
+[; ;main.c: 149: }
 [e :UE 1945 ]
 }
-"132
-[; ;main.c: 132: void interruptTmr1(void){
+"151
+[; ;main.c: 151: void boton1 (void){
+[v _boton1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _boton1 ]
+[f ]
+"152
+[; ;main.c: 152:     flagguardar=~flagguardar;
+[e = _flagguardar -> ~ -> _flagguardar `i `a ]
+"153
+[; ;main.c: 153: }
+[e :UE 1949 ]
+}
+"157
+[; ;main.c: 157: void interruptTmr1(void){
 [v _interruptTmr1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _interruptTmr1 ]
 [f ]
-"133
-[; ;main.c: 133:     printf("%d\n",conv1);
+"158
+[; ;main.c: 158:     printf("%d\n",conv1);
 [e ( _printf , (. :s 1C -> _conv1 `ui ]
-"138
-[; ;main.c: 138: }
-[e :UE 1949 ]
+"163
+[; ;main.c: 163: }
+[e :UE 1950 ]
 }
 [p f _printf 8388736 ]
 [a 1C 37 100 10 0 ]

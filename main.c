@@ -30,16 +30,14 @@ void interruptSensor(void);
 void interruptTimer0(void);
 void interruptTmr1(void);
 void boton1 (void);
-volatile bool flagguardar = true;
 
 uint8_t contador=0;
-uint16_t conv1;
-uint16_t conv2;
-float valorGuardado;
+uint16_t conv1, conv2;
 
 //int RxMsg;    bool activeMsg=0;
-float voltaje1, dutyVal,dutyval1, DACval = 0;
+float voltaje1, dutyValue, dutyValue1, DACval = 0, valorGuardado;
 volatile float frecuencia;
+volatile bool flagguardar = true;
 char str[8], CharF[8];
 
 /*
@@ -51,12 +49,11 @@ int main(void)
     SYSTEM_Initialize();
     OLED_Init();
     
-    Timer2_OverflowCallbackRegister(LKP);
-    Timer1_OverflowCallbackRegister(interruptTmr1);
     Timer0_OverflowCallbackRegister(interruptTimer0);
+    Timer1_OverflowCallbackRegister(LKP);
     
     InSensor_SetInterruptHandler(interruptSensor);
-     BtnSet_SetInterruptHandler(boton1);
+    BtnSet_SetInterruptHandler(boton1);
     
     
     // Enable the Global Interrupts 
@@ -65,42 +62,34 @@ int main(void)
     
     while(1)
     {
-        dutyVal = (65535.0/80.0) * frecuencia;  // Conversion a duty
-        
-        //voltaje1 = (5.0/255.0)*DACval;
-        
-        PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyVal);
-        PWM1_16BIT_LoadBufferRegisters();
+        conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);   //Lee potenciometro, valor de ref
+        conv2 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANC3);
         
         //OPA1_SetResistorLadder(OPA1_R2byR1_is_1); //Ganancia (R2/R1 + 1) 
-        conv1 = (uint16_t) ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANB4);
+        dutyValue = (65535.0/80.0) * frecuencia;  // Conversion a duty de los RPS
+        dutyValue1 =(65535.0/4095.0)*conv2;
         
-        
-        conv2 = (uint16_t)ADC_ChannelSelectAndConvert(ADC_CHANNEL_ANC3);
-        
-        dutyval1 =(65535.0/4095.0)*conv2;
-        
-        PWM1_16BIT_SetSlice1Output2DutyCycleRegister((uint16_t) dutyval1);
+        PWM1_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyValue);
         PWM1_16BIT_LoadBufferRegisters();
+        PWM2_16BIT_SetSlice1Output1DutyCycleRegister((uint16_t) dutyValue1);
+        PWM2_16BIT_LoadBufferRegisters();
         
-        
-        
+ 
         
         if (flagguardar) {
-        
+            valorGuardado = DACval;
             DACval = (255.0 / 4095.0)*conv1;
         }
         else {
-       
             DACval = valorGuardado;
         }
-       // DACval = (255.0/5.0)*3.3;
+        //DACval = (255.0/5.0)*3.3;
         DAC1_SetOutput((uint8_t) DACval);
         
-        voltaje1 = (5.0/4095.0)*conv1;
+        //voltaje1 = (5.0/4095.0)*conv1;
         
         
-        floatToStr(voltaje1, str, 2, 1);
+        //floatToStr(voltaje1, str, 2, 1);
         //printf("%s",str);
         
         
@@ -151,23 +140,12 @@ void interruptSensor(void){
     TMR0_CounterSet(0);
 }
 
+void boton1 (void){
+    flagguardar=~flagguardar;
+}
+
 void LKP(void){
     LKP_Toggle();
-    //UART1_Write(65);
-    //printf("%d\n",conv1);
-    
-}
-
-void boton1 (void){
-    
-    flagguardar=~flagguardar;
-     
-    
-}
-   
-
-
-void interruptTmr1(void){
     printf("%d\n",conv1);
     //printf("%s \n",str);
     //__delay_ms(1500);

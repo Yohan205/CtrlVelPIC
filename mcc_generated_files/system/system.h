@@ -43,6 +43,7 @@
 #include "../dac/dac1.h"
 #include "../opa/opa1.h"
 #include "../pwm/pwm1_16bit.h"
+#include "../pwm/pwm2_16bit.h"
 #include "../uart/uart1.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"

@@ -2204,14 +2204,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _OPA1_Initialize ]
 [f ]
 "47
-[; ;mcc_generated_files/opa/src/opa1.c: 47:     OPA1CON1 = 0xF;
-[e = _OPA1CON1 -> -> 15 `i `uc ]
+[; ;mcc_generated_files/opa/src/opa1.c: 47:     OPA1CON1 = 0x0;
+[e = _OPA1CON1 -> -> 0 `i `uc ]
 "50
-[; ;mcc_generated_files/opa/src/opa1.c: 50:     OPA1CON2 = 0x12;
-[e = _OPA1CON2 -> -> 18 `i `uc ]
+[; ;mcc_generated_files/opa/src/opa1.c: 50:     OPA1CON2 = 0x2;
+[e = _OPA1CON2 -> -> 2 `i `uc ]
 "53
-[; ;mcc_generated_files/opa/src/opa1.c: 53:     OPA1CON3 = 0x80;
-[e = _OPA1CON3 -> -> 128 `i `uc ]
+[; ;mcc_generated_files/opa/src/opa1.c: 53:     OPA1CON3 = 0x0;
+[e = _OPA1CON3 -> -> 0 `i `uc ]
 "56
 [; ;mcc_generated_files/opa/src/opa1.c: 56:     OPA1HWC = 0x0;
 [e = _OPA1HWC -> -> 0 `i `uc ]
@@ -2219,8 +2219,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/opa/src/opa1.c: 59:     OPA1ORS = 0x0;
 [e = _OPA1ORS -> -> 0 `i `uc ]
 "62
-[; ;mcc_generated_files/opa/src/opa1.c: 62:     OPA1CON0 = 0x80;
-[e = _OPA1CON0 -> -> 128 `i `uc ]
+[; ;mcc_generated_files/opa/src/opa1.c: 62:     OPA1CON0 = 0x88;
+[e = _OPA1CON0 -> -> 136 `i `uc ]
 "63
 [; ;mcc_generated_files/opa/src/opa1.c: 63: }
 [e :UE 1930 ]

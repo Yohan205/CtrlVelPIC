@@ -23749,13 +23749,13 @@ __attribute__((inline)) void OPA1_SetInputOffset(uint8_t offset);
 void OPA1_Initialize(void)
 {
 
-    OPA1CON1 = 0xF;
+    OPA1CON1 = 0x0;
 
 
-    OPA1CON2 = 0x12;
+    OPA1CON2 = 0x2;
 
 
-    OPA1CON3 = 0x80;
+    OPA1CON3 = 0x0;
 
 
     OPA1HWC = 0x0;
@@ -23764,7 +23764,7 @@ void OPA1_Initialize(void)
     OPA1ORS = 0x0;
 
 
-    OPA1CON0 = 0x80;
+    OPA1CON0 = 0x88;
 }
 
 __attribute__((inline)) void OPA1_EnableChargePump(void)
