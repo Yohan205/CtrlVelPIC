@@ -23769,7 +23769,7 @@ void TMR1_Initialize(void)
  PIR3bits.TMR1GIF = 0U;
 
     T1CON = (1 << 0x0)
-        | (0 << 0x1)
+        | (1 << 0x1)
         | (1 << 0x2)
         | (3 << 0x4);
 }

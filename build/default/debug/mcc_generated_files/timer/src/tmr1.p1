@@ -2214,7 +2214,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PIR3bits 0 5 -> -> 0 `ui `uc ]
 "74
 [; ;mcc_generated_files/timer/src/tmr1.c: 74:     T1CON = (1 << 0x0)
-[e = _T1CON -> | | | << -> 1 `i -> 0 `i << -> 0 `i -> 1 `i << -> 1 `i -> 2 `i << -> 3 `i -> 4 `i `uc ]
+[e = _T1CON -> | | | << -> 1 `i -> 0 `i << -> 1 `i -> 1 `i << -> 1 `i -> 2 `i << -> 3 `i -> 4 `i `uc ]
 "78
 [; ;mcc_generated_files/timer/src/tmr1.c: 78: }
 [e :UE 1930 ]

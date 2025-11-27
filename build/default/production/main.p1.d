@@ -7,6 +7,7 @@ mcc_generated_files/system/../system/pins.h  \
 mcc_generated_files/system/../dac/dac1.h  \
 mcc_generated_files/system/../opa/opa1.h  \
 mcc_generated_files/system/../pwm/pwm1_16bit.h  \
+mcc_generated_files/system/../pwm/pwm2_16bit.h  \
 mcc_generated_files/system/../uart/uart1.h  \
 mcc_generated_files/system/../uart/../system/system.h  \
 mcc_generated_files/system/../system/interrupt.h  \
@@ -22,5 +23,5 @@ mcc_generated_files/system/../timer/tmr1.h  \
 mcc_generated_files/system/../timer/tmr1_deprecated.h  \
 mcc_generated_files/system/../timer/tmr2.h  \
 mcc_generated_files/system/../timer/tmr2_deprecated.h  \
-ssd1306_oled.h  \
-Utils.h 
+Utils.h  \
+ssd1306_oled.h 

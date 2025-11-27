@@ -13,7 +13,7 @@ ADC_CHANNEL_DAC1 61
 ADC_CHANNEL_FVR_BUFFER1 62
 ADC_CHANNEL_FVR_BUFFER2 63
 ADC_CHANNEL_ANB4 12
-ADC_CHANNEL_ANC3 19
+ADC_CHANNEL_ANC5 21
 ADC_CHANNEL_ANC2 18
 ]
 "164
@@ -182,8 +182,8 @@ TMR2_UART2_TX_EDGE 21
 TMR2_UART3_RX_EDGE 22
 TMR2_UART3_TX_EDGE 23
 ]
-"68 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
-[e E14250 . `uc
+"74 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+[e E14274 . `uc
 ADC_CHANNEL_OPA1 57
 ADC_CHANNEL_DAC2 58
 ADC_CHANNEL_VSS 59
@@ -192,11 +192,11 @@ ADC_CHANNEL_DAC1 61
 ADC_CHANNEL_FVR_BUFFER1 62
 ADC_CHANNEL_FVR_BUFFER2 63
 ADC_CHANNEL_ANB4 12
-ADC_CHANNEL_ANC3 19
+ADC_CHANNEL_ANC5 21
 ADC_CHANNEL_ANC2 18
 ]
-"1691 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
-[e E14401 . `uc
+"1739 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+[e E14425 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
 I2C_ERROR_DATA_NACK 2
@@ -204,8 +204,6 @@ I2C_ERROR_BUS_COLLISION 3
 ]
 "7 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"1 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\abs.c
-[v _abs abs `(i  1 e 2 0 ]
 "7 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 "7 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\almod.c
@@ -284,16 +282,19 @@ I2C_ERROR_BUS_COLLISION 3
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"49 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+[v i2___xxtofl __xxtofl `(d  1 e 4 0 ]
+"53 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"137
+"126
 [v _interruptTimer0 interruptTimer0 `(v  1 e 1 0 ]
-"141
+"130
+[v _interruptTimer2 interruptTimer2 `(v  1 e 1 0 ]
+"134
 [v _interruptSensor interruptSensor `(v  1 e 1 0 ]
-"147
+"152
+[v _boton1 boton1 `(v  1 e 1 0 ]
+"156
 [v _LKP LKP `(v  1 e 1 0 ]
-"157
-[v _interruptTmr1 interruptTmr1 `(v  1 e 1 0 ]
 "47 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/adc/src/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "196
@@ -363,6 +364,24 @@ I2C_ERROR_BUS_COLLISION 3
 [v _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler PWM1_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output2_DefaultInterruptHandler ]
 "216
 [v _PWM1_16BIT_Period_DefaultInterruptHandler PWM1_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Period_DefaultInterruptHandler ]
+"50 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Initialize PWM2_16BIT_Initialize `(v  1 e 1 0 ]
+"137
+[v _PWM2_16BIT_SetSlice1Output1DutyCycleRegister PWM2_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+"149
+[v _PWM2_16BIT_LoadBufferRegisters PWM2_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+"189
+[v _PWM2_16BIT_Slice1Output1_SetInterruptHandler PWM2_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"194
+[v _PWM2_16BIT_Slice1Output2_SetInterruptHandler PWM2_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"199
+[v _PWM2_16BIT_Period_SetInterruptHandler PWM2_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"204
+[v _PWM2_16BIT_Slice1Output1_DefaultInterruptHandler PWM2_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"210
+[v _PWM2_16BIT_Slice1Output2_DefaultInterruptHandler PWM2_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"216
+[v _PWM2_16BIT_Period_DefaultInterruptHandler PWM2_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Period_DefaultInterruptHandler ]
 "39 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 "42 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/system/src/interrupt.c
@@ -433,9 +452,9 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "145
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
-"161
+"155
 [v _TMR2_PeriodMatchCallbackRegister TMR2_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
-"166
+"160
 [v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
 "101 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/uart/src/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
@@ -467,20 +486,24 @@ I2C_ERROR_BUS_COLLISION 3
 [v _UART1_OverrunErrorCallbackRegister UART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
 "493
 [v _UART1_ParityErrorCallbackRegister UART1_ParityErrorCallbackRegister `(v  1 e 1 0 ]
-"1674 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+"1722 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
 [v _i2c_write i2c_write `(a  1 s 1 i2c_write ]
-"1696
+"1744
 [v _ssd1306_command ssd1306_command `T(v  1 s 1 ssd1306_command ]
-"1710
+"1758
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
-"1787
+"1813
+[v _OLED_SetFont OLED_SetFont `(v  1 e 1 0 ]
+"1835
 [v _OLED_Update OLED_Update `(v  1 e 1 0 ]
-"1831
+"1879
 [v _OLED_ClearDisplay OLED_ClearDisplay `(v  1 e 1 0 ]
-"1853
+"1901
 [v _OLED_DrawPixel OLED_DrawPixel `(v  1 e 1 0 ]
-"1876
+"1924
 [v _OLED_Write OLED_Write `(v  1 e 1 0 ]
+"2026
+[v _OLED_Write_Text OLED_Write_Text `(v  1 e 1 0 ]
 "13 D:\CYOHAN\MPLABXProjects\ControlVel.X\Utils.c
 [v _uIntToStr uIntToStr `(uc  1 e 1 0 ]
 "385 D:\CYOHAN\MPLABXProjects\ControlVel.X/mcc_generated_files/uart/uart1.h
@@ -844,34 +867,34 @@ I2C_ERROR_BUS_COLLISION 3
 [v _U1P3H U1P3H `VEuc  1 e 1 @682 ]
 "15021
 [v _U1CON0 U1CON0 `VEuc  1 e 1 @683 ]
-[s S3150 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S3349 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 ]
 "15054
-[s S3155 . 1 `uc 1 U1MODE 1 0 :4:0 
+[s S3354 . 1 `uc 1 U1MODE 1 0 :4:0 
 `uc 1 U1RXEN 1 0 :1:4 
 `uc 1 U1TXEN 1 0 :1:5 
 `uc 1 U1ABDEN 1 0 :1:6 
 `uc 1 U1BRGS 1 0 :1:7 
 ]
-[s S3161 . 1 `uc 1 U1MODE0 1 0 :1:0 
+[s S3360 . 1 `uc 1 U1MODE0 1 0 :1:0 
 `uc 1 U1MODE1 1 0 :1:1 
 `uc 1 U1MODE2 1 0 :1:2 
 `uc 1 U1MODE3 1 0 :1:3 
 ]
-[s S3166 . 1 `uc 1 MODE 1 0 :4:0 
+[s S3365 . 1 `uc 1 MODE 1 0 :4:0 
 `uc 1 RXEN 1 0 :1:4 
 `uc 1 TXEN 1 0 :1:5 
 `uc 1 ABDEN 1 0 :1:6 
 `uc 1 BRGS 1 0 :1:7 
 ]
-[u S3172 . 1 `S3150 1 . 1 0 `S3155 1 . 1 0 `S3161 1 . 1 0 `S3166 1 . 1 0 ]
-[v _U1CON0bits U1CON0bits `VES3172  1 e 1 @683 ]
+[u S3371 . 1 `S3349 1 . 1 0 `S3354 1 . 1 0 `S3360 1 . 1 0 `S3365 1 . 1 0 ]
+[v _U1CON0bits U1CON0bits `VES3371  1 e 1 @683 ]
 "15149
 [v _U1CON1 U1CON1 `VEuc  1 e 1 @684 ]
-[s S3114 . 1 `uc 1 SENDB 1 0 :1:0 
+[s S3313 . 1 `uc 1 SENDB 1 0 :1:0 
 `uc 1 BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 RXBIMD 1 0 :1:3 
@@ -880,7 +903,7 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 ON 1 0 :1:7 
 ]
 "15174
-[s S3122 . 1 `uc 1 U1SENDB 1 0 :1:0 
+[s S3321 . 1 `uc 1 U1SENDB 1 0 :1:0 
 `uc 1 U1BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 U1RXBIMD 1 0 :1:3 
@@ -888,8 +911,8 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 . 1 0 :2:5 
 `uc 1 U1ON 1 0 :1:7 
 ]
-[u S3130 . 1 `S3114 1 . 1 0 `S3122 1 . 1 0 ]
-[v _U1CON1bits U1CON1bits `VES3130  1 e 1 @684 ]
+[u S3329 . 1 `S3313 1 . 1 0 `S3321 1 . 1 0 ]
+[v _U1CON1bits U1CON1bits `VES3329  1 e 1 @684 ]
 "15229
 [v _U1CON2 U1CON2 `VEuc  1 e 1 @685 ]
 "15378
@@ -900,24 +923,24 @@ I2C_ERROR_BUS_COLLISION 3
 [v _U1FIFO U1FIFO `VEuc  1 e 1 @688 ]
 "15548
 [v _U1UIR U1UIR `VEuc  1 e 1 @689 ]
-[s S3200 . 1 `uc 1 . 1 0 :2:0 
+[s S3399 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 ABDIE 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 ABDIF 1 0 :1:6 
 `uc 1 WUIF 1 0 :1:7 
 ]
 "15569
-[s S3206 . 1 `uc 1 . 1 0 :2:0 
+[s S3405 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 U1ABDIE 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 U1ABDIF 1 0 :1:6 
 `uc 1 U1WUIF 1 0 :1:7 
 ]
-[u S3212 . 1 `S3200 1 . 1 0 `S3206 1 . 1 0 ]
-[v _U1UIRbits U1UIRbits `VES3212  1 e 1 @689 ]
+[u S3411 . 1 `S3399 1 . 1 0 `S3405 1 . 1 0 ]
+[v _U1UIRbits U1UIRbits `VES3411  1 e 1 @689 ]
 "15604
 [v _U1ERRIR U1ERRIR `VEuc  1 e 1 @690 ]
-[s S3228 . 1 `uc 1 TXCIF 1 0 :1:0 
+[s S3427 . 1 `uc 1 TXCIF 1 0 :1:0 
 `uc 1 RXFOIF 1 0 :1:1 
 `uc 1 RXBKIF 1 0 :1:2 
 `uc 1 FERIF 1 0 :1:3 
@@ -927,7 +950,7 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TXMTIF 1 0 :1:7 
 ]
 "15631
-[s S3237 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+[s S3436 . 1 `uc 1 U1TXCIF 1 0 :1:0 
 `uc 1 U1RXFOIF 1 0 :1:1 
 `uc 1 U1RXBKIF 1 0 :1:2 
 `uc 1 U1FERIF 1 0 :1:3 
@@ -936,8 +959,8 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 U1PERIF 1 0 :1:6 
 `uc 1 U1TXMTIF 1 0 :1:7 
 ]
-[u S3246 . 1 `S3228 1 . 1 0 `S3237 1 . 1 0 ]
-[v _U1ERRIRbits U1ERRIRbits `VES3246  1 e 1 @690 ]
+[u S3445 . 1 `S3427 1 . 1 0 `S3436 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES3445  1 e 1 @690 ]
 "15716
 [v _U1ERRIE U1ERRIE `VEuc  1 e 1 @691 ]
 "19114
@@ -946,37 +969,37 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR1H TMR1H `VEuc  1 e 1 @787 ]
 "19354
 [v _T1CON T1CON `VEuc  1 e 1 @788 ]
-[s S2789 . 1 `uc 1 ON 1 0 :1:0 
+[s S2988 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 NOT_SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
 "19396
-[s S2795 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S2994 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S2802 . 1 `uc 1 . 1 0 :2:0 
+[s S3001 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
-[s S2808 . 1 `uc 1 . 1 0 :1:0 
+[s S3007 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD161 1 0 :1:1 
 ]
-[s S2811 . 1 `uc 1 . 1 0 :2:0 
+[s S3010 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nT1SYNC 1 0 :1:2 
 ]
-[u S2814 . 1 `S2789 1 . 1 0 `S2795 1 . 1 0 `S2802 1 . 1 0 `S2808 1 . 1 0 `S2811 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES2814  1 e 1 @788 ]
+[u S3013 . 1 `S2988 1 . 1 0 `S2994 1 . 1 0 `S3001 1 . 1 0 `S3007 1 . 1 0 `S3010 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES3013  1 e 1 @788 ]
 "19576
 [v _T1GCON T1GCON `VEuc  1 e 1 @789 ]
-[s S2884 . 1 `uc 1 . 1 0 :2:0 
+[s S3083 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -985,7 +1008,7 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 GE 1 0 :1:7 
 ]
 "19630
-[s S2892 . 1 `uc 1 . 1 0 :2:0 
+[s S3091 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -993,26 +1016,26 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
-[s S2900 . 1 `uc 1 . 1 0 :3:0 
+[s S3099 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_DONE 1 0 :1:3 
 ]
-[s S2903 . 1 `uc 1 . 1 0 :3:0 
+[s S3102 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_T1DONE 1 0 :1:3 
 ]
-[s S2906 . 1 `uc 1 . 1 0 :3:0 
+[s S3105 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S2909 . 1 `uc 1 . 1 0 :3:0 
+[s S3108 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 GGO_nDONE 1 0 :1:3 
 ]
-[s S2912 . 1 `uc 1 . 1 0 :3:0 
+[s S3111 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S2915 . 1 `uc 1 . 1 0 :3:0 
+[s S3114 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 ]
-[u S2918 . 1 `S2884 1 . 1 0 `S2892 1 . 1 0 `S2900 1 . 1 0 `S2903 1 . 1 0 `S2906 1 . 1 0 `S2909 1 . 1 0 `S2912 1 . 1 0 `S2915 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES2918  1 e 1 @789 ]
+[u S3117 . 1 `S3083 1 . 1 0 `S3091 1 . 1 0 `S3099 1 . 1 0 `S3102 1 . 1 0 `S3105 1 . 1 0 `S3108 1 . 1 0 `S3111 1 . 1 0 `S3114 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES3117  1 e 1 @789 ]
 "19862
 [v _T1GATE T1GATE `VEuc  1 e 1 @790 ]
 "20028
@@ -1023,32 +1046,32 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
 "20666
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
-[s S2707 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2906 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "20700
-[s S2713 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S2912 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S2719 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2918 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[s S2725 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S2924 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S2730 . 1 `S2707 1 . 1 0 `S2713 1 . 1 0 `S2719 1 . 1 0 `S2725 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES2730  1 e 1 @794 ]
+[u S2929 . 1 `S2906 1 . 1 0 `S2912 1 . 1 0 `S2918 1 . 1 0 `S2924 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES2929  1 e 1 @794 ]
 "20790
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
 "20932
@@ -1057,16 +1080,16 @@ I2C_ERROR_BUS_COLLISION 3
 [v _T2PR T2PR `VEuc  1 e 1 @797 ]
 "21008
 [v _T2CON T2CON `VEuc  1 e 1 @798 ]
-[s S2445 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2645 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
 "21044
-[s S2449 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+[s S2649 . 1 `uc 1 T2OUTPS 1 0 :4:0 
 `uc 1 T2CKPS 1 0 :3:4 
 `uc 1 T2ON 1 0 :1:7 
 ]
-[s S2453 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+[s S2653 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
 `uc 1 T2OUTPS1 1 0 :1:1 
 `uc 1 T2OUTPS2 1 0 :1:2 
 `uc 1 T2OUTPS3 1 0 :1:3 
@@ -1074,7 +1097,7 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 T2CKPS1 1 0 :1:5 
 `uc 1 T2CKPS2 1 0 :1:6 
 ]
-[s S2461 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2661 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
@@ -1083,58 +1106,58 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 CKPS2 1 0 :1:6 
 `uc 1 TMR2ON 1 0 :1:7 
 ]
-[u S2470 . 1 `S2445 1 . 1 0 `S2449 1 . 1 0 `S2453 1 . 1 0 `S2461 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES2470  1 e 1 @798 ]
+[u S2670 . 1 `S2645 1 . 1 0 `S2649 1 . 1 0 `S2653 1 . 1 0 `S2661 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES2670  1 e 1 @798 ]
 "21154
 [v _T2HLT T2HLT `VEuc  1 e 1 @799 ]
-[s S2523 . 1 `uc 1 MODE 1 0 :5:0 
+[s S2723 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
 "21187
-[s S2528 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S2728 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 `uc 1 MODE4 1 0 :1:4 
 ]
-[s S2534 . 1 `uc 1 T2MODE 1 0 :5:0 
+[s S2734 . 1 `uc 1 T2MODE 1 0 :5:0 
 `uc 1 T2CKSYNC 1 0 :1:5 
 `uc 1 T2CKPOL 1 0 :1:6 
 `uc 1 T2PSYNC 1 0 :1:7 
 ]
-[s S2539 . 1 `uc 1 T2MODE0 1 0 :1:0 
+[s S2739 . 1 `uc 1 T2MODE0 1 0 :1:0 
 `uc 1 T2MODE1 1 0 :1:1 
 `uc 1 T2MODE2 1 0 :1:2 
 `uc 1 T2MODE3 1 0 :1:3 
 `uc 1 T2MODE4 1 0 :1:4 
 ]
-[u S2545 . 1 `S2523 1 . 1 0 `S2528 1 . 1 0 `S2534 1 . 1 0 `S2539 1 . 1 0 ]
-[v _T2HLTbits T2HLTbits `VES2545  1 e 1 @799 ]
+[u S2745 . 1 `S2723 1 . 1 0 `S2728 1 . 1 0 `S2734 1 . 1 0 `S2739 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES2745  1 e 1 @799 ]
 "21282
 [v _T2CLKCON T2CLKCON `VEuc  1 e 1 @800 ]
 "21440
 [v _T2RST T2RST `VEuc  1 e 1 @801 ]
-[s S2596 . 1 `uc 1 RSEL 1 0 :8:0 
+[s S2796 . 1 `uc 1 RSEL 1 0 :8:0 
 ]
 "21467
-[s S2598 . 1 `uc 1 RSEL0 1 0 :1:0 
+[s S2798 . 1 `uc 1 RSEL0 1 0 :1:0 
 `uc 1 RSEL1 1 0 :1:1 
 `uc 1 RSEL2 1 0 :1:2 
 `uc 1 RSEL3 1 0 :1:3 
 `uc 1 RSEL4 1 0 :1:4 
 ]
-[s S2604 . 1 `uc 1 T2RSEL 1 0 :8:0 
+[s S2804 . 1 `uc 1 T2RSEL 1 0 :8:0 
 ]
-[s S2606 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+[s S2806 . 1 `uc 1 T2RSEL0 1 0 :1:0 
 `uc 1 T2RSEL1 1 0 :1:1 
 `uc 1 T2RSEL2 1 0 :1:2 
 `uc 1 T2RSEL3 1 0 :1:3 
 `uc 1 T2RSEL4 1 0 :1:4 
 ]
-[u S2612 . 1 `S2596 1 . 1 0 `S2598 1 . 1 0 `S2604 1 . 1 0 `S2606 1 . 1 0 ]
-[v _T2RSTbits T2RSTbits `VES2612  1 e 1 @801 ]
+[u S2812 . 1 `S2796 1 . 1 0 `S2798 1 . 1 0 `S2804 1 . 1 0 `S2806 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES2812  1 e 1 @801 ]
 "28142
 [v _ADCP ADCP `VEuc  1 e 1 @984 ]
 [s S481 . 1 `uc 1 CPRDY 1 0 :1:0 
@@ -1364,7 +1387,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
 "32566
 [v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
-[s S2330 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[s S2530 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -1372,8 +1395,8 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 IOCAF5 1 0 :1:5 
 ]
 "32581
-[u S2337 . 1 `S2330 1 . 1 0 ]
-[v _IOCAFbits IOCAFbits `VES2337  1 e 1 @1031 ]
+[u S2537 . 1 `S2530 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES2537  1 e 1 @1031 ]
 "32616
 [v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
 "32655
@@ -1406,7 +1429,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
 "33362
 [v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
-[s S2351 . 1 `uc 1 IOCCF0 1 0 :1:0 
+[s S2551 . 1 `uc 1 IOCCF0 1 0 :1:0 
 `uc 1 IOCCF1 1 0 :1:1 
 `uc 1 IOCCF2 1 0 :1:2 
 `uc 1 IOCCF3 1 0 :1:3 
@@ -1416,10 +1439,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 IOCCF7 1 0 :1:7 
 ]
 "33379
-[u S2360 . 1 `S2351 1 . 1 0 ]
+[u S2560 . 1 `S2551 1 . 1 0 ]
 "33379
 "33379
-[v _IOCCFbits IOCCFbits `VES2360  1 e 1 @1047 ]
+[v _IOCCFbits IOCCFbits `VES2560  1 e 1 @1047 ]
 "34746
 [v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
 "34816
@@ -1477,7 +1500,46 @@ I2C_ERROR_BUS_COLLISION 3
 [v _PWM1S1P2L PWM1S1P2L `VEuc  1 e 1 @1133 ]
 "35267
 [v _PWM1S1P2H PWM1S1P2H `VEuc  1 e 1 @1134 ]
-[s S1897 . 1 `uc 1 SWIE 1 0 :1:0 
+"35287
+[v _PWM2ERS PWM2ERS `VEuc  1 e 1 @1135 ]
+"35357
+[v _PWM2CLK PWM2CLK `VEuc  1 e 1 @1136 ]
+"35427
+[v _PWM2LDS PWM2LDS `VEuc  1 e 1 @1137 ]
+"35504
+[v _PWM2PRL PWM2PRL `VEuc  1 e 1 @1138 ]
+"35524
+[v _PWM2PRH PWM2PRH `VEuc  1 e 1 @1139 ]
+"35544
+[v _PWM2CPRE PWM2CPRE `VEuc  1 e 1 @1140 ]
+"35564
+[v _PWM2PIPOS PWM2PIPOS `VEuc  1 e 1 @1141 ]
+"35584
+[v _PWM2GIR PWM2GIR `VEuc  1 e 1 @1142 ]
+"35595
+"35595
+[v _PWM2GIRbits PWM2GIRbits `VES1631  1 e 1 @1142 ]
+"35610
+[v _PWM2GIE PWM2GIE `VEuc  1 e 1 @1143 ]
+"35621
+"35621
+[v _PWM2GIEbits PWM2GIEbits `VES1707  1 e 1 @1143 ]
+"35636
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @1144 ]
+"35650
+"35650
+[v _PWM2CONbits PWM2CONbits `VES1695  1 e 1 @1144 ]
+"35675
+[v _PWM2S1CFG PWM2S1CFG `VEuc  1 e 1 @1145 ]
+"35741
+[v _PWM2S1P1L PWM2S1P1L `VEuc  1 e 1 @1146 ]
+"35761
+[v _PWM2S1P1H PWM2S1P1H `VEuc  1 e 1 @1147 ]
+"35788
+[v _PWM2S1P2L PWM2S1P2L `VEuc  1 e 1 @1148 ]
+"35808
+[v _PWM2S1P2H PWM2S1P2H `VEuc  1 e 1 @1149 ]
+[s S2095 . 1 `uc 1 SWIE 1 0 :1:0 
 `uc 1 HLVDIE 1 0 :1:1 
 `uc 1 OSFIE 1 0 :1:2 
 `uc 1 CSWIE 1 0 :1:3 
@@ -1487,10 +1549,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 IOCIE 1 0 :1:7 
 ]
 "36450
-[u S1906 . 1 `S1897 1 . 1 0 ]
+[u S2104 . 1 `S2095 1 . 1 0 ]
 "36450
 "36450
-[v _PIE0bits PIE0bits `VES1906  1 e 1 @1192 ]
+[v _PIE0bits PIE0bits `VES2104  1 e 1 @1192 ]
 [s S141 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 ZCDIE 1 0 :1:1 
 `uc 1 ADIE 1 0 :1:2 
@@ -1521,7 +1583,7 @@ I2C_ERROR_BUS_COLLISION 3
 "36581
 "36581
 [v _PIE2bits PIE2bits `VES193  1 e 1 @1194 ]
-[s S1943 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+[s S2141 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
 `uc 1 SPI1TXIE 1 0 :1:1 
 `uc 1 SPI1IE 1 0 :1:2 
 `uc 1 TMR2IE 1 0 :1:3 
@@ -1531,10 +1593,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TMR0IE 1 0 :1:7 
 ]
 "36628
-[u S1952 . 1 `S1943 1 . 1 0 ]
+[u S2150 . 1 `S2141 1 . 1 0 ]
 "36628
 "36628
-[v _PIE3bits PIE3bits `VES1952  1 e 1 @1195 ]
+[v _PIE3bits PIE3bits `VES2150  1 e 1 @1195 ]
 [s S1637 . 1 `uc 1 U1RXIE 1 0 :1:0 
 `uc 1 U1TXIE 1 0 :1:1 
 `uc 1 U1EIE 1 0 :1:2 
@@ -1549,6 +1611,24 @@ I2C_ERROR_BUS_COLLISION 3
 "36690
 "36690
 [v _PIE4bits PIE4bits `VES1646  1 e 1 @1196 ]
+[s S1828 . 1 `uc 1 SPI2RXIE 1 0 :1:0 
+`uc 1 SPI2TXIE 1 0 :1:1 
+`uc 1 SPI2IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 C2IE 1 0 :1:4 
+`uc 1 CLC2IE 1 0 :1:5 
+`uc 1 PWM2PIE 1 0 :1:6 
+`uc 1 PWM2IE 1 0 :1:7 
+]
+"36756
+[s S1837 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CM2IE 1 0 :1:4 
+]
+"36756
+[u S1840 . 1 `S1828 1 . 1 0 `S1837 1 . 1 0 ]
+"36756
+"36756
+[v _PIE5bits PIE5bits `VES1840  1 e 1 @1197 ]
 [s S1081 . 1 `uc 1 I2C1RXIE 1 0 :1:0 
 `uc 1 I2C1TXIE 1 0 :1:1 
 `uc 1 I2C1IE 1 0 :1:2 
@@ -1563,7 +1643,7 @@ I2C_ERROR_BUS_COLLISION 3
 "36875
 "36875
 [v _PIE7bits PIE7bits `VES1090  1 e 1 @1199 ]
-[s S1918 . 1 `uc 1 SWIF 1 0 :1:0 
+[s S2116 . 1 `uc 1 SWIF 1 0 :1:0 
 `uc 1 HLVDIF 1 0 :1:1 
 `uc 1 OSFIF 1 0 :1:2 
 `uc 1 CSWIF 1 0 :1:3 
@@ -1573,10 +1653,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 IOCIF 1 0 :1:7 
 ]
 "37097
-[u S1927 . 1 `S1918 1 . 1 0 ]
+[u S2125 . 1 `S2116 1 . 1 0 ]
 "37097
 "37097
-[v _PIR0bits PIR0bits `VES1927  1 e 1 @1203 ]
+[v _PIR0bits PIR0bits `VES2125  1 e 1 @1203 ]
 [s S113 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 ZCDIF 1 0 :1:1 
 `uc 1 ADIF 1 0 :1:2 
@@ -1607,7 +1687,7 @@ I2C_ERROR_BUS_COLLISION 3
 "37228
 "37228
 [v _PIR2bits PIR2bits `VES176  1 e 1 @1205 ]
-[s S1964 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+[s S2162 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
 `uc 1 SPI1TXIF 1 0 :1:1 
 `uc 1 SPI1IF 1 0 :1:2 
 `uc 1 TMR2IF 1 0 :1:3 
@@ -1617,10 +1697,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TMR0IF 1 0 :1:7 
 ]
 "37275
-[u S1973 . 1 `S1964 1 . 1 0 ]
+[u S2171 . 1 `S2162 1 . 1 0 ]
 "37275
 "37275
-[v _PIR3bits PIR3bits `VES1973  1 e 1 @1206 ]
+[v _PIR3bits PIR3bits `VES2171  1 e 1 @1206 ]
 [s S1607 . 1 `uc 1 U1RXIF 1 0 :1:0 
 `uc 1 U1TXIF 1 0 :1:1 
 `uc 1 U1EIF 1 0 :1:2 
@@ -1635,7 +1715,25 @@ I2C_ERROR_BUS_COLLISION 3
 "37337
 "37337
 [v _PIR4bits PIR4bits `VES1616  1 e 1 @1207 ]
-[s S1837 . 1 `uc 1 INT1IF 1 0 :1:0 
+[s S1791 . 1 `uc 1 SPI2RXIF 1 0 :1:0 
+`uc 1 SPI2TXIF 1 0 :1:1 
+`uc 1 SPI2IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 C2IF 1 0 :1:4 
+`uc 1 CLC2IF 1 0 :1:5 
+`uc 1 PWM2PIF 1 0 :1:6 
+`uc 1 PWM2IF 1 0 :1:7 
+]
+"37403
+[s S1800 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CM2IF 1 0 :1:4 
+]
+"37403
+[u S1803 . 1 `S1791 1 . 1 0 `S1800 1 . 1 0 ]
+"37403
+"37403
+[v _PIR5bits PIR5bits `VES1803  1 e 1 @1208 ]
+[s S2035 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 CWG1IF 1 0 :1:2 
 `uc 1 NCO1IF 1 0 :1:3 
@@ -1645,11 +1743,11 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 DMA2AIF 1 0 :1:7 
 ]
 "37465
-[u S1846 . 1 `S1837 1 . 1 0 ]
+[u S2044 . 1 `S2035 1 . 1 0 ]
 "37465
 "37465
-[v _PIR6bits PIR6bits `VES1846  1 e 1 @1209 ]
-[s S2005 . 1 `uc 1 I2C1RXIF 1 0 :1:0 
+[v _PIR6bits PIR6bits `VES2044  1 e 1 @1209 ]
+[s S2203 . 1 `uc 1 I2C1RXIF 1 0 :1:0 
 `uc 1 I2C1TXIF 1 0 :1:1 
 `uc 1 I2C1IF 1 0 :1:2 
 `uc 1 I2C1EIF 1 0 :1:3 
@@ -1659,11 +1757,11 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 PWM3IF 1 0 :1:7 
 ]
 "37522
-[u S2014 . 1 `S2005 1 . 1 0 ]
+[u S2212 . 1 `S2203 1 . 1 0 ]
 "37522
 "37522
-[v _PIR7bits PIR7bits `VES2014  1 e 1 @1210 ]
-[s S1868 . 1 `uc 1 INT2IF 1 0 :1:0 
+[v _PIR7bits PIR7bits `VES2212  1 e 1 @1210 ]
+[s S2066 . 1 `uc 1 INT2IF 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 TMR4IF 1 0 :1:3 
 `uc 1 DMA4SCNTIF 1 0 :1:4 
@@ -1672,13 +1770,13 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 DMA4AIF 1 0 :1:7 
 ]
 "37692
-[u S1876 . 1 `S1868 1 . 1 0 ]
+[u S2074 . 1 `S2066 1 . 1 0 ]
 "37692
 "37692
-[v _PIR10bits PIR10bits `VES1876  1 e 1 @1213 ]
+[v _PIR10bits PIR10bits `VES2074  1 e 1 @1213 ]
 "37727
 [v _LATA LATA `VEuc  1 e 1 @1214 ]
-[s S3475 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S3699 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1686,10 +1784,10 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 LATA5 1 0 :1:5 
 ]
 "37742
-[u S3482 . 1 `S3475 1 . 1 0 ]
+[u S3706 . 1 `S3699 1 . 1 0 ]
 "37742
 "37742
-[v _LATAbits LATAbits `VES3482  1 e 1 @1214 ]
+[v _LATAbits LATAbits `VES3706  1 e 1 @1214 ]
 "37772
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
 "37811
@@ -1700,7 +1798,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "37962
 [v _TRISC TRISC `VEuc  1 e 1 @1224 ]
-[s S1785 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S1983 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -1709,32 +1807,36 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 GIE 1 0 :1:7 
 ]
 "38195
-[s S1793 . 1 `uc 1 . 1 0 :7:0 
+[s S1991 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "38195
-[u S1796 . 1 `S1785 1 . 1 0 `S1793 1 . 1 0 ]
+[u S1994 . 1 `S1983 1 . 1 0 `S1991 1 . 1 0 ]
 "38195
 "38195
-[v _INTCON0bits INTCON0bits `VES1796  1 e 1 @1238 ]
+[v _INTCON0bits INTCON0bits `VES1994  1 e 1 @1238 ]
 "153 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
 [v _prec prec `i  1 s 2 prec ]
 [v _width width `i  1 s 2 width ]
 "154
 [v _flags flags `uc  1 s 1 flags ]
-"185
-[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
-"33 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
-[v _flagguardar flagguardar `VEa  1 e 1 0 ]
-"35
+"34 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
 [v _contador contador `uc  1 e 1 0 ]
-"36
+"35
 [v _conv1 conv1 `us  1 e 2 0 ]
-"41
-[v _dutyVal dutyVal `f  1 e 4 0 ]
+[v _conv2 conv2 `us  1 e 2 0 ]
+[v _valorGuardado valorGuardado `us  1 e 2 0 ]
+"38
+[v _voltaje1 voltaje1 `f  1 e 4 0 ]
+[v _dutyValue dutyValue `f  1 e 4 0 ]
+[v _dutyValue1 dutyValue1 `f  1 e 4 0 ]
 [v _DACval DACval `f  1 e 4 0 ]
-"42
+"39
 [v _frecuencia frecuencia `VEf  1 e 4 0 ]
+"40
+[v _flagguardar flagguardar `VEa  1 e 1 0 ]
+"41
+[v _str str `[8]uc  1 e 8 0 ]
 "43 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/adc/src/adc.c
 [v _ADC_ConversionDoneCallback ADC_ConversionDoneCallback `*.37(v  1 s 2 ADC_ConversionDoneCallback ]
 "44
@@ -1752,6 +1854,12 @@ I2C_ERROR_BUS_COLLISION 3
 [v _PWM1_16BIT_Slice1Output2_InterruptHandler PWM1_16BIT_Slice1Output2_InterruptHandler `*.37(v  1 s 2 PWM1_16BIT_Slice1Output2_InterruptHandler ]
 "45
 [v _PWM1_16BIT_Period_InterruptHandler PWM1_16BIT_Period_InterruptHandler `*.37(v  1 s 2 PWM1_16BIT_Period_InterruptHandler ]
+"43 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Slice1Output1_InterruptHandler PWM2_16BIT_Slice1Output1_InterruptHandler `*.37(v  1 s 2 PWM2_16BIT_Slice1Output1_InterruptHandler ]
+"44
+[v _PWM2_16BIT_Slice1Output2_InterruptHandler PWM2_16BIT_Slice1Output2_InterruptHandler `*.37(v  1 s 2 PWM2_16BIT_Slice1Output2_InterruptHandler ]
+"45
+[v _PWM2_16BIT_Period_InterruptHandler PWM2_16BIT_Period_InterruptHandler `*.37(v  1 s 2 PWM2_16BIT_Period_InterruptHandler ]
 "38 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.37(v  1 e 2 0 ]
 "39
@@ -1788,16 +1896,16 @@ I2C_ERROR_BUS_COLLISION 3
 [v _uart1RxCount uart1RxCount `VEuc  1 s 1 uart1RxCount ]
 "60
 [v _uart1RxBuffer uart1RxBuffer `VE[8]uc  1 s 8 uart1RxBuffer ]
-[s S3021 . 1 `uc 1 perr 1 0 :1:0 
+[s S3220 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "66
-[u S3026 . 2 `S3021 1 . 1 0 `ui 1 status 2 0 ]
-[v _uart1RxStatusBuffer uart1RxStatusBuffer `VE[8]S3026  1 s 16 uart1RxStatusBuffer ]
+[u S3225 . 2 `S3220 1 . 1 0 `ui 1 status 2 0 ]
+[v _uart1RxStatusBuffer uart1RxStatusBuffer `VE[8]S3225  1 s 16 uart1RxStatusBuffer ]
 "73
-[v _uart1RxLastError uart1RxLastError `VES3026  1 s 2 uart1RxLastError ]
+[v _uart1RxLastError uart1RxLastError `VES3225  1 s 2 uart1RxLastError ]
 "79
 [v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.37(v  1 s 2 UART1_FramingErrorHandler ]
 "80
@@ -1814,16 +1922,33 @@ I2C_ERROR_BUS_COLLISION 3
 [v _UART1_RxCompleteInterruptHandler UART1_RxCompleteInterruptHandler `*.37(v  1 s 2 UART1_RxCompleteInterruptHandler ]
 "88
 [v _UART1_GeneralErrorInterruptHandler UART1_GeneralErrorInterruptHandler `*.37(v  1 s 2 UART1_GeneralErrorInterruptHandler ]
-[s S3546 _Current_Font_s 7 `*.39Cuc 1 font 2 0 `uc 1 x_size 1 2 `uc 1 y_size 1 3 `uc 1 offset 1 4 `uc 1 numchars 1 5 `uc 1 inverted 1 6 ]
-"1671 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
-[v _cfont cfont `S3546  1 s 7 cfont ]
+"5 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+[v _FONT_1 FONT_1 `C[581]uc  1 e 581 0 ]
+[s S3772 _Current_Font_s 7 `*.32Cuc 1 font 2 0 `uc 1 x_size 1 2 `uc 1 y_size 1 3 `uc 1 offset 1 4 `uc 1 numchars 1 5 `uc 1 inverted 1 6 ]
+"1671
+[v _cfont cfont `S3772  1 s 7 cfont ]
 "1672
 [v _buffer buffer `[1024]uc  1 s 1024 buffer ]
-"49 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+"53 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"134
+"123
 } 0
+"10 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 p 1 8 ]
+"44
+} 1
 "43 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
@@ -1837,33 +1962,33 @@ I2C_ERROR_BUS_COLLISION 3
 "8 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S4161 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S4384 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S4166 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S4169 . 4 `l 1 i 4 0 `d 1 f 4 0 `S4161 1 fAsBytes 4 0 `S4166 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S4169  1 a 4 19 ]
+[s S4389 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S4392 . 4 `l 1 i 4 0 `d 1 f 4 0 `S4384 1 fAsBytes 4 0 `S4389 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S4392  1 a 4 33 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 13 ]
-[s S4237 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 27 ]
+[s S4460 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S4240 . 2 `s 1 i 2 0 `us 1 n 2 0 `S4237 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S4240  1 a 2 23 ]
+[u S4463 . 2 `s 1 i 2 0 `us 1 n 2 0 `S4460 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S4463  1 a 2 37 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 18 ]
+[v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 17 ]
+[v ___flmul@aexp aexp `uc  1 a 1 31 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 12 ]
+[v ___flmul@sign sign `uc  1 a 1 26 ]
 "8
-[v ___flmul@b b `d  1 p 4 0 ]
-[v ___flmul@a a `d  1 p 4 4 ]
+[v ___flmul@b b `d  1 p 4 14 ]
+[v ___flmul@a a `d  1 p 4 18 ]
 "205
 } 0
-"161 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr2.c
+"155 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_PeriodMatchCallbackRegister TMR2_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
 {
 [v TMR2_PeriodMatchCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
-"164
+"158
 } 0
 "220 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr1.c
 [v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
@@ -1880,7 +2005,7 @@ I2C_ERROR_BUS_COLLISION 3
 "41 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"55
+"56
 } 0
 "101 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/uart/src/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
@@ -1919,6 +2044,29 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "62
+} 0
+"50 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Initialize PWM2_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"119
+} 0
+"194
+[v _PWM2_16BIT_Slice1Output2_SetInterruptHandler PWM2_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"197
+} 0
+"189
+[v _PWM2_16BIT_Slice1Output1_SetInterruptHandler PWM2_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"192
+} 0
+"199
+[v _PWM2_16BIT_Period_SetInterruptHandler PWM2_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"202
 } 0
 "50 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
@@ -2013,6 +2161,17 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "95
 } 0
+"137 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_SetSlice1Output1DutyCycleRegister PWM2_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_SetSlice1Output1DutyCycleRegister@registerValue registerValue `us  1 p 2 10 ]
+"141
+} 0
+"149
+[v _PWM2_16BIT_LoadBufferRegisters PWM2_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+{
+"153
+} 0
 "137 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
 {
@@ -2024,50 +2183,142 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "153
 } 0
-"1710 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+"2026 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+[v _OLED_Write_Text OLED_Write_Text `(v  1 e 1 0 ]
+{
+"2029
+[v OLED_Write_Text@length length `ui  1 a 2 2 ]
+"2028
+[v OLED_Write_Text@cnt cnt `ui  1 a 2 0 ]
+"2026
+[v OLED_Write_Text@x x `s  1 p 2 52 ]
+[v OLED_Write_Text@y y `s  1 p 2 54 ]
+[v OLED_Write_Text@text text `*.32uc  1 p 2 56 ]
+"2037
+} 0
+"5 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.32Cuc  1 a 2 2 ]
+"5
+[v strlen@s s `*.32Cuc  1 p 2 0 ]
+"12
+} 0
+"1924 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+[v _OLED_Write OLED_Write `(v  1 e 1 0 ]
+{
+"1971
+[v OLED_Write@py py `s  1 a 2 39 ]
+"1970
+[v OLED_Write@px px `s  1 a 2 37 ]
+"1948
+[v OLED_Write@index index `us  1 a 2 31 ]
+"1947
+[v OLED_Write@page page `us  1 a 2 27 ]
+"1941
+[v OLED_Write@pages pages `us  1 a 2 25 ]
+"1928
+[v OLED_Write@cnt cnt `us  1 a 2 50 ]
+"1927
+[v OLED_Write@rowcnt rowcnt `us  1 a 2 48 ]
+"1931
+[v OLED_Write@cy cy `s  1 a 2 46 ]
+[v OLED_Write@cx cx `s  1 a 2 44 ]
+"1926
+[v OLED_Write@font_idx font_idx `us  1 a 2 42 ]
+"1930
+[v OLED_Write@temp temp `us  1 a 2 35 ]
+"1932
+[v OLED_Write@cbit cbit `s  1 a 2 33 ]
+"1931
+[v OLED_Write@cbyte cbyte `s  1 a 2 29 ]
+"1929
+[v OLED_Write@b b `uc  1 a 1 41 ]
+"1924
+[v OLED_Write@x x `s  1 p 2 12 ]
+[v OLED_Write@y y `s  1 p 2 14 ]
+[v OLED_Write@value value `uc  1 p 1 16 ]
+"2024
+} 0
+"7 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"1901 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+[v _OLED_DrawPixel OLED_DrawPixel `(v  1 e 1 0 ]
+{
+"1907
+[v OLED_DrawPixel@index index `us  1 a 2 9 ]
+"1906
+[v OLED_DrawPixel@page page `us  1 a 2 7 ]
+"1908
+[v OLED_DrawPixel@mask mask `uc  1 a 1 11 ]
+"1901
+[v OLED_DrawPixel@x x `s  1 p 2 0 ]
+[v OLED_DrawPixel@y y `s  1 p 2 2 ]
+[v OLED_DrawPixel@color color `uc  1 p 1 4 ]
+"1922
+} 0
+"1813
+[v _OLED_SetFont OLED_SetFont `(v  1 e 1 0 ]
+{
+[v OLED_SetFont@font font `*.32Cuc  1 p 2 0 ]
+"1821
+} 0
+"1758
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
 {
-"1753
+"1801
 } 0
-"1787
+"1835
 [v _OLED_Update OLED_Update `(v  1 e 1 0 ]
 {
-"1813
+"1861
 [v OLED_Update@remaining remaining `ui  1 a 2 47 ]
-"1814
-[v OLED_Update@chunk chunk `uc  1 a 1 51 ]
-"1806
+"1862
+[v OLED_Update@chunk chunk `uc  1 a 1 49 ]
+"1854
 [v OLED_Update@data data `[17]uc  1 a 17 26 ]
-"1809
-[v OLED_Update@sent sent `ui  1 a 2 49 ]
-"1808
+"1857
+[v OLED_Update@sent sent `ui  1 a 2 50 ]
+"1856
 [v OLED_Update@total total `Cui  1 a 2 45 ]
-"1790
+"1838
 [v OLED_Update@x x `uc  1 a 1 52 ]
-"1823
+"1871
 } 0
-"1696
+"1744
 [v _ssd1306_command ssd1306_command `T(v  1 s 1 ssd1306_command ]
 {
 [v ssd1306_command@command command `uc  1 p 1 wreg ]
-"1698
+"1746
 [v ssd1306_command@data data `[2]uc  1 a 2 20 ]
-"1696
+"1744
 [v ssd1306_command@command command `uc  1 p 1 wreg ]
-"1698
+"1746
 [v ssd1306_command@command command `uc  1 p 1 19 ]
-"1701
+"1749
 } 1
-"1674
+"1722
 [v _i2c_write i2c_write `(a  1 s 1 i2c_write ]
 {
-"1676
+"1724
 [v i2c_write@timeout timeout `ul  1 a 4 15 ]
-"1674
+"1722
 [v i2c_write@address address `us  1 p 2 8 ]
 [v i2c_write@data data `*.39uc  1 p 2 10 ]
 [v i2c_write@len len `ui  1 p 2 12 ]
-"1694
+"1742
 } 0
 "131 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
@@ -2097,10 +2348,10 @@ I2C_ERROR_BUS_COLLISION 3
 [v I2C1_ErrorGet@retErrorState retErrorState `E13703  1 a 1 0 ]
 "193
 } 0
-"1831 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
+"1879 D:\CYOHAN\MPLABXProjects\ControlVel.X\ssd1306_oled.c
 [v _OLED_ClearDisplay OLED_ClearDisplay `(v  1 e 1 0 ]
 {
-"1834
+"1882
 } 0
 "3 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
@@ -2175,19 +2426,17 @@ I2C_ERROR_BUS_COLLISION 3
 "145 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
 {
-"147
-[v TMR2_ISR@CountCallBack CountCallBack `VEus  1 s 2 CountCallBack ]
-"159
+"153
 } 0
-"147 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
-[v _LKP LKP `(v  1 e 1 0 ]
-{
-"149
-} 0
-"166 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr2.c
+"160
 [v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
 {
-"169
+"163
+} 0
+"130 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+[v _interruptTimer2 interruptTimer2 `(v  1 e 1 0 ]
+{
+"132
 } 0
 "191 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr1.c
 [v _TMR1_OverflowISR TMR1_OverflowISR `(v  1 e 1 0 ]
@@ -2196,51 +2445,56 @@ I2C_ERROR_BUS_COLLISION 3
 [v TMR1_OverflowISR@CountCallBack CountCallBack `VEus  1 s 2 CountCallBack ]
 "207
 } 0
-"231
+"156 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+[v _LKP LKP `(v  1 e 1 0 ]
+{
+"164
+} 0
+"231 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr1.c
 [v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
 {
 "234
 } 0
-"157 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
-[v _interruptTmr1 interruptTmr1 `(v  1 e 1 0 ]
+"122
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
 {
-"163
+"126
+[v TMR1_CounterSet@onState onState `a  1 a 1 2 ]
+"122
+[v TMR1_CounterSet@timerVal timerVal `us  1 p 2 0 ]
+"138
 } 0
 "5 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
 "8
-[v printf@ap ap `[1]*.39v  1 a 2 40 ]
+[v printf@ap ap `[1]*.39v  1 a 2 35 ]
 "5
-[v printf@fmt fmt `*.32Cuc  1 p 2 36 ]
+[v printf@fmt fmt `*.32Cuc  1 p 2 31 ]
 "13
 } 0
 "1817 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1820
-[v vfprintf@cfmt cfmt `*.32uc  1 a 2 34 ]
-[s S4326 _IO_FILE 0 ]
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 29 ]
+[s S4549 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.39S4326  1 p 2 28 ]
-[v vfprintf@fmt fmt `*.32Cuc  1 p 2 30 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 32 ]
+[v vfprintf@fp fp `*.39S4549  1 p 2 23 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 25 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 27 ]
 "1840
 } 0
 "1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S4339 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
-"1188
-[v vfpfcnvrt@convarg convarg `S4339  1 a 4 23 ]
-"1179
-[v vfpfcnvrt@cp cp `*.32uc  1 a 2 21 ]
-[v vfpfcnvrt@c c `uc  1 a 1 27 ]
+"1669
+[v vfpfcnvrt@cp_4583 cp `*.39uc  1 a 2 21 ]
 "1180
 [v vfpfcnvrt@done done `a  1 a 1 20 ]
-[s S4326 _IO_FILE 0 ]
+[s S4549 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.39S4326  1 p 2 12 ]
+[v vfpfcnvrt@fp fp `*.39S4549  1 p 2 12 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 14 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 16 ]
 "1814
@@ -2249,9 +2503,9 @@ I2C_ERROR_BUS_COLLISION 3
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 3 ]
-[u S4305 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
-[s S4308 _IO_FILE 11 `S4305 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.39S4308  1 p 2 5 ]
+[u S4528 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S4531 _IO_FILE 11 `S4528 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S4531  1 p 2 5 ]
 "24
 } 0
 "439 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/uart/src/uart1.c
@@ -2279,45 +2533,6 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "298
 } 0
-"1 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\abs.c
-[v _abs abs `(i  1 e 2 0 ]
-{
-[v abs@a a `i  1 p 2 6 ]
-"4
-} 0
-"7 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-{
-"10
-[v ___awmod@sign sign `uc  1 a 1 5 ]
-[v ___awmod@counter counter `uc  1 a 1 4 ]
-"7
-[v ___awmod@dividend dividend `i  1 p 2 0 ]
-[v ___awmod@divisor divisor `i  1 p 2 2 ]
-"34
-} 0
-"7 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"10
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"11
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"7
-[v ___awdiv@dividend dividend `i  1 p 2 0 ]
-[v ___awdiv@divisor divisor `i  1 p 2 2 ]
-"41
-} 0
-"122 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr1.c
-[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
-{
-"126
-[v TMR1_CounterSet@onState onState `a  1 a 1 2 ]
-"122
-[v TMR1_CounterSet@timerVal timerVal `us  1 p 2 0 ]
-"138
-} 0
 "126 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
@@ -2328,10 +2543,10 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "143
 } 0
-"137 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+"126 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
 [v _interruptTimer0 interruptTimer0 `(v  1 e 1 0 ]
 {
-"139
+"128
 } 0
 "128 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -2348,24 +2563,24 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "170
 } 0
-"141 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+"134 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
 [v _interruptSensor interruptSensor `(v  1 e 1 0 ]
 {
-"145
+"150
 } 0
 "10 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+[v i2___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
-[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v i2___xxtofl@sign sign `uc  1 p 1 wreg ]
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+[v i2___xxtofl@arg arg `ul  1 a 4 10 ]
 "12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+[v i2___xxtofl@exp exp `uc  1 a 1 9 ]
 "10
-[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
+[v i2___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v i2___xxtofl@val val `l  1 p 4 0 ]
 "15
-[v ___xxtofl@sign sign `uc  1 p 1 8 ]
+[v i2___xxtofl@sign sign `uc  1 p 1 8 ]
 "44
 } 1
 "11 D:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcdiv.c
@@ -2413,6 +2628,11 @@ I2C_ERROR_BUS_COLLISION 3
 [v _BtnSet_DefaultInterruptHandler BtnSet_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "200
+} 0
+"152 D:\CYOHAN\MPLABXProjects\ControlVel.X\main.c
+[v _boton1 boton1 `(v  1 e 1 0 ]
+{
+"154
 } 0
 "286 D:\CYOHAN\MPLABXProjects\ControlVel.X\mcc_generated_files/i2c_host/src/i2c1.c
 [v _I2C1_TX_ISR I2C1_TX_ISR `(v  1 e 1 0 ]

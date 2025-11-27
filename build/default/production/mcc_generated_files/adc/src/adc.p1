@@ -153,8 +153,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCON0 `Vuc ~T0 @X0 0 e@1011 ]
 "139 mcc_generated_files/adc/src/adc.c
 [; ;mcc_generated_files/adc/src/adc.c: 139: void ADC_ChannelSelect(adc_channel_t channel)
-[c E13706 57 58 59 60 61 62 63 12 19 18 .. ]
-[n E13706 . ADC_CHANNEL_OPA1 ADC_CHANNEL_DAC2 ADC_CHANNEL_VSS ADC_CHANNEL_TEMP ADC_CHANNEL_DAC1 ADC_CHANNEL_FVR_BUFFER1 ADC_CHANNEL_FVR_BUFFER2 ADC_CHANNEL_ANB4 ADC_CHANNEL_ANC3 ADC_CHANNEL_ANC2  ]
+[c E13706 57 58 59 60 61 62 63 12 21 18 .. ]
+[n E13706 . ADC_CHANNEL_OPA1 ADC_CHANNEL_DAC2 ADC_CHANNEL_VSS ADC_CHANNEL_TEMP ADC_CHANNEL_DAC1 ADC_CHANNEL_FVR_BUFFER1 ADC_CHANNEL_FVR_BUFFER2 ADC_CHANNEL_ANB4 ADC_CHANNEL_ANC5 ADC_CHANNEL_ANC2  ]
 "30599 D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 30599: extern volatile unsigned char ADRESH __attribute__((address(0x3EB)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@1003 ]

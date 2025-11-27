@@ -23913,6 +23913,86 @@ void PWM1_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void
 
 void PWM1_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
 # 46 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../pwm/pwm2_16bit.h" 1
+# 50 "mcc_generated_files/system/src/../../system/../pwm/pwm2_16bit.h"
+void PWM2_16BIT_Initialize(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_Enable(void);
+# 67 "mcc_generated_files/system/src/../../system/../pwm/pwm2_16bit.h"
+void PWM2_16BIT_Disable(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_WritePeriodRegister(uint16_t periodCount);
+
+
+
+
+
+
+
+void PWM2_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+
+
+
+
+
+
+
+void PWM2_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t value);
+# 101 "mcc_generated_files/system/src/../../system/../pwm/pwm2_16bit.h"
+void PWM2_16BIT_LoadBufferRegisters(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_PWMI_ISR(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_PWMPI_ISR(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_Slice1Output1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void PWM2_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void PWM2_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
+# 47 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../uart/uart1.h" 1
 # 45 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdio.h" 1 3
@@ -24323,7 +24403,7 @@ int getch(void);
 
 
 void putch(char txData);
-# 47 "mcc_generated_files/system/src/../../system/system.h" 2
+# 48 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 # 1 "mcc_generated_files/system/src/../../system/../adc/adc.h" 1
@@ -24368,7 +24448,7 @@ typedef enum
     ADC_CHANNEL_FVR_BUFFER1 = 0x3e,
     ADC_CHANNEL_FVR_BUFFER2 = 0x3f,
     ADC_CHANNEL_ANB4 = 0xc,
-    ADC_CHANNEL_ANC3 = 0x13,
+    ADC_CHANNEL_ANC5 = 0x15,
     ADC_CHANNEL_ANC2 = 0x12
 } adc_channel_t;
 
@@ -24847,7 +24927,7 @@ void ADC_ISR(void);
 
 
 void ADC_ThresholdISR(void);
-# 50 "mcc_generated_files/system/src/../../system/system.h" 2
+# 51 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../i2c_host/i2c1.h" 1
 # 49 "mcc_generated_files/system/src/../../system/../i2c_host/i2c1.h"
 # 1 "mcc_generated_files/system/src/../../system/../i2c_host/i2c_host_event_types.h" 1
@@ -24992,7 +25072,7 @@ void I2C1_RX_ISR(void);
 
 
 void I2C1_TX_ISR(void);
-# 51 "mcc_generated_files/system/src/../../system/system.h" 2
+# 52 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr0.h" 1
 # 40 "mcc_generated_files/system/src/../../system/../timer/tmr0.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr0_deprecated.h" 1
@@ -25059,7 +25139,7 @@ void TMR0_ISR(void);
 
 
 void TMR0_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 52 "mcc_generated_files/system/src/../../system/system.h" 2
+# 53 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 1
 # 40 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr1_deprecated.h" 1
@@ -25164,12 +25244,12 @@ void TMR1_Tasks(void);
 
 
  void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
-# 53 "mcc_generated_files/system/src/../../system/system.h" 2
+# 54 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr2.h" 1
 # 41 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr2_deprecated.h" 1
 # 42 "mcc_generated_files/system/src/../../system/../timer/tmr2.h" 2
-# 167 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 162 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 typedef enum
 {
 
@@ -25215,7 +25295,7 @@ typedef enum
 
 
    TMR2_ROP_RESETS_ERSHIGH,
-# 222 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 217 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
    TMR2_OS_STARTS_TMRON,
 
 
@@ -25265,7 +25345,7 @@ typedef enum
 
 
    TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
-# 279 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 274 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
    TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
 
 
@@ -25377,7 +25457,7 @@ typedef enum
 
     TMR2_UART3_TX_EDGE = 0x17
 } TMR2_HLT_EXT_RESET_SOURCE;
-# 402 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 397 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_Initialize(void);
 
 
@@ -25387,17 +25467,17 @@ void TMR2_Initialize(void);
 
 
 void TMR2_Deinitialize(void);
-# 419 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 414 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_Start(void);
-# 428 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 423 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_Stop(void);
-# 437 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 432 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 uint8_t TMR2_CounterGet(void);
-# 446 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 441 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_CounterSet(uint8_t count);
-# 455 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 450 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_PeriodSet(uint8_t periodVal);
-# 464 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 459 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 uint8_t TMR2_PeriodGet(void);
 
 
@@ -25407,9 +25487,9 @@ uint8_t TMR2_PeriodGet(void);
 
 
 uint8_t TMR2_MaxCountGet(void);
-# 481 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 476 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_ModeSet(TMR2_HLT_MODE mode);
-# 490 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
+# 485 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
 
 
@@ -25443,7 +25523,7 @@ void TMR2_ISR(void);
 
 
 void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
-# 54 "mcc_generated_files/system/src/../../system/system.h" 2
+# 55 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 

@@ -23633,7 +23633,7 @@ unsigned char __t3rd16on(void);
 # 41 "mcc_generated_files/timer/src/../tmr2.h" 2
 # 1 "mcc_generated_files/timer/src/../tmr2_deprecated.h" 1
 # 42 "mcc_generated_files/timer/src/../tmr2.h" 2
-# 167 "mcc_generated_files/timer/src/../tmr2.h"
+# 162 "mcc_generated_files/timer/src/../tmr2.h"
 typedef enum
 {
 
@@ -23679,7 +23679,7 @@ typedef enum
 
 
    TMR2_ROP_RESETS_ERSHIGH,
-# 222 "mcc_generated_files/timer/src/../tmr2.h"
+# 217 "mcc_generated_files/timer/src/../tmr2.h"
    TMR2_OS_STARTS_TMRON,
 
 
@@ -23729,7 +23729,7 @@ typedef enum
 
 
    TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
-# 279 "mcc_generated_files/timer/src/../tmr2.h"
+# 274 "mcc_generated_files/timer/src/../tmr2.h"
    TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
 
 
@@ -23841,7 +23841,7 @@ typedef enum
 
     TMR2_UART3_TX_EDGE = 0x17
 } TMR2_HLT_EXT_RESET_SOURCE;
-# 402 "mcc_generated_files/timer/src/../tmr2.h"
+# 397 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_Initialize(void);
 
 
@@ -23851,17 +23851,17 @@ void TMR2_Initialize(void);
 
 
 void TMR2_Deinitialize(void);
-# 419 "mcc_generated_files/timer/src/../tmr2.h"
+# 414 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_Start(void);
-# 428 "mcc_generated_files/timer/src/../tmr2.h"
+# 423 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_Stop(void);
-# 437 "mcc_generated_files/timer/src/../tmr2.h"
+# 432 "mcc_generated_files/timer/src/../tmr2.h"
 uint8_t TMR2_CounterGet(void);
-# 446 "mcc_generated_files/timer/src/../tmr2.h"
+# 441 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_CounterSet(uint8_t count);
-# 455 "mcc_generated_files/timer/src/../tmr2.h"
+# 450 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_PeriodSet(uint8_t periodVal);
-# 464 "mcc_generated_files/timer/src/../tmr2.h"
+# 459 "mcc_generated_files/timer/src/../tmr2.h"
 uint8_t TMR2_PeriodGet(void);
 
 
@@ -23871,9 +23871,9 @@ uint8_t TMR2_PeriodGet(void);
 
 
 uint8_t TMR2_MaxCountGet(void);
-# 481 "mcc_generated_files/timer/src/../tmr2.h"
+# 476 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_ModeSet(TMR2_HLT_MODE mode);
-# 490 "mcc_generated_files/timer/src/../tmr2.h"
+# 485 "mcc_generated_files/timer/src/../tmr2.h"
 void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
 
 
@@ -23927,7 +23927,7 @@ void TMR2_Initialize(void)
 
     T2RST = (0 << 0x0);
 
-    T2PR = 0xF9;
+    T2PR = 0x7C;
 
     T2TMR = 0x0;
 
@@ -24013,16 +24013,10 @@ void TMR2_TMRInterruptDisable(void)
 
 void TMR2_ISR(void)
 {
-    static volatile uint16_t CountCallBack = 0;
 
-
-    if(++CountCallBack >= (500U))
+    if(((void*)0) != TMR2_PeriodMatchCallback)
     {
-        if(((void*)0) != TMR2_PeriodMatchCallback)
-        {
-            TMR2_PeriodMatchCallback();
-        }
-        CountCallBack = 0;
+        TMR2_PeriodMatchCallback();
     }
    PIR3bits.TMR2IF = 0;
 }

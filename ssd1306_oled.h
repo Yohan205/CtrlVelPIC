@@ -106,7 +106,7 @@ void OLED_SetFont(const uint8_t *font);
 void OLED_InvertFont(uint8_t invert_status);
 void OLED_Write(int16_t x, int16_t y, char value);
 void OLED_Write_Text(int16_t x, int16_t y, char *text);
-/* Nueva función: dibujar bitmap (x,y) con ancho w, alto h, color (BLACK/WHITE/INVERSE) */
+/* Nueva funcion: dibujar bitmap (x,y) con ancho w, alto h, color (BLACK/WHITE/INVERSE) */
 void OLED_DrawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, uint8_t w, uint8_t h, uint8_t color);
 
 #endif // SSD1306_OLED_H

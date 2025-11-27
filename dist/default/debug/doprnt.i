@@ -839,9 +839,6 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 12 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c" 2
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdbool.h" 1 3
 # 13 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c" 2
-# 97 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
-typedef signed int vfpf_sint_t;
-typedef unsigned int vfpf_uint_t;
 # 153 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
 static int prec, width;
 static char flags;
@@ -895,51 +892,37 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 {
     char c, *cp;
     _Bool done;
-
- union {
-
-  vfpf_sint_t sint;
-  vfpf_uint_t uint;
-
-  long double f;
- } convarg;
 # 1201 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
     if ((*fmt)[0] == '%') {
         ++*fmt;
 
         flags = width = 0;
         prec = -1;
-# 1291 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
-  cp = *fmt;
-# 1361 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
-  if (*cp == 'd' || *cp == 'i') {
-# 1404 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
-   convarg.sint = (vfpf_sint_t)(int)(*(int *)__va_arg(*(int **)ap, (int)0));
-
-   *fmt = cp+1;
-
-   c = sizeof(dbuf);
-   done = convarg.sint < 0;
-   do {
-    dbuf[--c] = abs(convarg.sint % 10) + '0';
-    convarg.sint /= 10;
+# 1656 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\sources\\c99\\common\\doprnt.c"
+  done = 0;
+  if ((*fmt)[0] == 's') {
+   ++*fmt;
+   done = 1;
+  }
+  else if ((*fmt)[0] == 'l' && (*fmt)[1] == 'l' && (*fmt)[2] == 's') {
+   *fmt += 3;
+   done = 1;
+  }
+  if (done) {
 
 
 
-   } while (convarg.sint != 0 && c != 0);
-   if (c != 0 && done) {
-    dbuf[--c] = '-';
+   for (char * cp = (*(char * *)__va_arg(*(char * **)ap, (char *)0)); *cp != '\0'; cp++) {
+    fputc(*cp, fp);
 
 
 
-   }
-   while (c != sizeof(dbuf)) {
-    fputc(dbuf[c++], fp);
    }
 
 
 
    return;
+
 
 
 

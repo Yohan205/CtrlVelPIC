@@ -8,6 +8,7 @@ mcc_generated_files/uart/src/../../system/../system/pins.h  \
 mcc_generated_files/uart/src/../../system/../dac/dac1.h  \
 mcc_generated_files/uart/src/../../system/../opa/opa1.h  \
 mcc_generated_files/uart/src/../../system/../pwm/pwm1_16bit.h  \
+mcc_generated_files/uart/src/../../system/../pwm/pwm2_16bit.h  \
 mcc_generated_files/uart/src/../../system/../uart/uart1.h  \
 mcc_generated_files/uart/src/../../system/../system/interrupt.h  \
 mcc_generated_files/uart/src/../../system/../adc/adc.h  \

@@ -72,7 +72,7 @@ void TMR1_Initialize(void)
 	PIR3bits.TMR1GIF = 0U;
 	
     T1CON = (1 << _T1CON_TMR1ON_POSN)   // TMR1ON enabled
-        | (0 << _T1CON_T1RD16_POSN)   // T1RD16 disabled
+        | (1 << _T1CON_T1RD16_POSN)   // T1RD16 enabled
         | (1 << _T1CON_nT1SYNC_POSN)   // nT1SYNC do_not_synchronize
         | (3 << _T1CON_CKPS_POSN);  // CKPS 1:8
 }

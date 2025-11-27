@@ -43,13 +43,13 @@
  * @ingroup adc
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_RB4 ADC_CHANNEL_ANB4
+#define RB4_IN0 ADC_CHANNEL_ANB4
 
 /**
  * @ingroup adc
  * @brief Defines the Custom Name pin mapping for channels in @ref adc_channel_t
  */
-#define IO_RC3 ADC_CHANNEL_ANC3
+#define IO_RC5 ADC_CHANNEL_ANC5
 
 /**
  * @ingroup adc

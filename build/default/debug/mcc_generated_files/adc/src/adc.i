@@ -23671,7 +23671,7 @@ typedef enum
     ADC_CHANNEL_FVR_BUFFER1 = 0x3e,
     ADC_CHANNEL_FVR_BUFFER2 = 0x3f,
     ADC_CHANNEL_ANB4 = 0xc,
-    ADC_CHANNEL_ANC3 = 0x13,
+    ADC_CHANNEL_ANC5 = 0x15,
     ADC_CHANNEL_ANC2 = 0x12
 } adc_channel_t;
 

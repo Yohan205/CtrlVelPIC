@@ -65,7 +65,7 @@ void floatToStr(float n, char *res, uint8_t precision, bool endLine)
     }
 
     // Terminación
-    res[i] = endLine ? '\n' : '\0';
+    res[i] = endLine ? '\n' : 32;
 }
 
 
@@ -74,5 +74,5 @@ void uint16ToStr(uint16_t n, char *res, bool endLine)
     uint8_t len = uIntToStr(n, res);
 
     // Terminación
-    res[len] = endLine ? '\n' : '\0';
+    res[len] = endLine ? '\n' : 32;
 }

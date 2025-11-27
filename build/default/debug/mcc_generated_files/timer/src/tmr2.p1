@@ -120,9 +120,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21467
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 21467: extern volatile T2RSTbits_t T2RSTbits __attribute__((address(0x321)));
 [v _T2RSTbits `VS1041 ~T0 @X0 0 e@801 ]
-[v F13795 `(v ~T0 @X0 0 tf ]
-[v F13797 `(v ~T0 @X0 0 tf ]
-[v F13799 `(v ~T0 @X0 0 tf ]
+[v F13794 `(v ~T0 @X0 0 tf ]
+[v F13796 `(v ~T0 @X0 0 tf ]
+[v F13798 `(v ~T0 @X0 0 tf ]
 "211 D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f16q41.h: 211: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2184,8 +2184,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/timer/src/tmr2.c: 59:     T2RST = (0 << 0x0);
 [e = _T2RST -> << -> 0 `i -> 0 `i `uc ]
 "61
-[; ;mcc_generated_files/timer/src/tmr2.c: 61:     T2PR = 0xF9;
-[e = _T2PR -> -> 249 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr2.c: 61:     T2PR = 0x7C;
+[e = _T2PR -> -> 124 `i `uc ]
 "63
 [; ;mcc_generated_files/timer/src/tmr2.c: 63:     T2TMR = 0x0;
 [e = _T2TMR -> -> 0 `i `uc ]
@@ -2440,74 +2440,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _TMR2_ISR ]
 [f ]
-"147
-[; ;mcc_generated_files/timer/src/tmr2.c: 147:     static volatile uint16_t CountCallBack = 0;
-[v F13794 `Vus ~T0 @X0 1 s CountCallBack ]
-[i F13794
--> -> 0 `i `us
-]
+"148
+[; ;mcc_generated_files/timer/src/tmr2.c: 148:     if(((void*)0) != TMR2_PeriodMatchCallback)
+[e $ ! != -> -> -> 0 `i `*v `*F13794 _TMR2_PeriodMatchCallback 1944  ]
+"149
+[; ;mcc_generated_files/timer/src/tmr2.c: 149:     {
+{
 "150
-[; ;mcc_generated_files/timer/src/tmr2.c: 150:     if(++CountCallBack >= (500U))
-[e $ ! >= -> =+ F13794 -> -> 1 `i `Vus `ui -> 500 `ui 1944  ]
-"151
-[; ;mcc_generated_files/timer/src/tmr2.c: 151:     {
-{
-"152
-[; ;mcc_generated_files/timer/src/tmr2.c: 152:         if(((void*)0) != TMR2_PeriodMatchCallback)
-[e $ ! != -> -> -> 0 `i `*v `*F13795 _TMR2_PeriodMatchCallback 1945  ]
-"153
-[; ;mcc_generated_files/timer/src/tmr2.c: 153:         {
-{
-"154
-[; ;mcc_generated_files/timer/src/tmr2.c: 154:             TMR2_PeriodMatchCallback();
+[; ;mcc_generated_files/timer/src/tmr2.c: 150:         TMR2_PeriodMatchCallback();
 [e ( *U _TMR2_PeriodMatchCallback ..  ]
-"155
-[; ;mcc_generated_files/timer/src/tmr2.c: 155:         }
-}
-[e :U 1945 ]
-"156
-[; ;mcc_generated_files/timer/src/tmr2.c: 156:         CountCallBack = 0;
-[e = F13794 -> -> 0 `i `us ]
-"157
-[; ;mcc_generated_files/timer/src/tmr2.c: 157:     }
+"151
+[; ;mcc_generated_files/timer/src/tmr2.c: 151:     }
 }
 [e :U 1944 ]
-"158
-[; ;mcc_generated_files/timer/src/tmr2.c: 158:    PIR3bits.TMR2IF = 0;
+"152
+[; ;mcc_generated_files/timer/src/tmr2.c: 152:    PIR3bits.TMR2IF = 0;
 [e = . . _PIR3bits 0 3 -> -> 0 `i `uc ]
-"159
-[; ;mcc_generated_files/timer/src/tmr2.c: 159: }
+"153
+[; ;mcc_generated_files/timer/src/tmr2.c: 153: }
 [e :UE 1943 ]
 }
-"161
-[; ;mcc_generated_files/timer/src/tmr2.c: 161: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void))
-[v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 1 ef1`*F13797 ]
-"162
-[; ;mcc_generated_files/timer/src/tmr2.c: 162: {
+"155
+[; ;mcc_generated_files/timer/src/tmr2.c: 155: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void))
+[v _TMR2_PeriodMatchCallbackRegister `(v ~T0 @X0 1 ef1`*F13796 ]
+"156
+[; ;mcc_generated_files/timer/src/tmr2.c: 156: {
 {
 [e :U _TMR2_PeriodMatchCallbackRegister ]
-"161
-[; ;mcc_generated_files/timer/src/tmr2.c: 161: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void))
-[v _callbackHandler `*F13799 ~T0 @X0 1 r1 ]
-"162
-[; ;mcc_generated_files/timer/src/tmr2.c: 162: {
+"155
+[; ;mcc_generated_files/timer/src/tmr2.c: 155: void TMR2_PeriodMatchCallbackRegister(void (* callbackHandler)(void))
+[v _callbackHandler `*F13798 ~T0 @X0 1 r1 ]
+"156
+[; ;mcc_generated_files/timer/src/tmr2.c: 156: {
 [f ]
-"163
-[; ;mcc_generated_files/timer/src/tmr2.c: 163:    TMR2_PeriodMatchCallback = callbackHandler;
+"157
+[; ;mcc_generated_files/timer/src/tmr2.c: 157:    TMR2_PeriodMatchCallback = callbackHandler;
 [e = _TMR2_PeriodMatchCallback _callbackHandler ]
-"164
-[; ;mcc_generated_files/timer/src/tmr2.c: 164: }
-[e :UE 1946 ]
+"158
+[; ;mcc_generated_files/timer/src/tmr2.c: 158: }
+[e :UE 1945 ]
 }
-"166
-[; ;mcc_generated_files/timer/src/tmr2.c: 166: static void TMR2_DefaultPeriodMatchCallback(void)
+"160
+[; ;mcc_generated_files/timer/src/tmr2.c: 160: static void TMR2_DefaultPeriodMatchCallback(void)
 [v _TMR2_DefaultPeriodMatchCallback `(v ~T0 @X0 1 sf ]
-"167
-[; ;mcc_generated_files/timer/src/tmr2.c: 167: {
+"161
+[; ;mcc_generated_files/timer/src/tmr2.c: 161: {
 {
 [e :U _TMR2_DefaultPeriodMatchCallback ]
 [f ]
-"169
-[; ;mcc_generated_files/timer/src/tmr2.c: 169: }
-[e :UE 1947 ]
+"163
+[; ;mcc_generated_files/timer/src/tmr2.c: 163: }
+[e :UE 1946 ]
 }

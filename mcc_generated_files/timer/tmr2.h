@@ -59,11 +59,6 @@
 #define TMR2_CLOCK_FREQ (125000UL)
 /**
  * @ingroup tmr2
- * @brief Defines the TMR2 interrupt ticker factor.
- */
-#define TMR2_INTERRUPT_TICKER_FACTOR (500U)
-/**
- * @ingroup tmr2
  * @brief Defines the Custom Name for the \ref TMR2_MAX_COUNT.
  */
 /* cppcheck-suppress misra-c2012-2.5 */

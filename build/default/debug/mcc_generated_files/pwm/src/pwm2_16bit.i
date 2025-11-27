@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/opa/src/opa1.c"
+# 1 "mcc_generated_files/pwm/src/pwm2_16bit.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/opa/src/opa1.c" 2
-# 37 "mcc_generated_files/opa/src/opa1.c"
+# 1 "mcc_generated_files/pwm/src/pwm2_16bit.c" 2
+# 38 "mcc_generated_files/pwm/src/pwm2_16bit.c"
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -23626,84 +23626,11 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 38 "mcc_generated_files/opa/src/opa1.c" 2
-# 1 "mcc_generated_files/opa/src/../opa1.h" 1
-# 40 "mcc_generated_files/opa/src/../opa1.h"
+# 39 "mcc_generated_files/pwm/src/pwm2_16bit.c" 2
+# 1 "mcc_generated_files/pwm/src/../pwm2_16bit.h" 1
+# 42 "mcc_generated_files/pwm/src/../pwm2_16bit.h"
 # 1 "D:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdbool.h" 1 3
-# 41 "mcc_generated_files/opa/src/../opa1.h" 2
-
-
-
-
-
-
-typedef enum
-{
-    OPA1_R2byR1_is_0dp07,
-    OPA1_R2byR1_is_0dp14,
-    OPA1_R2byR1_is_0dp33,
-    OPA1_R2byR1_is_1,
-    OPA1_R2byR1_is_1dp67,
-    OPA1_R2byR1_is_3,
-    OPA1_R2byR1_is_7,
-    OPA1_R2byR1_is_15
-} OPA1_resistor_select;
-
-
-
-
-
-
-typedef enum
-{
-    OPA1_posChannel_Vss,
-    OPA1_posChannel_GSEL,
-    OPA1_posChannel_OPA1IN,
-    OPA1_posChannel_Vdd_by_2,
-    OPA1_posChannel_DAC1,
-    OPA1_posChannel_DAC2
-} OPA1_posChannel_select;
-
-
-
-
-
-
-typedef enum
-{
-    OPA1_RB5_IN0_pos = 0x0,
-    OPA1_RC3_IN1_pos = 0x1,
-    OPA1_RA2_IN2_pos = 0x2,
-    OPA1_RA0_IN3_pos = 0x3
-} OPA1_posSource_select;
-
-
-
-
-
-
-typedef enum
-{
-    OPA1_negChannel_No_Connection = 0x0,
-    OPA1_negChannel_GSEL = 0x1,
-    OPA1_negChannel_OPA1IN = 0x2,
-    OPA1_negChannel_DAC1 = 0x4,
-    OPA1_negChannel_DAC2 = 0x5
-} OPA1_negChannel_select;
-
-
-
-
-
-
-typedef enum
-{
-    OPA1_RB4_IN0_neg = 0x0,
-    OPA1_RC3_IN1_neg = 0x1,
-    OPA1_RA2_IN2_neg = 0x2,
-    OPA1_RA0_IN3_neg = 0x3,
-    OPA1_Vss = 0x7
-} OPA1_negSource_select;
+# 43 "mcc_generated_files/pwm/src/../pwm2_16bit.h" 2
 
 
 
@@ -23711,130 +23638,262 @@ typedef enum
 
 
 
-void OPA1_Initialize(void);
-# 130 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_EnableChargePump(void);
-# 139 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_DisableChargePump(void);
-# 148 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_EnableSoftwareUnityGain(void);
-# 157 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_DisableSoftwareUnityGain(void);
-# 166 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_SetPositiveChannel(OPA1_posChannel_select posChannel);
-# 175 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_SetPositiveSource(OPA1_posSource_select posSource);
-# 184 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_SetNegativeChannel(OPA1_negChannel_select negChannel);
-# 193 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_SetNegativeSource(OPA1_negSource_select negSource);
-# 202 "mcc_generated_files/opa/src/../opa1.h"
-void OPA1_SetResistorLadder(OPA1_resistor_select resistorSelection);
-# 211 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_EnableHardwareOverride(void);
-# 221 "mcc_generated_files/opa/src/../opa1.h"
-void OPA1_SetHardwareOverrideSource(uint8_t overrideSource, uint8_t polarity);
-# 230 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_DisableHardwareOverride(void);
-# 239 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_SetSoftwareOverride(uint8_t softwareControl);
-# 248 "mcc_generated_files/opa/src/../opa1.h"
-__attribute__((inline)) void OPA1_SetInputOffset(uint8_t offset);
-# 39 "mcc_generated_files/opa/src/opa1.c" 2
+void PWM2_16BIT_Initialize(void);
 
 
 
 
 
-void OPA1_Initialize(void)
+
+
+void PWM2_16BIT_Enable(void);
+# 67 "mcc_generated_files/pwm/src/../pwm2_16bit.h"
+void PWM2_16BIT_Disable(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_WritePeriodRegister(uint16_t periodCount);
+
+
+
+
+
+
+
+void PWM2_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+
+
+
+
+
+
+
+void PWM2_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t value);
+# 101 "mcc_generated_files/pwm/src/../pwm2_16bit.h"
+void PWM2_16BIT_LoadBufferRegisters(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_PWMI_ISR(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_PWMPI_ISR(void);
+
+
+
+
+
+
+
+void PWM2_16BIT_Slice1Output1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void PWM2_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void PWM2_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
+# 40 "mcc_generated_files/pwm/src/pwm2_16bit.c" 2
+
+
+
+static void (*PWM2_16BIT_Slice1Output1_InterruptHandler)(void);
+static void (*PWM2_16BIT_Slice1Output2_InterruptHandler)(void);
+static void (*PWM2_16BIT_Period_InterruptHandler)(void);
+static void PWM2_16BIT_Slice1Output1_DefaultInterruptHandler(void);
+static void PWM2_16BIT_Slice1Output2_DefaultInterruptHandler(void);
+static void PWM2_16BIT_Period_DefaultInterruptHandler(void);
+
+void PWM2_16BIT_Initialize(void)
 {
 
-    OPA1CON1 = 0x0;
+    PWM2ERS = 0x0;
 
 
-    OPA1CON2 = 0x2;
+    PWM2CLK = 0x2;
 
 
-    OPA1CON3 = 0x0;
+    PWM2LDS = 0x0;
 
 
-    OPA1HWC = 0x0;
+    PWM2PRL = 0xFF;
 
 
-    OPA1ORS = 0x0;
+    PWM2PRH = 0xF9;
 
 
-    OPA1CON0 = 0x88;
+    PWM2CPRE = 0x0;
+
+
+    PWM2PIPOS = 0x0;
+
+
+    PWM2GIR = 0x0;
+
+
+    PWM2GIE = 0x0;
+
+
+    PWM2S1CFG = 0x0;
+
+
+    PWM2S1P1L = 0x0;
+
+
+    PWM2S1P1H = 0x7D;
+
+
+    PWM2S1P2L = 0x0;
+
+
+    PWM2S1P2H = 0x7D;
+
+
+    PIR5bits.PWM2PIF = 0;
+
+
+    PIR5bits.PWM2IF = 0;
+
+
+    PWM2GIRbits.S1P1IF = 0;
+
+
+    PWM2GIRbits.S1P2IF = 0;
+
+
+    PIE5bits.PWM2IE = 0;
+
+
+    PIE5bits.PWM2PIE = 0;
+
+
+    PWM2_16BIT_Slice1Output1_SetInterruptHandler(PWM2_16BIT_Slice1Output1_DefaultInterruptHandler);
+    PWM2_16BIT_Slice1Output2_SetInterruptHandler(PWM2_16BIT_Slice1Output2_DefaultInterruptHandler);
+    PWM2_16BIT_Period_SetInterruptHandler(PWM2_16BIT_Period_DefaultInterruptHandler);
+
+
+    PWM2CON = 0x80;
 }
 
-__attribute__((inline)) void OPA1_EnableChargePump(void)
+void PWM2_16BIT_Enable(void)
 {
-    OPA1CON0bits.CPON = 1;
+    PWM2CON |= 0x80;
 }
 
-__attribute__((inline)) void OPA1_DisableChargePump(void)
+void PWM2_16BIT_Disable(void)
 {
-    OPA1CON0bits.CPON = 0;
+    PWM2CON &= (~0x80);
 }
 
-__attribute__((inline)) void OPA1_EnableSoftwareUnityGain(void)
+void PWM2_16BIT_WritePeriodRegister(uint16_t periodCount)
 {
-    OPA1CON0bits.UG = 1;
+    PWM2PRL = (uint8_t)periodCount;
+    PWM2PRH= (uint8_t)(periodCount >> 8);
 }
 
-__attribute__((inline)) void OPA1_DisableSoftwareUnityGain(void)
+void PWM2_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t registerValue)
 {
-    OPA1CON0bits.UG = 0;
+    PWM2S1P1L = (uint8_t)(registerValue);
+    PWM2S1P1H = (uint8_t)(registerValue >> 8);
 }
 
-__attribute__((inline)) void OPA1_SetPositiveChannel(OPA1_posChannel_select posChannel)
+void PWM2_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t registerValue)
 {
-    OPA1CON2bits.PCH = posChannel;
+    PWM2S1P2L = (uint8_t)(registerValue);
+    PWM2S1P2H = (uint8_t)(registerValue >> 8);
 }
 
-__attribute__((inline)) void OPA1_SetPositiveSource(OPA1_posSource_select posSource)
+void PWM2_16BIT_LoadBufferRegisters(void)
 {
-    OPA1CON3bits.PSS = posSource;
+
+    PWM2CONbits.LD = 1;
 }
 
-__attribute__((inline)) void OPA1_SetNegativeChannel(OPA1_negChannel_select negChannel)
+void PWM2_16BIT_PWMI_ISR(void)
 {
-    OPA1CON2bits.NCH = negChannel;
+    PIR5bits.PWM2IF = 0;
+    if((PWM2GIEbits.S1P1IE == 1) && (PWM2GIRbits.S1P1IF == 1))
+    {
+        PWM2GIRbits.S1P1IF = 0;
+        if(PWM2_16BIT_Slice1Output1_InterruptHandler != ((void*)0))
+        {
+            PWM2_16BIT_Slice1Output1_InterruptHandler();
+        }
+    }
+    else if((PWM2GIEbits.S1P2IE == 1) && (PWM2GIRbits.S1P2IF == 1))
+    {
+        PWM2GIRbits.S1P2IF = 0;
+        if(PWM2_16BIT_Slice1Output2_InterruptHandler != ((void*)0))
+        {
+            PWM2_16BIT_Slice1Output2_InterruptHandler();
+        }
+    }
+    else
+    {
+
+    }
 }
 
-__attribute__((inline)) void OPA1_SetNegativeSource(OPA1_negSource_select negSource)
+void PWM2_16BIT_PWMPI_ISR(void)
 {
-    OPA1CON1bits.NSS = negSource;
+    PIR5bits.PWM2PIF = 0;
+    if(PWM2_16BIT_Period_InterruptHandler != ((void*)0))
+    {
+        PWM2_16BIT_Period_InterruptHandler();
+    }
 }
 
-void OPA1_SetResistorLadder(OPA1_resistor_select resistorSelection)
+void PWM2_16BIT_Slice1Output1_SetInterruptHandler(void (* InterruptHandler)(void))
 {
-    OPA1CON1bits.RESON = 1;
-    OPA1CON1bits.GSEL = resistorSelection;
+    PWM2_16BIT_Slice1Output1_InterruptHandler = InterruptHandler;
 }
 
-__attribute__((inline)) void OPA1_EnableHardwareOverride(void)
+void PWM2_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void))
 {
-   OPA1HWCbits.OREN = 1;
+    PWM2_16BIT_Slice1Output2_InterruptHandler = InterruptHandler;
 }
 
-void OPA1_SetHardwareOverrideSource(uint8_t overrideSource, uint8_t polarity)
+void PWM2_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void))
 {
-    OPA1ORS = overrideSource;
-    OPA1HWCbits.ORPOL = polarity;
+    PWM2_16BIT_Period_InterruptHandler = InterruptHandler;
 }
 
-__attribute__((inline)) void OPA1_DisableHardwareOverride(void)
+static void PWM2_16BIT_Slice1Output1_DefaultInterruptHandler(void)
 {
-    OPA1HWCbits.OREN = 0;
+
+
 }
 
-__attribute__((inline)) void OPA1_SetSoftwareOverride(uint8_t softwareControl)
+static void PWM2_16BIT_Slice1Output2_DefaultInterruptHandler(void)
 {
-    OPA1CON0bits.SOC = softwareControl;
+
+
 }
 
-__attribute__((inline)) void OPA1_SetInputOffset(uint8_t offset)
+static void PWM2_16BIT_Period_DefaultInterruptHandler(void)
 {
-    OPA1OFFSET = offset;
+
+
 }
